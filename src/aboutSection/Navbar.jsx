@@ -1,5 +1,5 @@
 import SquareAnimation from "../sqaureAnimation/SquareAnimation";
-import { React, useState } from "react";
+import { useState } from "react";
 
 export default function Navbar() {
   let Links = [
