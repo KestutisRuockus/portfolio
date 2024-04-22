@@ -1,9 +1,11 @@
 import About from "./aboutSection/About";
+import Contacts from "./contactsSection/Contacts";
 
 function App() {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex flex-col justify-center items-center">
       <About />
+      <Contacts />
     </div>
   );
 }
