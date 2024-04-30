@@ -2,7 +2,7 @@ import personImg from "../assets/person.svg";
 
 export default function Developer() {
   return (
-    <div className="grid grid-cols-1  sm:pt-10 relative cursor-default pt-[110px] px-16 max-[460px]:px-12 w-full">
+    <div className="grid grid-cols-1  sm:pt-10 relative cursor-default pt-[110px] px-16 max-[460px]:px-0 w-full">
       {/* links through icons to github, linkedIn */}
       <div className="absolute left-0 top-20 xl:top-1/2 xl:transform xl:-translate-y-1/2 text-white flex sm:flex-col gap-6 ml-5">
         <i className="fa-brands fa-github text-3xl cursor-pointer hover:scale-150 duration-300 hover:text-gray-400"></i>

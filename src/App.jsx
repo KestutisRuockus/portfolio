@@ -1,14 +1,15 @@
-import About from "./aboutSection/About";
-import Contacts from "./contactsSection/Contacts";
-import Skills from "./skillsSection/Skills";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Home";
+import TmdbIndex from "./projects/TMDB/TmdbIndex";
 
 function App() {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <About />
-      <Skills />
-      <Contacts />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/portfolio" element={<Home />} />
+        <Route path="tmdb-project" element={<TmdbIndex />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
