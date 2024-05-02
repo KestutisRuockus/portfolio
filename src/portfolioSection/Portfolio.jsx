@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import img1 from "../projects/TMDB/images/no-image-1.svg";
-import img2 from "../projects/TMDB/images/no-image-2.svg";
-import img3 from "../projects/TMDB/images/no-image-3.svg";
-import img4 from "../projects/TMDB/images/no-image-4.svg";
+import img1 from "../projects/TMDB/assets/no-image-1.svg";
+import img2 from "../projects/TMDB/assets/no-image-2.svg";
+import img3 from "../projects/TMDB/assets/no-image-3.svg";
+import img4 from "../projects/TMDB/assets/no-image-4.svg";
 import { useState } from "react";
 
 const projectsDetails = [

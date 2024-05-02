@@ -1,7 +1,9 @@
+import Navbar from "./src/Navbar";
+
 export default function TmdbIndex() {
   return (
-    <div className="bg-white w-full">
-      <h1>TMDB PROJECT</h1>
+    <div className="bg-[#0d253f] w-full text-white">
+      <Navbar />
     </div>
   );
 }
