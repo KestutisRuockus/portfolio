@@ -7,6 +7,12 @@ export default function Pagination() {
   return (
     <>
       <ul className="flex justify-center items-center gap-8">
+        <i
+          onClick={() => {
+            page != totalPages[0] ? setPage(page - 1) : "";
+          }}
+          className="fa-solid fa-angles-left cursor-pointer hover:text-teal-500 transition-all duration-300"
+        ></i>
         {totalPages.map((number) =>
           number < page - 3 || number > page + 3 ? (
             ""
@@ -24,6 +30,12 @@ export default function Pagination() {
             </li>
           )
         )}
+        <i
+          onClick={() => {
+            page != totalPages[totalPages.length - 1] ? setPage(page + 1) : "";
+          }}
+          className="fa-solid fa-angles-right cursor-pointer hover:text-teal-500 transition-all duration-300"
+        ></i>
       </ul>
     </>
   );
