@@ -14,7 +14,7 @@ export default function Pagination() {
       <ul className="flex justify-center items-center gap-8">
         <i
           onClick={() => {
-            page != totalPages[0] ? setPage(page - 1) : "";
+            page != allPages[0] ? setPage(page - 1) : "";
           }}
           className="fa-solid fa-angles-left cursor-pointer hover:text-teal-500 transition-all duration-300"
         ></i>
@@ -37,7 +37,7 @@ export default function Pagination() {
         )}
         <i
           onClick={() => {
-            page != totalPages[totalPages.length - 1] ? setPage(page + 1) : "";
+            page != allPages[allPages.length - 1] ? setPage(page + 1) : "";
           }}
           className="fa-solid fa-angles-right cursor-pointer hover:text-teal-500 transition-all duration-300"
         ></i>

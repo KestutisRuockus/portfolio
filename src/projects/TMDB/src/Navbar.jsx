@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { TmdbContext } from "./TmdbContext";
 
 export default function Navbar() {
+  const context = useContext(TmdbContext);
+
   const [open, setOpen] = useState(false);
 
   return (
@@ -17,16 +20,34 @@ export default function Navbar() {
           open ? "right-[0]" : "top-[-340px]"
         }  top-0 justify-center items-center text-center gap-12 text-2xl font-bold max-md:bg-teal-900 py-8 px-2 rounded-bl-3xl transition-all duration-500`}
       >
-        <li className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300">
+        {/* <li className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300">
           Home
-        </li>
-        <li className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300">
+        </li> */}
+        <li
+          onClick={() => {
+            context.setPage(1);
+            context.setListUrl("movie/popular");
+          }}
+          className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300"
+        >
           Popular
         </li>
-        <li className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300">
+        <li
+          onClick={() => {
+            context.setPage(1);
+            context.setListUrl("trending/movie/day");
+          }}
+          className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300"
+        >
           Trending
         </li>
-        <li className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300">
+        <li
+          onClick={() => {
+            context.setPage(1);
+            context.setListUrl("movie/upcoming");
+          }}
+          className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300"
+        >
           Upcoming
         </li>
       </ul>

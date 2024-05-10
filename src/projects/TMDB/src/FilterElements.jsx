@@ -1,4 +1,10 @@
+import { useContext } from "react";
+import { TmdbContext } from "./TmdbContext";
+
 export default function FilterElements() {
+  const context = useContext(TmdbContext);
+  console.log(context.filters);
+
   return (
     <div className=" flex gap-2 flex-wrap justify-center items-center p-4">
       {/* Search elements */}

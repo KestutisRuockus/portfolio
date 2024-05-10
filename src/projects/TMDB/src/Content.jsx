@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useContext } from "react";
 import MovieCard from "./MovieCard";
 import { TmdbContext } from "./TmdbContext";
 
@@ -13,24 +13,23 @@ const options = {
 
 export default function Content() {
   const context = useContext(TmdbContext);
+
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie//popular?page=${context.page}`,
+      `https://api.themoviedb.org/3/${context.listUrl}?page=${context.page}`,
       options
     )
       .then((response) => response.json())
       .then((data) => {
-        setMoviesList(data.results);
+        context.setMoviesList(data.results);
         context.setTotalPages(data.total_pages);
       })
       .catch((err) => console.error(err));
-  }, [context.page]);
-
-  const [moviesList, setMoviesList] = useState([]);
+  }, [context.page, context.listUrl]);
 
   return (
     <div className="flex flex-wrap justify-center items-center m-auto my-8 py-8 gap-8 w-4/5 bg-emerald-700 rounded-md">
-      {moviesList.map((movie) => (
+      {context.moviesList.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
     </div>
