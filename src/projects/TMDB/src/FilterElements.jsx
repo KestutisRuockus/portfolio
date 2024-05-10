@@ -5,19 +5,30 @@ export default function FilterElements() {
   const context = useContext(TmdbContext);
   console.log(context.filters);
 
+  function searchText(e) {
+    context.setFilters({ search: e.target.value });
+  }
+
   return (
     <div className=" flex gap-2 flex-wrap justify-center items-center p-4">
       {/* Search elements */}
       <div className="flex items-center">
         <input
+          value={context.filters.search}
+          onChange={searchText}
           className="px-2 mr-2 rounded-md border-4 border-teal-500 text-[#0d253f] font-semibold focus:outline-none"
           type="text"
           placeholder="Search"
         />
-        <button className="text-[#0d253f] font-bold rounded-md bg-white px-4 border-4 border-teal-500 hover:bg-sky-950 hover:text-white transition-all duration-300">
+        <button
+          onClick={() => {
+            context.setPage(1);
+            context.setListUrl(`search/movie?query=${context.filters.search}&`);
+          }}
+          className="text-[#0d253f] font-bold rounded-md bg-white px-4 border-4 border-teal-500 hover:bg-sky-950 hover:text-white transition-all duration-300"
+        >
           Search
         </button>
-        <button></button>
       </div>
       {/* Select genre element */}
       <div>

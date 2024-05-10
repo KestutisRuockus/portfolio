@@ -9,7 +9,8 @@ export default function TmdbIndex() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState([]);
   const [moviesList, setMoviesList] = useState([]);
-  const [listUrl, setListUrl] = useState("movie/upcoming");
+  const [listUrl, setListUrl] = useState("movie/upcoming?");
+  const [listTitle, setListTitle] = useState("popular movies");
   const [filters, setFilters] = useState({
     search: "",
     genre: "all",
@@ -29,11 +30,15 @@ export default function TmdbIndex() {
         setFilters,
         listUrl,
         setListUrl,
+        setListTitle,
       }}
     >
       <div className="bg-[#0d253f] w-full text-white">
         <Navbar />
         <FilterElements />
+        <div className="flex justify-center m-8 text-7xl text-teal-500 font-bold tracking-widest uppercase">
+          <h1>{listTitle}</h1>
+        </div>
         <Content />
         <Pagination />
       </div>

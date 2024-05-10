@@ -26,7 +26,9 @@ export default function Navbar() {
         <li
           onClick={() => {
             context.setPage(1);
-            context.setListUrl("movie/popular");
+            context.setFilters({ search: "" });
+            context.setListTitle("popular movies");
+            context.setListUrl("movie/popular?");
           }}
           className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300"
         >
@@ -35,7 +37,9 @@ export default function Navbar() {
         <li
           onClick={() => {
             context.setPage(1);
-            context.setListUrl("trending/movie/day");
+            context.setFilters({ search: "" });
+            context.setListTitle("Trending movies");
+            context.setListUrl("trending/movie/day?");
           }}
           className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300"
         >
@@ -44,7 +48,9 @@ export default function Navbar() {
         <li
           onClick={() => {
             context.setPage(1);
-            context.setListUrl("movie/upcoming");
+            context.setFilters({ search: "" });
+            context.setListTitle("Upcoming movies");
+            context.setListUrl("movie/upcoming?");
           }}
           className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300"
         >
