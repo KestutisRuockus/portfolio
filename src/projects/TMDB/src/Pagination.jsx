@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { TmdbContext } from "./TmdbContext";
 
 export default function Pagination() {
-  const [page, setPage] = useState(1);
-  const totalPages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  const { page, setPage, totalPages } = useContext(TmdbContext);
+  console.log();
+  const allPages = [];
+  for (let i = 1; i <= totalPages; i++) {
+    allPages.push(i);
+  }
 
   return (
     <>
@@ -13,8 +18,8 @@ export default function Pagination() {
           }}
           className="fa-solid fa-angles-left cursor-pointer hover:text-teal-500 transition-all duration-300"
         ></i>
-        {totalPages.map((number) =>
-          number < page - 3 || number > page + 3 ? (
+        {allPages.map((number) =>
+          number < page - 2 || number > page + 2 ? (
             ""
           ) : (
             <li

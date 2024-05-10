@@ -14,11 +14,14 @@ export default function Navbar() {
       </div>
       <ul
         className={`md:w-auto w-3/5 flex flex-col md:flex-row max-md:absolute right-0 ${
-          open ? "right-[0]" : "top-[-275px]"
+          open ? "right-[0]" : "top-[-340px]"
         }  top-0 justify-center items-center text-center gap-12 text-2xl font-bold max-md:bg-teal-900 py-8 px-2 rounded-bl-3xl transition-all duration-500`}
       >
         <li className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300">
           Home
+        </li>
+        <li className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300">
+          Popular
         </li>
         <li className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300">
           Trending
