@@ -26,7 +26,7 @@ export default function Content() {
         context.setTotalPages(data.total_pages);
       })
       .catch((err) => console.error(err));
-  }, [context.page, context.listUrl]);
+  }, [context.page, context.listUrl, context.filters.genre]);
 
   useEffect(() => {
     setFilteredMoviesList(context.moviesList);

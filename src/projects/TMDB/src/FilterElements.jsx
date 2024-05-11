@@ -2,8 +2,53 @@ import { useContext } from "react";
 import { TmdbContext } from "./TmdbContext";
 
 export default function FilterElements() {
+  const moviesGenries = [
+    { id: "all", genre: "Clear Genre filter" },
+    { id: "28", genre: "Action" },
+    { id: "12", genre: "Adventure" },
+    { id: "16", genre: "Animation" },
+    { id: "35", genre: "Comedy" },
+    { id: "80", genre: "Crime" },
+    { id: "99", genre: "Documentary" },
+    { id: "18", genre: "Drama" },
+    { id: "10751", genre: "Family" },
+    { id: "14", genre: "Fantasy" },
+    { id: "36", genre: "History" },
+    { id: "27", genre: "Horror" },
+    { id: "10402", genre: "Music" },
+    { id: "9648", genre: "Mystery" },
+    { id: "10749", genre: "Romance" },
+    { id: "878", genre: "Science Fiction" },
+    { id: "10770", genre: "TV Movie" },
+    { id: "53", genre: "Thriller" },
+    { id: "10752", genre: "War" },
+    { id: "37", genre: "Western" },
+  ];
+
   const context = useContext(TmdbContext);
-  console.log(context.filters);
+
+  function getMoviesByGenre(e) {
+    const filteredListTitle = moviesGenries.filter(
+      (genre) => genre.id === e.target.value
+    );
+
+    context.setPage(1);
+    context.setListTitle(
+      e.target.value === "all"
+        ? "popular movies"
+        : `${filteredListTitle[0].genre} movies`
+    );
+    context.setFilters({
+      genre: e.target.value,
+    });
+    context.setListUrl(
+      e.target.value === "all"
+        ? "movie/upcoming?"
+        : `discover/movie?${import.meta.env.REACT_API_KEY}&with_genres=${
+            e.target.value
+          }&`
+    );
+  }
 
   function searchText(e) {
     context.setFilters({ search: e.target.value });
@@ -23,7 +68,9 @@ export default function FilterElements() {
         <button
           onClick={() => {
             context.setPage(1);
+            context.setListTitle(`'${context.filters.search}' results`);
             context.setListUrl(`search/movie?query=${context.filters.search}&`);
+            context.setFilters({ search: "" });
           }}
           className="text-[#0d253f] font-bold rounded-md bg-white px-4 border-4 border-teal-500 hover:bg-sky-950 hover:text-white transition-all duration-300"
         >
@@ -32,16 +79,19 @@ export default function FilterElements() {
       </div>
       {/* Select genre element */}
       <div>
-        <select className="text-[#0d253f] font-bold rounded-md bg-white px-2 border-4 border-teal-500 hover:bg-sky-950 hover:text-white focus:outline-none transition-all duration-300">
-          <option value="all">All genres</option>
-          <option value="action">Action</option>
-          <option value="adventure">Adventure</option>
-          <option value="animation">Animation</option>
-          <option value="comedy">Comedy</option>
-          <option value="documentary">Documentary</option>
-          <option value="drama">Drama</option>
-          <option value="horror">Horror</option>
-          <option value="war">War</option>
+        <select
+          onChange={getMoviesByGenre}
+          className="text-[#0d253f] font-bold rounded-md bg-white px-2 border-4 border-teal-500 hover:bg-sky-950 hover:text-white focus:outline-none transition-all duration-300"
+        >
+          {moviesGenries.map((genre) => (
+            <option
+              onChange={getMoviesByGenre}
+              key={`genre: ${genre.id}`}
+              value={genre.id}
+            >
+              {genre.genre}
+            </option>
+          ))}
         </select>
       </div>
       {/* Sort elements */}
