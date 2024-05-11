@@ -15,6 +15,7 @@ export default function TmdbIndex() {
     search: "",
     genre: "all",
   });
+  const [open, setOpen] = useState(true);
 
   return (
     <TmdbContext.Provider
@@ -30,6 +31,8 @@ export default function TmdbIndex() {
         listUrl,
         setListUrl,
         setListTitle,
+        open,
+        setOpen,
       }}
     >
       <div className="bg-[#0d253f] w-full text-white">

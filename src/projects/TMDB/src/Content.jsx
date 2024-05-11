@@ -1,6 +1,7 @@
 import { useEffect, useContext, useState } from "react";
 import MovieCard from "./MovieCard";
 import { TmdbContext } from "./TmdbContext";
+import Modal from "./Modal";
 
 const options = {
   method: "GET",
@@ -23,6 +24,7 @@ export default function Content() {
       .then((response) => response.json())
       .then((data) => {
         context.setMoviesList(data.results);
+        console.log(data.results);
         context.setTotalPages(data.total_pages);
       })
       .catch((err) => console.error(err));
@@ -33,10 +35,11 @@ export default function Content() {
   }, [context.filters.search, context.moviesList]);
 
   return (
-    <div className="flex flex-wrap justify-center items-center m-auto my-8 py-8 gap-8 w-4/5 bg-emerald-700 rounded-md">
+    <div className="flex flex-wrap justify-center items-center m-auto my-8 py-8 gap-8 w-4/5 bg-emerald-700 rounded-md relative">
       {filteredMoviesList.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
+      <Modal onClose={() => context.setOpen(false)} />
     </div>
   );
 }

@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import noImage from "../assets/no-image-1.svg";
+import { TmdbContext } from "./TmdbContext";
 
 export default function MovieCard(movie) {
+  const context = useContext(TmdbContext);
+
   return (
     <div
+      onClick={() => context.setOpen(true)}
       id={movie.movie.id}
       className="flex flex-col bg-gradient-to-r from-cyan-500 to-teal-500 w-44 h-80 rounded-xl cursor-pointer hover:opacity-80 transition-all duration-300"
     >
