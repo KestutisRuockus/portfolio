@@ -20,9 +20,17 @@ export default function Navbar() {
           open ? "right-[0]" : "top-[-340px]"
         }  top-0 justify-center items-center text-center gap-12 text-2xl font-bold max-md:bg-teal-900 py-8 px-2 rounded-bl-3xl transition-all duration-500`}
       >
-        {/* <li className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300">
-          Home
-        </li> */}
+        <li
+          onClick={() => {
+            context.setPage(1);
+            context.setFilters({ search: "" });
+            context.setListTitle("Top Rated movies");
+            context.setListUrl("movie/top_rated?");
+          }}
+          className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300"
+        >
+          Top Rated
+        </li>
         <li
           onClick={() => {
             context.setPage(1);

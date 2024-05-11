@@ -9,12 +9,11 @@ export default function TmdbIndex() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState([]);
   const [moviesList, setMoviesList] = useState([]);
-  const [listUrl, setListUrl] = useState("movie/upcoming?");
+  const [listUrl, setListUrl] = useState("movie/popular?");
   const [listTitle, setListTitle] = useState("popular movies");
   const [filters, setFilters] = useState({
     search: "",
     genre: "all",
-    sort: "popular-desc",
   });
 
   return (
