@@ -24,7 +24,6 @@ export default function Content() {
       .then((response) => response.json())
       .then((data) => {
         context.setMoviesList(data.results);
-        console.log(data.results);
         context.setTotalPages(data.total_pages);
       })
       .catch((err) => console.error(err));

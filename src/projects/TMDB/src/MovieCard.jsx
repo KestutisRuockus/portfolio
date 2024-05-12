@@ -1,13 +1,47 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import noImage from "../assets/no-image-1.svg";
 import { TmdbContext } from "./TmdbContext";
 
 export default function MovieCard(movie) {
   const context = useContext(TmdbContext);
+  const [movieId, setMovieId] = useState(null);
+
+  useEffect(() => {
+    const options = {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2OWUzMmVlNTM2Y2JiMTg5MDJhYjUyNDkxMzFmNGU3ZiIsInN1YiI6IjYyZDcyMTQ2NmJlYWVhMDA0YzM1NjI2OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.gICniYLTW8OBAczVNLw7ATkeVoZTL7ivc73FQDuJzhg",
+      },
+    };
+
+    if (movieId) {
+      fetch(`https://api.themoviedb.org/3/movie/${movieId}`, options)
+        .then((response) => response.json())
+        .then((data) => {
+          const genriesList = [];
+          for (const genre in data.genres) {
+            genriesList.push(data.genres[genre].name);
+          }
+          context.setMovieInfoForModalWindow({
+            posterPath: data.poster_path,
+            title: data.title,
+            rating: data.vote_average.toFixed(1),
+            overview: data.overview,
+            genre: genriesList,
+          });
+        });
+    }
+  }, [movieId]);
 
   return (
     <div
-      onClick={() => context.setOpen(true)}
+      onClick={() => {
+        setMovieId(movie.movie.id);
+
+        context.setOpen(true);
+      }}
       id={movie.movie.id}
       className="flex flex-col bg-gradient-to-r from-cyan-500 to-teal-500 w-44 h-80 rounded-xl cursor-pointer hover:opacity-80 transition-all duration-300"
     >

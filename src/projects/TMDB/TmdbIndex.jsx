@@ -15,7 +15,14 @@ export default function TmdbIndex() {
     search: "",
     genre: "all",
   });
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
+  const [movieInfoForModalWindow, setMovieInfoForModalWindow] = useState({
+    posterPath: "",
+    title: "",
+    rating: 0,
+    overview: "",
+    genre: [],
+  });
 
   return (
     <TmdbContext.Provider
@@ -33,12 +40,14 @@ export default function TmdbIndex() {
         setListTitle,
         open,
         setOpen,
+        movieInfoForModalWindow,
+        setMovieInfoForModalWindow,
       }}
     >
       <div className="bg-[#0d253f] w-full text-white">
         <Navbar />
         <FilterElements />
-        <div className="flex justify-center m-8 text-7xl text-teal-500 font-bold tracking-widest uppercase">
+        <div className="flex justify-center m-8 sm:text-7xl text-4xl text-center text-teal-500 font-bold tracking-widest uppercase">
           <h1>{listTitle}</h1>
         </div>
         <Content />
