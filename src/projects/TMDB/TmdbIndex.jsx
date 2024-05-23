@@ -9,6 +9,12 @@ export default function TmdbIndex() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState([]);
   const [moviesList, setMoviesList] = useState([]);
+
+  // create key in localStorage if it does not exist
+  const checkLocalStorage = localStorage.getItem("myList");
+  if (checkLocalStorage === null)
+    localStorage.setItem("myList", JSON.stringify([]));
+
   const [listUrl, setListUrl] = useState("movie/popular?");
   const [listTitle, setListTitle] = useState("popular movies");
   const [filters, setFilters] = useState({
@@ -17,12 +23,17 @@ export default function TmdbIndex() {
   });
   const [open, setOpen] = useState(false);
   const [movieInfoForModalWindow, setMovieInfoForModalWindow] = useState({
-    posterPath: "",
+    id: 0,
+    poster_path: "",
     title: "",
     rating: 0,
     overview: "",
     genre: [],
+    release_date: "",
   });
+  const [myListInLocalStorage, setMyListInLocalStorage] = useState(
+    JSON.parse(localStorage.getItem("myList"))
+  );
 
   return (
     <TmdbContext.Provider
@@ -42,6 +53,8 @@ export default function TmdbIndex() {
         setOpen,
         movieInfoForModalWindow,
         setMovieInfoForModalWindow,
+        myListInLocalStorage,
+        setMyListInLocalStorage,
       }}
     >
       <div className="bg-[#0d253f] w-full text-white">

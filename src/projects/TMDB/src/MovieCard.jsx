@@ -25,11 +25,13 @@ export default function MovieCard(movie) {
             genriesList.push(data.genres[genre].name);
           }
           context.setMovieInfoForModalWindow({
-            posterPath: data.poster_path,
+            id: data.id,
+            poster_path: data.poster_path,
             title: data.title,
             rating: data.vote_average.toFixed(1),
             overview: data.overview,
             genre: genriesList,
+            release_date: data.release_date,
           });
         });
     }

@@ -2,9 +2,21 @@ import { useContext } from "react";
 import noImage from "../assets/no-image-1.svg";
 import { TmdbContext } from "./TmdbContext";
 
+function saveMovieToLocalStorage(movie) {
+  localStorage.setItem("myList", JSON.stringify(movie));
+}
+
 export default function Modal({ onClose, children }) {
   const context = useContext(TmdbContext);
   let genriesStr = context.movieInfoForModalWindow.genre.join(", ");
+
+  const listInMyList = JSON.parse(localStorage.getItem("myList")); // list from local storage
+  let movieExistInMyList;
+  if (listInMyList) {
+    movieExistInMyList = listInMyList.find(
+      (movie) => movie.id === context.movieInfoForModalWindow.id
+    );
+  }
 
   return (
     <div
@@ -17,7 +29,37 @@ export default function Modal({ onClose, children }) {
         onClick={(e) => e.stopPropagation()}
         className="w-full md:h-full h-fit md:px-8 md:py-0 py-12 flex flex-col md:flex-row justify-center items-center gap-12 relative bg-black/90"
       >
-        <div className="absolute max-[500px]:top-4 max-[500px]:right-4 top-8 right-12">
+        <div className=" flex justify-center items-center gap-4 absolute max-[500px]:top-4 max-[500px]:right-4 top-8 right-12">
+          {!movieExistInMyList ? (
+            <i
+              onClick={() => {
+                const listFromLocalStorage = JSON.parse(
+                  localStorage.getItem("myList") || []
+                );
+                const newList = [
+                  ...listFromLocalStorage,
+                  context.movieInfoForModalWindow,
+                ];
+                context.setMyListInLocalStorage(newList);
+                saveMovieToLocalStorage(newList);
+              }}
+              className="fa-solid fa-heart-circle-plus text-4xl text-teal-500 cursor-pointer"
+            ></i>
+          ) : (
+            <i
+              onClick={() => {
+                const myList = JSON.parse(localStorage.getItem("myList"));
+                const newList = myList.filter(
+                  (movie) => movie.id !== context.movieInfoForModalWindow.id
+                );
+                saveMovieToLocalStorage(newList);
+                context.setMoviesList(newList);
+                context.setMyListInLocalStorage(newList);
+              }}
+              className="fa-solid fa-heart-circle-minus text-4xl text-rose-500 cursor-pointer"
+            ></i>
+          )}
+
           <i
             onClick={onClose}
             className="fa-regular fa-rectangle-xmark text-white text-4xl cursor-pointer hover:text-teal-500 transition-colors duration-300"
@@ -28,8 +70,8 @@ export default function Modal({ onClose, children }) {
           <img
             className="w-full bg-gray-300"
             src={
-              context.movieInfoForModalWindow.posterPath !== null
-                ? `https://image.tmdb.org/t/p/w500/${context.movieInfoForModalWindow.posterPath}`
+              context.movieInfoForModalWindow.poster_path !== null
+                ? `https://image.tmdb.org/t/p/w500/${context.movieInfoForModalWindow.poster_path}`
                 : noImage
             }
             alt="movie-poster"

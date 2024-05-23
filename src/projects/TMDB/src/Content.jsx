@@ -17,21 +17,25 @@ export default function Content() {
   const [filteredMoviesList, setFilteredMoviesList] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/${context.listUrl}page=${context.page}`,
-      options
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        context.setMoviesList(data.results);
-        context.setTotalPages(data.total_pages);
-      })
-      .catch((err) => console.error(err));
+    const url = `https://api.themoviedb.org/3/${context.listUrl}page=${context.page}`;
+    if (context.listUrl !== "") {
+      fetch(url, options)
+        .then((response) => response.json())
+        .then((data) => {
+          context.setMoviesList(data.results);
+          context.setTotalPages(data.total_pages);
+        })
+        .catch((err) => console.error(err));
+    }
   }, [context.page, context.listUrl, context.filters.genre]);
 
   useEffect(() => {
     setFilteredMoviesList(context.moviesList);
-  }, [context.filters.search, context.moviesList]);
+  }, [
+    context.filters.search,
+    context.moviesList,
+    context.myListInLocalStorage,
+  ]);
 
   return (
     <div className="flex flex-wrap justify-center items-center m-auto my-8 py-8 gap-8 w-4/5 bg-emerald-700 rounded-md relative">

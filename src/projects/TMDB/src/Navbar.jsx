@@ -64,6 +64,18 @@ export default function Navbar() {
         >
           Upcoming
         </li>
+        <li
+          onClick={() => {
+            context.setPage(1);
+            context.setFilters({ search: "" });
+            context.setListTitle("My list");
+            context.setListUrl("");
+            context.setMoviesList(context.myListInLocalStorage);
+          }}
+          className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300"
+        >
+          My List
+        </li>
       </ul>
 
       <div
