@@ -68,3 +68,7 @@ body {
 .break-text {
   overflow-wrap: break-word;
 }
+
+.tmdb-bg {
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}

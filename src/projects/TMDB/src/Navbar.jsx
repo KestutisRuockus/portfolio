@@ -2,13 +2,19 @@ import { useContext, useState } from "react";
 import { TmdbContext } from "./TmdbContext";
 
 export default function Navbar() {
-  function setStatesOnNavbarLinkClicked(searchText, listTitle, listUrl) {
+  function setStatesOnNavbarLinkClicked(
+    searchText,
+    listTitle,
+    listUrl,
+    showPagination
+  ) {
     context.setPage(1);
     context.setFilters({ search: searchText });
     context.setListTitle(`${listTitle} movies`);
     context.setListUrl(listUrl);
     setOpen(false);
     context.setOpen(false);
+    context.setShowPagination(showPagination);
   }
 
   const context = useContext(TmdbContext);
@@ -26,12 +32,17 @@ export default function Navbar() {
       </div>
       <ul
         className={`md:w-auto w-3/5 flex flex-col md:flex-row max-md:absolute max-md:z-30 z-0 right-0 ${
-          open ? "right-[0]" : "top-[-400px] z-20"
+          open ? "right-[0]" : "top-[-400px] z-10"
         }  top-0 justify-center items-center text-center min-[860px]:gap-12 min-[800px]:gap-10 gap-8 text-2xl font-bold max-md:bg-teal-900 py-8 px-2 rounded-bl-3xl transition-all duration-500`}
       >
         <li
           onClick={() => {
-            setStatesOnNavbarLinkClicked("", "Top Rated", "movie/top_rated?");
+            setStatesOnNavbarLinkClicked(
+              "",
+              "Top Rated",
+              "movie/top_rated?",
+              true
+            );
           }}
           className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300"
         >
@@ -39,7 +50,7 @@ export default function Navbar() {
         </li>
         <li
           onClick={() => {
-            setStatesOnNavbarLinkClicked("", "popular", "movie/popular?");
+            setStatesOnNavbarLinkClicked("", "popular", "movie/popular?", true);
           }}
           className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300"
         >
@@ -47,7 +58,12 @@ export default function Navbar() {
         </li>
         <li
           onClick={() => {
-            setStatesOnNavbarLinkClicked("", "Trending", "trending/movie/day?");
+            setStatesOnNavbarLinkClicked(
+              "",
+              "Trending",
+              "trending/movie/day?",
+              true
+            );
           }}
           className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300"
         >
@@ -55,7 +71,12 @@ export default function Navbar() {
         </li>
         <li
           onClick={() => {
-            setStatesOnNavbarLinkClicked("", "Upcoming", "movie/upcoming?");
+            setStatesOnNavbarLinkClicked(
+              "",
+              "Upcoming",
+              "movie/upcoming?",
+              true
+            );
           }}
           className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300"
         >
@@ -63,7 +84,7 @@ export default function Navbar() {
         </li>
         <li
           onClick={() => {
-            setStatesOnNavbarLinkClicked("", "My list", "");
+            setStatesOnNavbarLinkClicked("", "My list", "", false);
             context.setMoviesList(context.myListInLocalStorage);
           }}
           className="cursor-pointer hover:scale-125  hover:text-teal-500 transition-all duration-300"

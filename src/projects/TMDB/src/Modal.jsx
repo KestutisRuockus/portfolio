@@ -21,7 +21,7 @@ export default function Modal({ onClose, children }) {
   return (
     <div
       onClick={onClose}
-      className={`overflow-y-auto w-4/5 h-full fixed z-30 top-0 m-auto  bg-contain bg-center bg-no-repeat  ${
+      className={`overflow-y-auto w-4/5 h-full fixed z-40 top-0 m-auto  bg-contain bg-center bg-no-repeat  ${
         context.open ? "visible" : "invisible"
       }`}
     >
@@ -90,8 +90,9 @@ export default function Modal({ onClose, children }) {
               </p>
             </div>
             {/* rating */}
-            <div className="text-xl font-bold text-orange-500">
+            <div className="text-nowrap text-xl font-bold text-yellow-500">
               {+context.movieInfoForModalWindow.rating}
+              <i className="fa-solid fa-star text-xs"></i>
             </div>
           </div>
           {/* overview */}

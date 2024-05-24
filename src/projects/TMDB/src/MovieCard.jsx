@@ -45,7 +45,7 @@ export default function MovieCard(movie) {
         context.setOpen(true);
       }}
       id={movie.movie.id}
-      className="flex flex-col bg-gradient-to-r from-cyan-500 to-teal-500 w-44 h-80 rounded-xl cursor-pointer hover:opacity-80 transition-all duration-300"
+      className="flex flex-col bg-gradient-to-r from-cyan-500 to-teal-500 w-44 h-80 rounded-xl cursor-pointer hover:scale-125 transition-all duration-300"
     >
       <div className="bg-slate-200 h-2/3 rounded-xl">
         <img

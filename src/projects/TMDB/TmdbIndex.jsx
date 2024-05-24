@@ -34,6 +34,7 @@ export default function TmdbIndex() {
   const [myListInLocalStorage, setMyListInLocalStorage] = useState(
     JSON.parse(localStorage.getItem("myList"))
   );
+  const [showPagination, setShowPagination] = useState(false);
 
   return (
     <TmdbContext.Provider
@@ -55,9 +56,11 @@ export default function TmdbIndex() {
         setMovieInfoForModalWindow,
         myListInLocalStorage,
         setMyListInLocalStorage,
+        showPagination,
+        setShowPagination,
       }}
     >
-      <div className="bg-[#0d253f] w-full text-white">
+      <div className="tmdb-bg w-full text-white">
         <Navbar />
         <FilterElements />
         <div className="flex justify-center m-8 sm:text-7xl text-4xl text-center text-teal-500 font-bold tracking-widest uppercase">
