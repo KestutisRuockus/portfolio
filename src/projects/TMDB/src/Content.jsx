@@ -38,7 +38,7 @@ export default function Content() {
   ]);
 
   return (
-    <div className="flex flex-wrap justify-center items-center m-auto my-8 py-8 gap-8 w-4/5 bg-emerald-700 rounded-md relative">
+    <div className="flex flex-wrap justify-center items-center m-auto my-8 py-8 gap-8 w-4/5 bg-emerald-700 rounded-md relative z-10">
       {filteredMoviesList.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}

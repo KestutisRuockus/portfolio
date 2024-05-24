@@ -21,7 +21,7 @@ export default function Modal({ onClose, children }) {
   return (
     <div
       onClick={onClose}
-      className={`overflow-y-auto w-4/5 h-full fixed top-0 m-auto  bg-contain bg-center bg-no-repeat z-10 ${
+      className={`overflow-y-auto w-4/5 h-full fixed z-30 top-0 m-auto  bg-contain bg-center bg-no-repeat  ${
         context.open ? "visible" : "invisible"
       }`}
     >
@@ -66,7 +66,7 @@ export default function Modal({ onClose, children }) {
           ></i>
         </div>
         {/* poster */}
-        <div className="w-1/2 max-w-[300px] md:1/3 border-8 border-yellow-600">
+        <div className="w-1/2 max-w-[300px] md:1/3 border-8 border-yellow-600 md:mt-0 mt-10">
           <img
             className="w-full bg-gray-300"
             src={
