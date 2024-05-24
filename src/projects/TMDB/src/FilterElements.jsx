@@ -35,6 +35,11 @@ export default function FilterElements() {
     context.setFilters({
       genre: e.target.value,
     });
+    context.setListTitle(
+      `${
+        moviesGenriesList.find((genre) => genre.id == e.target.value).name
+      } movies`
+    );
     context.setListUrl(
       e.target.value === "all"
         ? "movie/upcoming?"
@@ -84,6 +89,7 @@ export default function FilterElements() {
           {moviesGenriesList.map((genre) => (
             <option
               onChange={getMoviesByGenre}
+              id={genre.id}
               key={`genre-${genre.id}`}
               value={genre.id}
             >

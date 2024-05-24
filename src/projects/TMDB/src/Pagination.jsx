@@ -11,7 +11,7 @@ export default function Pagination() {
 
   return (
     <>
-      <ul className="flex justify-center items-center gap-8">
+      <ul className="flex justify-center items-center gap-8 pb-8">
         <i
           onClick={() => {
             page != allPages[0] ? setPage(page - 1) : "";

@@ -59,7 +59,7 @@ export default function MovieCard(movie) {
         />
       </div>
       <div className="h-1/3 flex flex-col gap-2 justify-center pl-3 rounded-xl">
-        <h1 className="text-lg font-bold text-black max-h-16 overflow-hidden leading-4">
+        <h1 className="text-lg font-bold text-black max-h-16 overflow-hidden leading-4 pb-1">
           {movie.movie.title}
         </h1>
         <p className="text-slate-600 font-meidum">{movie.movie.release_date}</p>
