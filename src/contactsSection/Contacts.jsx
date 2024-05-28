@@ -1,6 +1,7 @@
 export default function Contacts() {
   return (
     <div
+      id="contacts"
       className="text-white text-md flex flex-wrap justify-start md:justify-center gap-6 bg-sky-950 bg-opacity-70 w-4/5 mt-14 px-5 py-14 rounded-md
      shadow-xl shadow-cyan-500/50 font-bold relative"
     >
@@ -10,7 +11,7 @@ export default function Contacts() {
 
       <div className="flex gap-2 max-[640px]:w-full">
         <h3 className="text-slate-400">Email:</h3>
-        <span className="cursor-pointer hover:text-slate-300 break-text max-[640px]:w-3/5">
+        <span className="break-text max-[640px]:w-3/5">
           kestutisruockus@gmail.com
         </span>
       </div>
@@ -21,15 +22,23 @@ export default function Contacts() {
 
       <div className="flex gap-2 max-[640px]:w-full">
         <h3 className="text-slate-400">GitHub:</h3>
-        <span className="cursor-pointer hover:text-slate-300 break-text max-[640px]:w-3/5">
+        <a
+          className="cursor-pointer hover:text-slate-300 break-text max-[640px]:w-3/5"
+          href="https://github.com/KestutisRuockus"
+          target="_blank"
+        >
           https://github.com/KestutisRuockus
-        </span>
+        </a>
       </div>
       <div className="flex gap-2 max-[640px]:w-full">
         <h3 className="text-slate-400">LinkedIn:</h3>
-        <span className="cursor-pointer hover:text-slate-300 break-text max-[640px]:w-3/5">
-          https://www.linkedin.com/in/k%C4%99stutis-ruo%C4%8Dkus-1a74251ab/
-        </span>
+        <a
+          className="cursor-pointer hover:text-slate-300 break-text max-[640px]:w-3/5"
+          href="https://www.linkedin.com/in/kestutis-ruockus/"
+          target="_blank"
+        >
+          https://www.linkedin.com/in/kestutis-ruockus/
+        </a>
       </div>
       <div className="flex gap-2 max-[640px]:w-full">
         <h3 className="text-slate-400">Location:</h3>

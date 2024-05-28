@@ -34,7 +34,7 @@ export default function TmdbIndex() {
   const [myListInLocalStorage, setMyListInLocalStorage] = useState(
     JSON.parse(localStorage.getItem("myList"))
   );
-  const [showPagination, setShowPagination] = useState(false);
+  const [showPagination, setShowPagination] = useState(true);
 
   return (
     <TmdbContext.Provider

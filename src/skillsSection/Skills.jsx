@@ -7,7 +7,7 @@ export default function Skills() {
      shadow-xl shadow-cyan-500/50 font-bold relative"
     >
       <div className="absolute left-4 top-4 text-sky-700 text-lg underline underline-offset-1 cursor-default">
-        Skills
+        Tech Stack
       </div>
       <div className="flex flex-col justify-center items-center">
         <i className="fa-brands fa-html5 text-6xl text-orange-600"></i>

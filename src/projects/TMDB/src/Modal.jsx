@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import noImage from "../assets/no-image-1.svg";
+import noImage from "../assets/no-image.svg";
 import { TmdbContext } from "./TmdbContext";
 
 function saveMovieToLocalStorage(movie) {
