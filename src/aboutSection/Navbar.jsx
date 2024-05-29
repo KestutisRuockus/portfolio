@@ -29,16 +29,15 @@ export default function Navbar() {
         )}
       </div>
       <ul
-        className={`flex flex-col sm:flex-row justify-center gap-4 sm:gap-10 sm:items-center absolute sm:static bg-transparent bg-white
-         sm:text-white text-xl text-sky-950 sm:z-auto z-[30] left-[55%] w-1/2 max-[400px]:w-[45%] sm:h-auto h-[180px] sm:w-auto sm:pl-0 pl-6 
+        className={`flex flex-col sm:flex-row justify-center gap-0 sm:gap-10 sm:items-center absolute sm:static sm:bg-transparent bg-white
+         sm:text-white text-xl text-sky-950 sm:z-auto z-[30] left-[55%] w-1/2 max-[400px]:w-[45%] sm:h-auto h-[220px] sm:w-auto sm:pl-0 pl-6 
          max-[400px]:ml-3 transition-all duration-500 ease-in font-bold ${
            open ? "top-0" : "top-[-490px]"
          }`}
       >
-        {/* ${open ? "top-20" : "top-[-490px]"} */}
         {Links.map((link) => (
           <li
-            className="hover:text-yellow-300 duration-300 sm:hover:scale-125 hover:scale-110 cursor-pointer text-start p-2"
+            className="hover:text-yellow-300 duration-300 sm:hover:scale-125 hover:scale-110 cursor-pointer text-4xl text-start pl-2 font-bold"
             key={link.name}
           >
             <a href={link.link}>{link.name}</a>
