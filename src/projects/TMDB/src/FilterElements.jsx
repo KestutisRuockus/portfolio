@@ -54,9 +54,9 @@ export default function FilterElements() {
   }
 
   return (
-    <div className=" flex gap-2 flex-wrap justify-center items-center p-4">
+    <div className="flex gap-2 flex-wrap justify-center items-center p-">
       {/* Search elements */}
-      <div className="flex items-center">
+      <div className="flex flex-wrap items-center justify-center gap-2">
         <input
           value={context.filters.search}
           onChange={searchText}

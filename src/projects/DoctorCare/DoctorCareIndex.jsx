@@ -14,11 +14,11 @@ import imgPicture2 from "./assets/img/picture2.svg";
 export default function DoctorCareIndex() {
   return (
     <div className="doctor-care-body">
-      <header>
+      <header className="doctor-care-header">
         <div className="title">
           Doctor<strong>Care</strong>
         </div>
-        <nav className="nav">
+        <nav className="doctor-care-nav">
           <ul>
             <li>
               <a href="#start">Início</a>
@@ -238,7 +238,7 @@ export default function DoctorCareIndex() {
         </div>
       </section>
       {/* <!-- footer --> */}
-      <footer>
+      <footer className="doctor-care-footer">
         <div className="footer-text">
           <div className="footer-title">
             Doctor<strong>Care</strong>
