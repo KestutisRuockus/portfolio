@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 
 export default function aboutus() {
   return (
-    <div className="bg-white pb-4">
+    <div className="bg-white">
       <Navbar />
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
         <div className="sm:w-1/2 w-full">

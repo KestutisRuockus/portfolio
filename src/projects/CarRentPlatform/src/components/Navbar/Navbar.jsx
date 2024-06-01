@@ -29,11 +29,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className=" bg-black">
+    <div className=" bg-[#0D1017]">
       <div className="w-4/5 m-auto flex justify-between items-center">
         <Logo />
         <ul
-          className={`text-white md:w-auto w-3/5 flex flex-col md:flex-row max-md:absolute right-0 top-0 justify-center items-center text-center min-[860px]:gap-12 min-[800px]:gap-10 gap-8 text-2xl font-bol bg-black py-8 px-2 rounded-bl-3xl transition-all duration-500 ${
+          className={`text-white md:w-auto w-3/5 flex flex-col md:flex-row max-md:absolute right-0 top-0 justify-center items-center text-center min-[860px]:gap-12 min-[800px]:gap-10 gap-8 text-2xl font-bol bg-[#0D1017] py-8 px-2 rounded-bl-3xl transition-all duration-500 ${
             open ? "right-[0]" : "top-[-400px]"
           }`}
         >

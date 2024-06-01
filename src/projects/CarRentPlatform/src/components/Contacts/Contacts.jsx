@@ -18,7 +18,7 @@ export default function Contacts() {
           <BiuroCard />
           <BiuroCard />
         </div>
-        <div className="w-1/3 max-[900px]:w-2/3 max-[900px]:w-full">
+        <div className="w-1/3 max-[900px]:w-full">
           <ContactUsForm />
         </div>
       </div>

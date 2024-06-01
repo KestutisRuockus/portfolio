@@ -22,7 +22,7 @@ export default function Contacts() {
           <span className="font-medium">Email:</span>
           <p>
             <strong className="text-[#21B14C] cursor-pointer underline hover:text-black hover:no-underline transition-all duration-200">
-              +*********
+              ***.***@*****.com
             </strong>
           </p>
         </div>
