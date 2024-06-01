@@ -10,6 +10,11 @@ import imgDoctorCare1 from "../projects/DoctorCare/assets/img/doctorCare-1.png";
 import imgDoctorCare2 from "../projects/DoctorCare/assets/img/doctorCare-2.png";
 import imgDoctorCare3 from "../projects/DoctorCare/assets/img/doctorCare-3.png";
 import imgDoctorCare4 from "../projects/DoctorCare/assets/img/doctorCare-4.png";
+// Car Rent Platform Project images
+import carRentPlatform1 from "../projects/CarRentPlatform/assets/img/no-image.svg";
+import carRentPlatform2 from "../projects/CarRentPlatform/assets/img/no-image.svg";
+import carRentPlatform3 from "../projects/CarRentPlatform/assets/img/no-image.svg";
+import carRentPlatform4 from "../projects/CarRentPlatform/assets/img/no-image.svg";
 
 // PROEJCTS ARRAY
 // 1. DoctorCare landing page
@@ -31,6 +36,18 @@ const projectsDetails = [
     url: "/tmdb-project",
     github:
       "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/TMDB",
+  },
+  {
+    name: "Car Rent Platform",
+    description: "Car rent platform",
+    images: [
+      carRentPlatform1,
+      carRentPlatform2,
+      carRentPlatform3,
+      carRentPlatform4,
+    ],
+    url: "/carrentplatform",
+    github: "",
   },
 ];
 
@@ -105,14 +122,26 @@ const Project = (props) => {
 };
 
 export default function Portfolio() {
+  {
+    /* IMAGES FOR DoctorCare Landing Page */
+  }
   const doctorCareProjectImages = projectsDetails[0].images;
   const [doctorCareCurrentImage, setDoctorCareCurrentImage] = useState(
     doctorCareProjectImages[0]
   );
+  {
+    /* IMAGES FOR TMDB PROJECT */
+  }
   const tmdbProjectImages = projectsDetails[1].images;
   const [tmdbCurrentImage, setTmdbCurrentImage] = useState(
     tmdbProjectImages[0]
   );
+  {
+    /* IMAGES FOR CAR RENT PLATFORM PROJECT */
+  }
+  const CarRentPlatformProjectImages = projectsDetails[2].images;
+  const [CarRentPlatformCurrentImage, setCarRentPlatformCurrentImage] =
+    useState(CarRentPlatformProjectImages[0]);
 
   return (
     <div className="bg-sky-950 w-4/5 mb-20 mt-14 py-14 rounded-md shadow-xl shadow-cyan-500/50 bg-opacity-70 relative">
@@ -133,6 +162,13 @@ export default function Portfolio() {
           projectImages={tmdbProjectImages}
           currentProjectImages={tmdbCurrentImage}
           setCurrentProjectImages={setTmdbCurrentImage}
+        />
+        {/* CAR RENT PLATFORM PROJECT */}
+        <Project
+          project={projectsDetails[2]}
+          projectImages={CarRentPlatformProjectImages}
+          currentProjectImages={CarRentPlatformCurrentImage}
+          setCurrentProjectImages={setCarRentPlatformCurrentImage}
         />
       </div>
     </div>
