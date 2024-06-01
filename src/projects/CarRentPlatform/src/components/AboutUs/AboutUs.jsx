@@ -1,6 +1,6 @@
-import Navbar from "../navbar/Navbar";
-import aboutUsImg from "../../assets/img/aboutUs.jpg";
-import Footer from "../footer/Footer";
+import Navbar from "../Navbar/Navbar";
+import aboutUsImg from "../../../assets/img/aboutUs.jpg";
+import Footer from "../Footer/Footer";
 
 export default function aboutus() {
   return (

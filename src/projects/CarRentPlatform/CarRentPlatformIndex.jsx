@@ -1,9 +1,10 @@
-import Footer from "./src/footer/Footer";
-import Header from "./src/header/Header";
-import Main from "./src/main/Main";
-import Navbar from "./src/navbar/Navbar";
+import Footer from "./src/components/Footer/Footer";
+import Header from "./src/components/Header/Header";
+import Main from "./src/components/Main/Main";
+import Navbar from "./src/components/Navbar/Navbar";
 
 export default function CarRentPlatformIndex() {
+  // when browsers back btn clicked loads main portfolio page
   // {
   //   window.addEventListener(
   //     "popstate",

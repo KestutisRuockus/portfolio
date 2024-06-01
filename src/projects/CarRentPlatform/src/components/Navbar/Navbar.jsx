@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "../logo/Logo";
+import Logo from "../../components/Logo/Logo";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -13,8 +13,8 @@ export default function Navbar() {
       url: "/carrentplatform/allcars",
     },
     {
-      title: "D.U.K.",
-      url: "/carrentplatform/duk",
+      title: "FAQ",
+      url: "/carrentplatform/faq",
     },
     {
       title: "About Us",
