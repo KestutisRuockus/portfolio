@@ -6,7 +6,7 @@ import CarRentPlatformIndex from "./projects/CarRentPlatform/CarRentPlatformInde
 import AllCars from "./projects/CarRentPlatform/src/components/AllCars";
 import DUK from "./projects/CarRentPlatform/src/components/DUK";
 import AboutUs from "./projects/CarRentPlatform/src/components/AboutUs";
-import Contacts from "./projects/CarRentPlatform/src/components/Contacts";
+import Contacts from "./projects/CarRentPlatform/src/components/Contacts/Contacts";
 
 function App() {
   return (

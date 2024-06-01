@@ -16,7 +16,7 @@ export default function aboutus() {
         </div>
         <div className="sm:w-1/2 w-full flex flex-col gap-4 p-4">
           <div className="pb-8">
-            <h1 className="text-4xl font-bold pb-4">About us</h1>
+            <h1 className="text-[#21B14C] text-4xl font-bold pb-4">About us</h1>
             <p>
               We have been working since 2000. Since the establishment of the
               company, our main goal has been the quality of service and
@@ -25,7 +25,9 @@ export default function aboutus() {
             </p>
           </div>
           <div>
-            <h2 className="text-xl font-bold pb-4">Car rental</h2>
+            <h2 className="text-[#21B14C] text-xl font-bold pb-4">
+              Car rental
+            </h2>
             <p>
               Cars are purchased and serviced at the headquarters of official
               representatives. The company does not rent broken down,
@@ -34,9 +36,11 @@ export default function aboutus() {
             </p>
           </div>
           <div>
-            Reserve a car on the website <strong>www.*****.com</strong>, you can
-            also send requests by e-mail <strong>***.***@*****.com</strong> or
-            contact <strong>+*********</strong>.
+            Reserve a car on the website{" "}
+            <strong className="text-[#21B14C]">www.*****.com</strong>, you can
+            also send requests by e-mail{" "}
+            <strong className="text-[#21B14C]">***.***@*****.com</strong> or
+            contact <strong className="text-[#21B14C]">+*********</strong>.
           </div>
         </div>
       </div>
