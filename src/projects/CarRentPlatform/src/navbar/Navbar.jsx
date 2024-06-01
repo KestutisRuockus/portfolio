@@ -39,7 +39,7 @@ export default function Navbar() {
         >
           {links.map((link) => (
             <li
-              className="text-xl hover:text-[#21B14C] hover:underline font-semibold cursor-pointer transition-all duration-200"
+              className="text-xl hover:text-[#21B14C] hover:underline font-semibold cursor-pointer transition-all duration-200 text-nowrap"
               key={link.title}
             >
               <Link to={link.url}>{link.title}</Link>
@@ -48,7 +48,7 @@ export default function Navbar() {
         </ul>
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute md:hidden max-[400px]:right-1 top-1 right-4 z-40 "
+          className="text-3xl absolute md:hidden top-7 right-4 z-40 "
         >
           {open ? (
             <i className="fa-regular fa-rectangle-xmark text-white cursor-pointer"></i>
