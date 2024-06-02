@@ -1,3 +1,9 @@
+import AdvantagesOfCompany from "../Utils/AdvantagesOfCompany";
+
 export default function Header() {
-  return <div>Header</div>;
+  return (
+    <div>
+      <AdvantagesOfCompany />
+    </div>
+  );
 }

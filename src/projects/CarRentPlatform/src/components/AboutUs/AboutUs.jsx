@@ -1,6 +1,7 @@
 import Navbar from "../Navbar/Navbar";
 import aboutUsImg from "../../../assets/img/aboutUs.jpg";
 import Footer from "../Footer/Footer";
+import AdvantagesOfCompany from "../Utils/AdvantagesOfCompany";
 
 export default function aboutus() {
   return (
@@ -44,6 +45,7 @@ export default function aboutus() {
           </div>
         </div>
       </div>
+      <AdvantagesOfCompany />
       <Footer />
     </div>
   );
