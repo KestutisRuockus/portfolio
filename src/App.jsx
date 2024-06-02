@@ -3,7 +3,7 @@ import Home from "./Home";
 import TmdbIndex from "./projects/TMDB/TmdbIndex";
 import DoctorCareIndex from "./projects/DoctorCare/DoctorCareIndex";
 import CarRentPlatformIndex from "./projects/CarRentPlatform/CarRentPlatformIndex";
-import Prices from "./projects/CarRentPlatform/src/components/Cars/Prices";
+import Prices from "./projects/CarRentPlatform/src/components/Prices/Prices";
 import FAQ from "./projects/CarRentPlatform/src/components/FAQ/FAQ";
 import AboutUs from "./projects/CarRentPlatform/src/components/AboutUs/AboutUs";
 import Contacts from "./projects/CarRentPlatform/src/components/Contacts/Contacts";
