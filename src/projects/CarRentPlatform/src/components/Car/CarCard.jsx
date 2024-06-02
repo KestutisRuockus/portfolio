@@ -1,7 +1,50 @@
 import vwPassat from "../../../assets/img/vw-passat/vw-passat.jpg";
 import Button from "../Utils/Button";
+import CarInfo from "./CarInfo";
 
 export default function CarCard() {
+  const car = {
+    carModel: "VW Passat",
+    features: {
+      fuelType: "Gasoline",
+      fuelConsumption: "5-6l/100km",
+      gearbox: "Automatic",
+      doors: "5 doors",
+      seats: "5 seats",
+      bags: "3 bags",
+    },
+    periods: [
+      {
+        days: "1-2",
+        price: "20",
+      },
+      {
+        days: "3-5",
+        price: "**",
+      },
+      {
+        days: "6-8",
+        price: "**",
+      },
+      {
+        days: "9-14",
+        price: "**",
+      },
+      {
+        days: "15-29",
+        price: "**",
+      },
+      {
+        days: "30-365",
+        price: "**",
+      },
+      {
+        days: "Deposit",
+        price: "**",
+      },
+    ],
+  };
+
   return (
     <div className="flex sm:flex-row flex-col justify-center items-center h-1/2 p-2 border-2 border-slate-200 rounded-xl">
       <div className="sm:w-1/2 w-full">
@@ -12,39 +55,13 @@ export default function CarCard() {
         />
       </div>
       <div className="sm:w-1/2 w-full flex flex-col sm:justify-between sm:items-start items-center gap-2  p-2">
-        <div className="font-bold text-lg">VW Passat</div>
-        <div className="flex items-center sm:flex-row flex-col w-full">
-          <div className="flex gap-2 flex-col w-1/2">
-            <div className="flex gap-3 items-center">
-              <i className="fa-solid fa-gas-pump w-4"></i>
-              <span className="text-[0.8rem]">Gasoline</span>
-            </div>
-            <div className="flex gap-3 items-center">
-              <i className="fa-solid fa-droplet  w-4"></i>
-              <span className="text-[0.8rem]">5-6l/100km</span>
-            </div>
-            <div className="flex gap-3 items-center">
-              <i className="fa-solid fa-gears w-4"></i>
-              <span className="text-[0.8rem]">Automatic</span>
-            </div>
-          </div>
-          <div className="flex gap-2 flex-col w-1/2">
-            <div className="flex gap-3 items-center">
-              <i className="fa-solid fa-clipboard w-4"></i>
-              <span className="text-[0.8rem]">5 doors</span>
-            </div>
-            <div className="flex gap-3 items-center">
-              <i className="fa-solid fa-user  w-4"></i>
-              <span className="text-[0.8rem]">5 seats</span>
-            </div>
-            <div className="flex gap-3 items-center">
-              <i className="fa-solid fa-suitcase w-4"></i>
-              <span className="text-[0.8rem]">3 bags</span>
-            </div>
-          </div>
-        </div>
+        <div className="font-bold text-lg">{car.carModel}</div>
+        <CarInfo features={car.features} />
         <div>
-          Price from <strong className="text-[#21B14C]">** Eur / day</strong>
+          Price from{" "}
+          <strong className="text-[#21B14C]">
+            {car.periods[0].price} Eur / day
+          </strong>
         </div>
         <Button text="Reserve" />
       </div>

@@ -1,3 +1,4 @@
+import CarModal from "./src/components/Car/CarModal";
 import Footer from "./src/components/Footer/Footer";
 import Header from "./src/components/Header/Header";
 import Main from "./src/components/Main/Main";
@@ -15,6 +16,7 @@ export default function CarRentPlatformIndex() {
   return (
     <div className="bg-white min-h-screen w-full flex flex-col">
       <Navbar />
+      <CarModal />
       <Header />
       <Main />
       <Footer />
