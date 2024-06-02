@@ -8,8 +8,8 @@ export default function Footer() {
       url: "/carrentplatform",
     },
     {
-      title: "Cars",
-      url: "/carrentplatform/allcars",
+      title: "Prices",
+      url: "/carrentplatform/prices",
     },
     {
       title: "FAQ",

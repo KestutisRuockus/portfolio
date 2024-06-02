@@ -9,8 +9,8 @@ export default function Navbar() {
       url: "/carrentplatform",
     },
     {
-      title: "Cars",
-      url: "/carrentplatform/allcars",
+      title: "Prices",
+      url: "/carrentplatform/prices",
     },
     {
       title: "FAQ",
