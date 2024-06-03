@@ -1,5 +1,4 @@
 export default function CarEquipment({ equipment }) {
-  console.log(equipment);
   return (
     <div className="flex flex-wrap sm:flex-row flex-col items-center w-full">
       {equipment.map((item) => (

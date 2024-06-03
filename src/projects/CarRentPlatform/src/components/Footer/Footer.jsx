@@ -62,16 +62,15 @@ export default function Footer() {
         </div>
         <div className="text-[#21B14C] flex flex-col gap-4">
           <div>CAR RENT PLATFORM</div>
-          <div>
+          <div className="flex flex-col">
             <span>+000000000</span>
             <span>***.***@*****.com</span>
           </div>
-          <div>Address, Kaunas, Lithuania</div>
+          <div>Address, Address, Address</div>
         </div>
       </div>
       <div className=" text-gray-600 text-xs sm:text-sm sm:px-0 px-6">
-        2015 - 2024 © UAB „Cheapauto LT“. Visos teisės saugomos. Privatumo
-        politika
+        1000 - 2024 © UAB „Anything“. All rights reserved. privacy policy.
       </div>
     </div>
   );

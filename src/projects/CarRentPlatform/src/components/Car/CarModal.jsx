@@ -1,64 +1,13 @@
 import PricesList from "../Prices/PricesList";
 import CarEquipment from "./CarEquipment";
-import CarInfo from "./CarInfo";
-import vwPassat from "../../../assets/img/vw-passat/vw-passat.jpg";
-import vwPassatDashboard from "../../../assets/img/vw-passat/vw-passat-dashboard.jpg";
-import vwPassatTrunk from "../../../assets/img/vw-passat/vw-passat-trunk.jpg";
-import { useState } from "react";
+import CarFeatures from "./CarFeatures";
+import { useContext, useState } from "react";
+import { CarRentPlatformContext } from "../Utils/CarRentPlatformContext";
 
 export default function CarModal() {
-  const periods = [
-    {
-      days: "1-2",
-      price: "**",
-    },
-    {
-      days: "3-5",
-      price: "**",
-    },
-    {
-      days: "6-8",
-      price: "**",
-    },
-    {
-      days: "9-14",
-      price: "**",
-    },
-    {
-      days: "15-29",
-      price: "**",
-    },
-    {
-      days: "30-365",
-      price: "**",
-    },
-    {
-      days: "Deposit",
-      price: "**",
-    },
-  ];
+  const context = useContext(CarRentPlatformContext);
 
-  const features = {
-    fuelType: "Gasoline",
-    fuelConsumption: "5-6l/100km",
-    gearbox: "Automatic",
-    doors: "5 doors",
-    seats: "5 seats",
-    bags: "3 bags",
-  };
-
-  const equipment = [
-    "ABS",
-    "Electric windows",
-    "Air conditioning",
-    "Stereo sound system",
-    "Central Locking",
-    "Cruise control",
-    "Airbag",
-    "Power steering",
-  ];
-
-  const images = [vwPassat, vwPassatDashboard, vwPassatTrunk];
+  const images = context.list[0][0].photos;
   const [currentImage, setCurrentImage] = useState(images[0]);
 
   return (
@@ -84,11 +33,11 @@ export default function CarModal() {
         ))}
       </div>
       <div className="flex lg:flex-row flex-col lg:ga-0 gap-6 justify-center items-center w-3/5 lg:ml-[10%]">
-        <CarEquipment equipment={equipment} />
-        <CarInfo features={features} />
+        <CarEquipment equipment={context.list[0][0].equipment} />
+        <CarFeatures features={context.list[0][0].features} />
       </div>
       <div className="flex text-center">
-        <PricesList periods={periods} />
+        <PricesList periods={context.list[0][0].periods} />
       </div>
     </div>
   );
