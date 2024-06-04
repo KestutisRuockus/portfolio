@@ -8,7 +8,7 @@ export default function aboutus() {
     <div className="bg-white">
       <Navbar />
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-        <div className="sm:w-1/2 w-full">
+        <div className="sm:w-1/2 w-full p-4">
           <img
             className="sm:rounded-r-full rounded-lg rounded-tr-lg min-h-[600px]"
             src={aboutUsImg}

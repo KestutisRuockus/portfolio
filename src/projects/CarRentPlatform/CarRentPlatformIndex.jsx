@@ -180,7 +180,7 @@ export default function CarRentPlatformIndex() {
     <CarRentPlatformContext.Provider value={{ list, setList }}>
       <div className="bg-white min-h-screen w-full flex flex-col">
         <Navbar />
-        <CarModal />
+        {/* <CarModal /> */}
         <Header />
         <Main />
         <Footer />
