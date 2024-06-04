@@ -32,7 +32,7 @@ export default function CarModal() {
           />
         ))}
       </div>
-      <div className="flex lg:flex-row flex-col lg:ga-0 gap-6 justify-center items-center w-3/5 lg:ml-[10%]">
+      <div className="flex lg:flex-row flex-col lg:gap-0 gap-6 justify-center items-center w-1/2 lg:ml-[10%]">
         <CarEquipment equipment={context.list[0][0].equipment} />
         <CarFeatures features={context.list[0][0].features} />
       </div>

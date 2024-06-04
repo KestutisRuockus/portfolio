@@ -2,6 +2,7 @@ import Footer from "./src/components/Footer/Footer";
 import Header from "./src/components/Header/Header";
 import Main from "./src/components/Main/Main";
 import Navbar from "./src/components/Navbar/Navbar";
+import CarModal from "./src/components/Car/CarModal";
 import { CarRentPlatformContext } from "./src/components/Utils/CarRentPlatformContext";
 import vwPassat from "./assets/img/vw-passat/vw-passat.jpg";
 import vwPassatDashboard from "./assets/img/vw-passat/vw-passat-dashboard.jpg";
@@ -179,6 +180,7 @@ export default function CarRentPlatformIndex() {
     <CarRentPlatformContext.Provider value={{ list, setList }}>
       <div className="bg-white min-h-screen w-full flex flex-col">
         <Navbar />
+        <CarModal />
         <Header />
         <Main />
         <Footer />

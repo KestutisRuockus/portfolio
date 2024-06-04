@@ -11,10 +11,12 @@ export default function CarCard({ list }) {
           alt={list.carModel}
         />
       </div>
-      <div className="sm:w-1/2 w-full flex flex-col sm:justify-between sm:items-start items-center gap-2  p-2">
-        <div className="font-bold text-lg">{list.carModel}</div>
+      <div className="sm:w-1/2 w-full flex flex-col sm:justify-between sm:items-start items-center gap-2 p-2">
+        <div className="w-full font-bold text-lg text-center">
+          {list.carModel}
+        </div>
         <CarFeatures features={list.features} />
-        <div>
+        <div className="w-full text-center">
           Price from{" "}
           <strong className="text-[#21B14C]">
             {list.periods[5].price} Eur / day

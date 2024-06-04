@@ -1,7 +1,7 @@
 export default function CarInfo({ features }) {
   return (
-    <div className="flex items-center sm:flex-row flex-col w-full">
-      <div className="flex gap-2 flex-col w-1/2">
+    <div className="flex gap-4 justify-center items-center w-full min-w-[280px]">
+      <div className="flex gap-2 flex-col w-fit">
         <div className="flex gap-3 items-center">
           <i className="fa-solid fa-gas-pump w-4"></i>
           <span className="text-[0.8rem]">{features.fuelType}</span>
@@ -15,7 +15,7 @@ export default function CarInfo({ features }) {
           <span className="text-[0.8rem]">{features.gearbox}</span>
         </div>
       </div>
-      <div className="flex gap-2 flex-col w-1/2">
+      <div className="flex gap-2 flex-col w-fit">
         <div className="flex gap-3 items-center">
           <i className="fa-solid fa-clipboard w-4"></i>
           <span className="text-[0.8rem]">{features.doors}</span>
