@@ -11,10 +11,10 @@ import imgDoctorCare2 from "../projects/DoctorCare/assets/img/doctorCare-2.png";
 import imgDoctorCare3 from "../projects/DoctorCare/assets/img/doctorCare-3.png";
 import imgDoctorCare4 from "../projects/DoctorCare/assets/img/doctorCare-4.png";
 // Car Rent Platform Project images
-import carRentPlatform1 from "../projects/CarRentPlatform/assets/img/no-image.svg";
-import carRentPlatform2 from "../projects/CarRentPlatform/assets/img/no-image.svg";
-import carRentPlatform3 from "../projects/CarRentPlatform/assets/img/no-image.svg";
-import carRentPlatform4 from "../projects/CarRentPlatform/assets/img/no-image.svg";
+import carRentPlatform1 from "../projects/CarRentPlatform/assets/img/rentCarPlatform-1.png";
+import carRentPlatform2 from "../projects/CarRentPlatform/assets/img/rentCarPlatform-2.png";
+import carRentPlatform3 from "../projects/CarRentPlatform/assets/img/rentCarPlatform-3.png";
+import carRentPlatform4 from "../projects/CarRentPlatform/assets/img/rentCarPlatform-4.png";
 
 // PROEJCTS ARRAY
 // 1. DoctorCare landing page
@@ -39,7 +39,8 @@ const projectsDetails = [
   },
   {
     name: "Car Rent Platform",
-    description: "Car rent platform",
+    description:
+      "Car rent platform - Main car rental points: City, City and City. We also deliver cars to any place in this country",
     images: [
       carRentPlatform1,
       carRentPlatform2,
@@ -47,7 +48,8 @@ const projectsDetails = [
       carRentPlatform4,
     ],
     url: "/carrentplatform",
-    github: "",
+    github:
+      "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/CarRentPlatform",
   },
 ];
 
@@ -90,7 +92,7 @@ const Project = (props) => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-4/5 md:w-1/2 lg:w-2/5 max-h-[750px] bg-emerald-600 bg-opacity-40 rounded-md p-5 flex flex-col gap-5  items-center border-4 border-gray-400">
+    <div className="w-4/5 md:w-1/2 lg:w-2/5 max-h-[800px] bg-emerald-600 bg-opacity-40 rounded-md p-5 flex flex-col gap-5  items-center border-4 border-gray-400">
       <div>
         <ProjectsImages
           projectImages={props.projectImages}
@@ -101,7 +103,7 @@ const Project = (props) => {
       <h1 className="text-2xl lg:text-3xl text-sky-400 uppercase font-bold text-center">
         {props.project.name}
       </h1>
-      <p className="text-white h-36 w-4/5 overflow-y-scroll border-2 border-gray-400 p-4 rounded-md">
+      <p className="text-white min-h-24 w-full overflow-y-scroll border-2 border-gray-400 p-4 rounded-md">
         {props.project.description}
       </p>
       <div className="flex max-[400px]:flex-col justify-center gap-6 max-[400px]:w-full text-center">

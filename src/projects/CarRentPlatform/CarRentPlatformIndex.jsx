@@ -11,7 +11,6 @@ export default function CarRentPlatformIndex() {
   window.scrollTo(0, 0);
 
   const carsList = allCars;
-  console.log(carsList);
 
   const [list, setList] = useState([carsList]);
   return (
