@@ -1,9 +1,7 @@
-import Button from "../Utils/Button";
+import Button from "../../utils/Button";
 import CarFeatures from "./CarFeatures";
-import skodaSuperb from "../../../assets/img/skoda-superb/skoda-superb.jpg";
 
 export default function CarCard({ list }) {
-  const image = "../../../assets/img/skoda-superb/skoda-superb.jpg";
   return (
     <div className="flex sm:flex-row flex-col justify-center items-center h-1/2 p-2 border-2 border-slate-200 rounded-xl">
       <div className="sm:w-1/2 w-full">

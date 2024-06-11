@@ -1,12 +1,12 @@
-import vwPassat from "./assets/img/vw-passat/vw-passat.jpg";
-import vwPassatDashboard from "./assets/img/vw-passat/vw-passat-dashboard.jpg";
-import vwPassatTrunk from "./assets/img/vw-passat/vw-passat-trunk.jpg";
-import opelInsignia from "./assets/img/opel-insignia/opel-insignia.jpg";
-import opelInsigniaDashboard from "./assets/img/opel-insignia/opel-insignia-dashboard.jpg";
-import opelInsigniaTrunk from "./assets/img/opel-insignia/opel-insignia-trunk.jpg";
-import skodaSuperb from "./assets/img/skoda-superb/skoda-superb.jpg";
-import skodaSuperbDashboard from "./assets/img/skoda-superb/skoda-superb-dashboard.jpg";
-import skodaSuperbTrunk from "./assets/img/skoda-superb/skoda-superb-trunk.jpg";
+import vwPassat from "../assets/img/vw-passat/vw-passat.jpg";
+import vwPassatDashboard from "../assets/img/vw-passat/vw-passat-dashboard.jpg";
+import vwPassatTrunk from "../assets/img/vw-passat/vw-passat-trunk.jpg";
+import opelInsignia from "../assets/img/opel-insignia/opel-insignia.jpg";
+import opelInsigniaDashboard from "../assets/img/opel-insignia/opel-insignia-dashboard.jpg";
+import opelInsigniaTrunk from "../assets/img/opel-insignia/opel-insignia-trunk.jpg";
+import skodaSuperb from "../assets/img/skoda-superb/skoda-superb.jpg";
+import skodaSuperbDashboard from "../assets/img/skoda-superb/skoda-superb-dashboard.jpg";
+import skodaSuperbTrunk from "../assets/img/skoda-superb/skoda-superb-trunk.jpg";
 
 const cars = [
   {

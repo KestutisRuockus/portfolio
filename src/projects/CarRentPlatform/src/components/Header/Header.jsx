@@ -1,4 +1,4 @@
-import AdvantagesOfCompany from "../Utils/AdvantagesOfCompany";
+import AdvantagesOfCompany from "../../utils/AdvantagesOfCompany";
 
 export default function Header() {
   return (

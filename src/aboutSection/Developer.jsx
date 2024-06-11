@@ -36,9 +36,9 @@ export default function Developer() {
             &lt;/img&gt;
           </span>
         </div>
-        <div className="col-span-1 grid grid-rows-5 max-[460px]:gap-20 gap-6 xl:gap-0 w-4/5 xl:w-full justify-self-start min-[640px]:justify-self-center xl:pr-10">
+        <div className="col-span-1 grid-rows-5 max-[460px]:gap-20 gap-6 xl:gap-0 w-4/5 xl:w-full justify-self-start min-[640px]:justify-self-center xl:pr-10">
           {/* Title */}
-          <div className="text-3xl font-bold row-span-1 relative">
+          <div className="text-3xl font-bold row-span-1 relative mb-8 max-[460px]:mb-20">
             <span className="absolute max-[460px]:left-[-8px] max-[460px]:top-[-28px] left-[-60px] top-2 text-rose-700 text-xl">
               &lt;h1&gt;
             </span>
@@ -52,16 +52,16 @@ export default function Developer() {
             <div className="absolute max-[460px]:left-[-8px] max-[460px]:top-[-28px] left-[-60px] top-0 text-rose-700 text-xl font-bold">
               &lt;p&gt;
             </div>
-            As a Junior Front-End Developer, I possess an impressive arsenal of
-            skills in HTML, CSS, JavaScript, React, Tailwind, and Bootstrap. I
-            excel in designing and maintaining responsive websites that offer a
-            smooth user experience. My expertise lies in crafting dynamic,
-            engaging interfaces through writing clean and optimized code and
-            solving puzzles, which helps fuel my creativity and problem-solving
-            skills. Outside of coding, I have a passion for basketball, which
-            makes me a team player. I not only foster chemistry within a team
-            but also thrive in collaborating with cross-functional teams to
-            create outstanding web applications.
+            As a Front-End Developer, I possess an impressive arsenal of skills
+            in HTML, CSS, JavaScript, React, Tailwind, and Bootstrap. I excel in
+            designing and maintaining responsive websites that offer a smooth
+            user experience. My expertise lies in crafting dynamic, engaging
+            interfaces through writing clean and optimized code and solving
+            puzzles, which helps fuel my creativity and problem-solving skills.
+            Outside of coding, I have a passion for basketball, which makes me a
+            team player. I not only foster chemistry within a team but also
+            thrive in collaborating with cross-functional teams to create
+            outstanding web applications.
             <span className="text-rose-700 text-xl ml-4 font-bold">
               &lt;/p&gt;
             </span>
@@ -70,7 +70,7 @@ export default function Developer() {
       </div>
 
       {/* Text to scroll down */}
-      <div className="absolute right-0 bottom-0 text-white uppercase [writing-mode:vertical-lr] tracking-widest">
+      <div className="absolute right-0 bottom-0 text-gray-500 uppercase [writing-mode:vertical-lr] tracking-widest">
         Scroll down
         <i className="fa-sharp fa-solid fa-arrow-down mt-2"></i>
       </div>

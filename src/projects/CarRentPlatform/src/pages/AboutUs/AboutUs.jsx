@@ -1,7 +1,7 @@
-import Navbar from "../Navbar/Navbar";
-import aboutUsImg from "../../../assets/img/aboutUs.jpg";
-import Footer from "../Footer/Footer";
-import AdvantagesOfCompany from "../Utils/AdvantagesOfCompany";
+import Navbar from "../../components/Navbar/Navbar";
+import aboutUsImg from "../../../src/assets/img/aboutUs.jpg";
+import Footer from "../../components/Footer/Footer";
+import AdvantagesOfCompany from "../../utils/AdvantagesOfCompany";
 
 export default function aboutus() {
   return (

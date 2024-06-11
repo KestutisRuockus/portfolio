@@ -15,10 +15,6 @@ export default function Contacts() {
           kestutisruockus@gmail.com
         </span>
       </div>
-      <div className="flex gap-2 max-[640px]:w-full">
-        <h3 className="text-slate-400">Phone Number:</h3>
-        <span>+37068120493</span>
-      </div>
 
       <div className="flex gap-2 max-[640px]:w-full">
         <h3 className="text-slate-400">GitHub:</h3>

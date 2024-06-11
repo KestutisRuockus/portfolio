@@ -9,27 +9,27 @@ export default function Skills() {
       <div className="absolute left-4 top-4 text-sky-700 text-lg underline underline-offset-1 cursor-default">
         Tech Stack
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center w-16">
         <i className="fa-brands fa-html5 text-6xl text-orange-600"></i>
         <span className="text-xs">HTML</span>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center w-16">
         <i className="fa-brands fa-css3-alt text-6xl text-blue-600"></i>
         <span className="text-xs">CSS</span>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center w-16">
         <i className="fa-brands fa-js text-6xl text-yellow-400"></i>
         <span className="text-xs">JS</span>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center w-16">
         <i className="fa-brands fa-react text-6xl text-blue-400"></i>
         <span className="text-xs">React</span>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center w-16">
         <img src={RestApiLogo} alt="rest-api" className="w-[60px]" />
         <span className="text-xs">Rest-API</span>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center w-16">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
           alt="tailwind"
@@ -37,15 +37,15 @@ export default function Skills() {
         />
         <span className="text-xs">Tailwind</span>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center w-16">
         <i className="fa-brands fa-bootstrap text-6xl text-purple-600"></i>
         <span className="text-xs">Bootstrap</span>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center w-16">
         <i className="fa-brands fa-github text-6xl text-black bg-white rounded-full"></i>
         <span className="text-xs">GitHub</span>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center w-16">
         <img
           src="https://www.vectorlogo.zone/logos/nodejs/nodejs-ar21.svg"
           alt="nodeJS"
@@ -53,7 +53,7 @@ export default function Skills() {
         />
         <span className="text-xs">NodeJS</span>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center w-16">
         <img
           src="https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg"
           alt="mySQL"
@@ -61,21 +61,13 @@ export default function Skills() {
         />
         <span className="text-xs">MySQL</span>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center w-16">
         <img
           src="https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg"
           alt="firebase"
           className="w-[60px] h-[60px]"
         />
         <span className="text-xs">Firebase</span>
-      </div>
-      <div className="flex flex-col justify-center items-center">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Breezeicons-apps-48-android-studio.svg"
-          alt="android studio"
-          className="w-[60px] h-[60px]"
-        />
-        <span className="text-xs">Android Studio</span>
       </div>
     </div>
   );

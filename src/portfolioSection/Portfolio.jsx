@@ -11,10 +11,10 @@ import imgDoctorCare2 from "../projects/DoctorCare/assets/img/doctorCare-2.png";
 import imgDoctorCare3 from "../projects/DoctorCare/assets/img/doctorCare-3.png";
 import imgDoctorCare4 from "../projects/DoctorCare/assets/img/doctorCare-4.png";
 // Car Rent Platform Project images
-import carRentPlatform1 from "../projects/CarRentPlatform/assets/img/rentCarPlatform-1.png";
-import carRentPlatform2 from "../projects/CarRentPlatform/assets/img/rentCarPlatform-2.png";
-import carRentPlatform3 from "../projects/CarRentPlatform/assets/img/rentCarPlatform-3.png";
-import carRentPlatform4 from "../projects/CarRentPlatform/assets/img/rentCarPlatform-4.png";
+import carRentPlatform1 from "../projects/CarRentPlatform/src/assets/img/rentCarPlatform-1.png";
+import carRentPlatform2 from "../projects/CarRentPlatform/src/assets/img/rentCarPlatform-2.png";
+import carRentPlatform3 from "../projects/CarRentPlatform/src/assets/img/rentCarPlatform-3.png";
+import carRentPlatform4 from "../projects/CarRentPlatform/src/assets/img/rentCarPlatform-4.png";
 
 // PROEJCTS ARRAY
 // 1. DoctorCare landing page
@@ -60,7 +60,7 @@ const ProjectsImages = ({
 }) => {
   return (
     <div id="portfolio" className="p-5 bg-white w-full rounded-md">
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-4 max-w-full h-auto object-contain">
         <div>
           <img
             className="max-h-[130px] bg-cover"
@@ -70,11 +70,11 @@ const ProjectsImages = ({
             height={140}
           />
         </div>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4 max-[350px]:gap-1">
           {projectImages.map((image, index) => (
             <img
               onClick={() => setCurrentProjectImages(projectImages[index])}
-              className="cursor-pointer border-2 p-1 rounded-md hover:scale-110 transition-all duration-300 bg-cover"
+              className="cursor-pointer border-2 p-1 rounded-md hover:scale-110 transition-all duration-300 bg-cover max-[350px]:w-[55px]"
               key={index}
               src={image}
               width={60}
@@ -103,7 +103,7 @@ const Project = (props) => {
       <h1 className="text-2xl lg:text-3xl text-sky-400 uppercase font-bold text-center">
         {props.project.name}
       </h1>
-      <p className="text-white min-h-24 w-full overflow-y-scroll border-2 border-gray-400 p-4 rounded-md">
+      <p className="text-white min-h-24 max-h-32 w-full overflow-y-scroll border-2 border-gray-400 p-4 rounded-md">
         {props.project.description}
       </p>
       <div className="flex max-[400px]:flex-col justify-center gap-6 max-[400px]:w-full text-center">

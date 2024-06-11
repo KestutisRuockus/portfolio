@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "../../components/Utils/Logo";
+import Logo from "../../utils/Logo";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {

@@ -1,15 +1,15 @@
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 import CarPrices from "./CarPrices";
-import Footer from "../Footer/Footer";
-import vwPassat from "../../../assets/img/vw-passat/vw-passat.jpg";
-import vwPassatDashboard from "../../../assets/img/vw-passat/vw-passat-dashboard.jpg";
-import vwPassatTrunk from "../../../assets/img/vw-passat/vw-passat-trunk.jpg";
-import opelInsignia from "../../../assets/img/opel-insignia/opel-insignia.jpg";
-import opelInsigniaDashboard from "../../../assets/img/opel-insignia/opel-insignia-dashboard.jpg";
-import opelInsigniaTrunk from "../../../assets/img/opel-insignia/opel-insignia-trunk.jpg";
-import skodaSuperb from "../../../assets/img/skoda-superb/skoda-superb.jpg";
-import skodaSuperbDashboard from "../../../assets/img/skoda-superb/skoda-superb-dashboard.jpg";
-import skodaSuperbTrunk from "../../../assets/img/skoda-superb/skoda-superb-trunk.jpg";
+import Footer from "../../components/Footer/Footer";
+import vwPassat from "../../../src/assets/img/vw-passat/vw-passat.jpg";
+import vwPassatDashboard from "../../../src/assets/img/vw-passat/vw-passat-dashboard.jpg";
+import vwPassatTrunk from "../../../src/assets/img/vw-passat/vw-passat-trunk.jpg";
+import opelInsignia from "../../../src/assets/img/opel-insignia/opel-insignia.jpg";
+import opelInsigniaDashboard from "../../../src/assets/img/opel-insignia/opel-insignia-dashboard.jpg";
+import opelInsigniaTrunk from "../../../src/assets/img/opel-insignia/opel-insignia-trunk.jpg";
+import skodaSuperb from "../../../src/assets/img/skoda-superb/skoda-superb.jpg";
+import skodaSuperbDashboard from "../../../src/assets/img/skoda-superb/skoda-superb-dashboard.jpg";
+import skodaSuperbTrunk from "../../../src/assets/img/skoda-superb/skoda-superb-trunk.jpg";
 
 export default function Prices() {
   const carsList = [

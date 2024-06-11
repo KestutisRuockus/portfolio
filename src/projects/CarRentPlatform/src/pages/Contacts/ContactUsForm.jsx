@@ -1,4 +1,4 @@
-import Button from "../Utils/Button";
+import Button from "../../utils/Button";
 
 export default function ContactUsForm() {
   return (

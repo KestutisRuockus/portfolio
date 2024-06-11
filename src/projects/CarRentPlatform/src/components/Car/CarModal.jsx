@@ -1,8 +1,8 @@
-import PricesList from "../Prices/PricesList";
+import PricesList from "../../pages/Prices/PricesList";
 import CarEquipment from "./CarEquipment";
 import CarFeatures from "./CarFeatures";
 import { useContext, useState } from "react";
-import { CarRentPlatformContext } from "../Utils/CarRentPlatformContext";
+import { CarRentPlatformContext } from "../../context/CarRentPlatformContext";
 
 export default function CarModal() {
   const context = useContext(CarRentPlatformContext);

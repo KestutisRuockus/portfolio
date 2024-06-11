@@ -2,11 +2,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import TmdbIndex from "./projects/TMDB/TmdbIndex";
 import DoctorCareIndex from "./projects/DoctorCare/DoctorCareIndex";
-import CarRentPlatformIndex from "./projects/CarRentPlatform/CarRentPlatformIndex";
-import Prices from "./projects/CarRentPlatform/src/components/Prices/Prices";
-import FAQ from "./projects/CarRentPlatform/src/components/FAQ/FAQ";
-import AboutUs from "./projects/CarRentPlatform/src/components/AboutUs/AboutUs";
-import Contacts from "./projects/CarRentPlatform/src/components/Contacts/Contacts";
+import Prices from "./projects/CarRentPlatform/src/pages/Prices/Prices";
+import FAQ from "./projects/CarRentPlatform/src/pages/FAQ/FAQ";
+import AboutUs from "./projects/CarRentPlatform/src/pages/AboutUs/AboutUs";
+import Contacts from "./projects/CarRentPlatform/src/pages/Contacts/Contacts";
+import CarRentalPlatformApp from "./projects/CarRentPlatform/CarRentalPlatformApp";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/portfolio" element={<Home />} />
         <Route path="tmdb-project" element={<TmdbIndex />} />
         <Route path="doctorcare" element={<DoctorCareIndex />} />
-        <Route path="carrentplatform" element={<CarRentPlatformIndex />} />
+        <Route path="carrentplatform" element={<CarRentalPlatformApp />} />
         <Route path="carrentplatform/prices" element={<Prices />} />
         <Route path="carrentplatform/faq" element={<FAQ />} />
         <Route path="carrentplatform/aboutus" element={<AboutUs />} />
