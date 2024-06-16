@@ -19,6 +19,8 @@ import carRentPlatform4 from "../projects/CarRentPlatform/src/assets/img/rentCar
 // PROEJCTS ARRAY
 // 1. DoctorCare landing page
 // 2. TMDB PROJECT
+// 3. CAR RENT PLATFORM PROJECT
+// 4. CLOTHES E-SHOP PROJECT
 const projectsDetails = [
   {
     name: "DoctorCare landing page",
@@ -50,6 +52,20 @@ const projectsDetails = [
     url: "/carrentplatform",
     github:
       "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/CarRentPlatform",
+  },
+  {
+    name: "Clothes E-Shop",
+    description:
+      "Welcome to Clothes E-shop, your one-stop online store for the latest in fashion. Explore a wide range of stylish apparel for men, women, and children. Enjoy a seamless shopping experience with easy navigation, secure payment options, and fast delivery. Stay trendy with Clothes E-shop!",
+    images: [
+      carRentPlatform1,
+      carRentPlatform2,
+      carRentPlatform3,
+      carRentPlatform4,
+    ],
+    url: "/clotheseshop",
+    github:
+      "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/ClothesEshop",
   },
 ];
 
@@ -144,6 +160,13 @@ export default function Portfolio() {
   const CarRentPlatformProjectImages = projectsDetails[2].images;
   const [CarRentPlatformCurrentImage, setCarRentPlatformCurrentImage] =
     useState(CarRentPlatformProjectImages[0]);
+  {
+    /* IMAGES FOR CLOTHES E-SHOP PROJECT */
+  }
+  const ClothesEshopProjectImages = projectsDetails[3].images;
+  const [ClothesEshopCurrentImage, setClothesEshopCurrentImage] = useState(
+    ClothesEshopProjectImages[0]
+  );
 
   return (
     <div className="bg-sky-950 w-4/5 mb-20 mt-14 py-14 rounded-md shadow-xl shadow-cyan-500/50 bg-opacity-70 relative">
@@ -171,6 +194,13 @@ export default function Portfolio() {
           projectImages={CarRentPlatformProjectImages}
           currentProjectImages={CarRentPlatformCurrentImage}
           setCurrentProjectImages={setCarRentPlatformCurrentImage}
+        />
+        {/* CLOTHES E-SHOP PROJECT */}
+        <Project
+          project={projectsDetails[3]}
+          projectImages={ClothesEshopProjectImages}
+          currentProjectImages={ClothesEshopCurrentImage}
+          setCurrentProjectImages={setClothesEshopCurrentImage}
         />
       </div>
     </div>

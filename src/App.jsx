@@ -7,6 +7,7 @@ import FAQ from "./projects/CarRentPlatform/src/pages/FAQ/FAQ";
 import AboutUs from "./projects/CarRentPlatform/src/pages/AboutUs/AboutUs";
 import Contacts from "./projects/CarRentPlatform/src/pages/Contacts/Contacts";
 import CarRentalPlatformApp from "./projects/CarRentPlatform/CarRentalPlatformApp";
+import ClothesEshopIndex from "./projects/ClothesEshop/ClothesEshopIndex";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="carrentplatform/faq" element={<FAQ />} />
         <Route path="carrentplatform/aboutus" element={<AboutUs />} />
         <Route path="carrentplatform/contacts" element={<Contacts />} />
+        <Route path="clotheseshop" element={<ClothesEshopIndex />} />
       </Routes>
     </BrowserRouter>
   );

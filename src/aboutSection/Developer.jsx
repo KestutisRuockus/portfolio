@@ -53,15 +53,15 @@ export default function Developer() {
               &lt;p&gt;
             </div>
             As a Front-End Developer, I possess an impressive arsenal of skills
-            in HTML, CSS, JavaScript, React, Tailwind, and Bootstrap. I excel in
-            designing and maintaining responsive websites that offer a smooth
-            user experience. My expertise lies in crafting dynamic, engaging
-            interfaces through writing clean and optimized code and solving
-            puzzles, which helps fuel my creativity and problem-solving skills.
-            Outside of coding, I have a passion for basketball, which makes me a
-            team player. I not only foster chemistry within a team but also
-            thrive in collaborating with cross-functional teams to create
-            outstanding web applications.
+            in HTML, CSS, JavaScript, React, TypeScript, Tailwind, and
+            Bootstrap. I excel in designing and maintaining responsive websites
+            that offer a smooth user experience. My expertise lies in crafting
+            dynamic, engaging interfaces through writing clean and optimized
+            code and solving puzzles, which helps fuel my creativity and
+            problem-solving skills. Outside of coding, I have a passion for
+            basketball, which makes me a team player. I not only foster
+            chemistry within a team but also thrive in collaborating with
+            cross-functional teams to create outstanding web applications.
             <span className="text-rose-700 text-xl ml-4 font-bold">
               &lt;/p&gt;
             </span>

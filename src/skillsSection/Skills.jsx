@@ -26,6 +26,14 @@ export default function Skills() {
         <span className="text-xs">React</span>
       </div>
       <div className="flex flex-col justify-center items-center w-16">
+        <img
+          src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"
+          alt="typescript"
+          className="w-[54px] h-[52px] my-1"
+        />
+        <span className="text-xs">Typescript</span>
+      </div>
+      <div className="flex flex-col justify-center items-center w-16">
         <img src={RestApiLogo} alt="rest-api" className="w-[60px]" />
         <span className="text-xs">Rest-API</span>
       </div>
