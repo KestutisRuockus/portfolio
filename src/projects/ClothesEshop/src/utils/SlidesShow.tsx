@@ -4,9 +4,12 @@ type ImageSliderProps = {
   brands: string[];
 };
 
+// Brand Images slideShow. after 5 second changes img.
+// user can change brand image when click on buttons left angle or right angle
 export default function SlidesShow({ brands }: ImageSliderProps) {
   const [imageIndex, setImageIndex] = useState(0);
 
+  // automatically change brand image after 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       showNextImage();
@@ -14,6 +17,7 @@ export default function SlidesShow({ brands }: ImageSliderProps) {
     return () => clearInterval(interval);
   }, []);
 
+  // display previous image on clicking left angle icon
   function showPrevImage() {
     setImageIndex((prevImageIndex) => {
       console.log("prevI:" + prevImageIndex);
@@ -25,6 +29,7 @@ export default function SlidesShow({ brands }: ImageSliderProps) {
     });
   }
 
+  // display next image on clicking right angle icon
   function showNextImage() {
     setImageIndex((prevImageIndex) => {
       if (prevImageIndex === brands.length - 1) return 0;

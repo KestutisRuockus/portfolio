@@ -15,6 +15,11 @@ import carRentPlatform1 from "../projects/CarRentPlatform/src/assets/img/rentCar
 import carRentPlatform2 from "../projects/CarRentPlatform/src/assets/img/rentCarPlatform-2.png";
 import carRentPlatform3 from "../projects/CarRentPlatform/src/assets/img/rentCarPlatform-3.png";
 import carRentPlatform4 from "../projects/CarRentPlatform/src/assets/img/rentCarPlatform-4.png";
+// Car Rent Platform Project images
+import eShop1 from "../projects/ClothesEshop/src/assets/images/e-shop-1.png";
+import eShop2 from "../projects/ClothesEshop/src/assets/images/e-shop-1.png";
+import eShop3 from "../projects/ClothesEshop/src/assets/images/e-shop-1.png";
+import eShop4 from "../projects/ClothesEshop/src/assets/images/e-shop-1.png";
 
 // PROEJCTS ARRAY
 // 1. DoctorCare landing page
@@ -57,12 +62,7 @@ const projectsDetails = [
     name: "Clothes E-Shop",
     description:
       "Welcome to Clothes E-shop, your one-stop online store for the latest in fashion. Explore a wide range of stylish apparel for men, women, and children. Enjoy a seamless shopping experience with easy navigation, secure payment options, and fast delivery. Stay trendy with Clothes E-shop!",
-    images: [
-      carRentPlatform1,
-      carRentPlatform2,
-      carRentPlatform3,
-      carRentPlatform4,
-    ],
+    images: [eShop1, eShop2, eShop3, eShop4],
     url: "/clotheseshop",
     github:
       "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/ClothesEshop",

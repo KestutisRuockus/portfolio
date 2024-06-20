@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import logo from "../../assets/images/logo.jpg";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); // state used to set or navbar is open or closed on small screens/pages
 
+  // automatically rendered links with map method
   const links = [
     {
       name: "Home",
