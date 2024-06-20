@@ -8,34 +8,61 @@ export default function SlidesShow({ brands }: ImageSliderProps) {
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       showNextImage();
-    }, 3000);
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   function showPrevImage() {
-    setImageIndex((index) => {
-      if (index === 0) return brands.length - 1;
-      return index - 1;
+    setImageIndex((prevImageIndex) => {
+      console.log("prevI:" + prevImageIndex);
+      console.log("url:" + brands[imageIndex]);
+      if (prevImageIndex === 0) return brands.length - 1;
+      else {
+        return prevImageIndex - 1;
+      }
     });
   }
 
   function showNextImage() {
-    setImageIndex((index) => {
-      if (index === brands.length - 1) return 0;
-      return index + 1;
+    setImageIndex((prevImageIndex) => {
+      if (prevImageIndex === brands.length - 1) return 0;
+      else {
+        return prevImageIndex + 1;
+      }
     });
   }
 
   return (
     <div className="w-full h-[200px] bg-[#FECA5A]">
-      <div className="w-full h-full m-auto flex justify-center items-center py-8 sm:px-0 px-2">
+      <div className="w-full h-full m-auto flex gap-4 justify-center items-center py-8 sm:px-0 px-2">
         <i
           onClick={showPrevImage}
           className="fa-solid fa-angle-left text-4xl mx-4 cursor-pointer sm:px-6 px-2 py-4 rounded-full"
         ></i>
-        <div className="flex items-center sm:w-96 w-full max-[500px]:h-40 h-8 :">
-          <img className="w-full h-fit" src={brands[imageIndex]} />
+        <div className="flex items-center sm:w-48 w-4/5 max-sm:hidden max-[500px]:h-20 h-10 :">
+          <img
+            className="w-full h-full"
+            src={
+              imageIndex === 0
+                ? brands[brands.length - 1]
+                : brands[imageIndex - 1]
+            }
+          />
+        </div>
+        <div className="flex items-center sm:w-96 w-full max-[400px]:h-16 h-24 :">
+          <img className="w-full h-full" src={brands[imageIndex]} />
+        </div>
+        <div className="flex items-center sm:w-48 w-4/5 max-sm:hidden max-[500px]:h-20 h-10 :">
+          <img
+            className="w-full h-full"
+            src={
+              imageIndex === brands.length - 1
+                ? brands[0]
+                : brands[imageIndex + 1]
+            }
+          />
         </div>
         <i
           onClick={showNextImage}
