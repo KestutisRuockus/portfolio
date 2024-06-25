@@ -60,8 +60,9 @@ const projectsDetails = [
   },
   {
     name: "Clothes E-Shop",
-    description:
-      "Welcome to Clothes E-shop, your one-stop online store for the latest in fashion. Explore a wide range of stylish apparel for men, women, and children. Enjoy a seamless shopping experience with easy navigation, secure payment options, and fast delivery. Stay trendy with Clothes E-shop!",
+    // description:
+    //   "Welcome to Clothes E-shop, your one-stop online store for the latest in fashion. Explore a wide range of stylish apparel for men, women, and children. Enjoy a seamless shopping experience with easy navigation, secure payment options, and fast delivery. Stay trendy with Clothes E-shop!",
+    description: "In development process...",
     images: [eShop1, eShop2, eShop3, eShop4],
     url: "/clotheseshop",
     github:

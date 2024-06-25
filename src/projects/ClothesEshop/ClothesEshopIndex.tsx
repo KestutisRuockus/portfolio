@@ -6,6 +6,7 @@ import "./src/assets/styles/style.css";
 import SlidesShow from "./src/utils/SlidesShow";
 import Feedback from "./src/components/Feedback/Feedback";
 import "./src/assets/styles/style.css";
+import LatestNews from "./src/components/latestNews/LatestNews";
 
 export default function ClothesEshopIndex() {
   return (
@@ -13,6 +14,7 @@ export default function ClothesEshopIndex() {
       <Navbar />
       <BrandAdvertisement />
       <SlidesShow brands={brands} />
+      <LatestNews />
       <Feedback />
     </div>
   );
