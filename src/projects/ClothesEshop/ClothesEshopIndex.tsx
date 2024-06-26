@@ -7,6 +7,7 @@ import SlidesShow from "./src/utils/SlidesShow";
 import Feedback from "./src/components/Feedback/Feedback";
 import "./src/assets/styles/style.css";
 import LatestNews from "./src/components/latestNews/LatestNews";
+import Footer from "./src/components/Footer/Footer";
 
 export default function ClothesEshopIndex() {
   return (
@@ -16,6 +17,7 @@ export default function ClothesEshopIndex() {
       <SlidesShow brands={brands} />
       <LatestNews />
       <Feedback />
+      <Footer />
     </div>
   );
 }
