@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-
-type ImageSliderProps = {
-  brands: string[];
-};
+import { brands } from "../../../src/data/brandImagesForSlides";
 
 // Brand Images slideShow. after 5 second changes img.
 // user can change brand image when click on buttons left angle or right angle
-export default function SlidesShow({ brands }: ImageSliderProps) {
+export default function BrandLogosSlider() {
   const [imageIndex, setImageIndex] = useState(0);
 
   // automatically change brand image after 5 seconds

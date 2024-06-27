@@ -20,6 +20,7 @@ import eShop1 from "../projects/ClothesEshop/src/assets/images/e-shop-1.png";
 import eShop2 from "../projects/ClothesEshop/src/assets/images/e-shop-1.png";
 import eShop3 from "../projects/ClothesEshop/src/assets/images/e-shop-1.png";
 import eShop4 from "../projects/ClothesEshop/src/assets/images/e-shop-1.png";
+import RestApiLogo from "../assets/rest-api.gif";
 
 // PROEJCTS ARRAY
 // 1. DoctorCare landing page
@@ -34,6 +35,10 @@ const projectsDetails = [
     url: "/doctorcare",
     github:
       "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/DoctorCare",
+    techStack: [
+      { name: "HTML", icon: "fa-html5", color: "orange-600" },
+      { name: "CSS", icon: "fa-css3-alt", color: "blue-600" },
+    ],
   },
   {
     name: "The Movies Database",
@@ -43,6 +48,17 @@ const projectsDetails = [
     url: "/tmdb-project",
     github:
       "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/TMDB",
+    techStack: [
+      { name: "React", icon: "fa-react", color: "blue-400" },
+      {
+        name: "Tailwind",
+        icon: "",
+        color: "",
+        imgUrl:
+          "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+      },
+      { name: "Rest-API", icon: "", color: "", imgUrl: RestApiLogo },
+    ],
   },
   {
     name: "Car Rent Platform",
@@ -57,6 +73,16 @@ const projectsDetails = [
     url: "/carrentplatform",
     github:
       "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/CarRentPlatform",
+    techStack: [
+      { name: "React", icon: "fa-react", color: "blue-400" },
+      {
+        name: "Tailwind",
+        icon: "",
+        color: "",
+        imgUrl:
+          "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+      },
+    ],
   },
   {
     name: "Clothes E-Shop",
@@ -67,6 +93,25 @@ const projectsDetails = [
     url: "/clotheseshop",
     github:
       "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/ClothesEshop",
+    techStack: [
+      { name: "JS", icon: "fa-js", color: "yellow-400" },
+      { name: "React", icon: "fa-react", color: "blue-400" },
+      {
+        name: "Typescript",
+        icon: "",
+        color: "",
+        imgUrl:
+          "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg",
+      },
+      { name: "CSS", icon: "fa-css3-alt", color: "blue-600" },
+      {
+        name: "Tailwind",
+        icon: "",
+        color: "",
+        imgUrl:
+          "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+      },
+    ],
   },
 ];
 
@@ -105,11 +150,43 @@ const ProjectsImages = ({
   );
 };
 
+// render icon or image of what technologies was used in project
+function generateUsedTechStackList(arr) {
+  return (
+    <div>
+      <h1 className="text-sky-400 text-center font-semibold mb-2">
+        Tech Stack:
+      </h1>
+      <div className="flex flex-wrap justify-center gap-2 w-full ">
+        {arr.map((item) => (
+          <div
+            key={item.name}
+            className="bg-black/[.3] py-2 rounded-md flex flex-col justify-center items-center w-16"
+          >
+            {item.icon !== "" ? (
+              <i
+                className={`fa-brands ${item.icon} text-3xl text-${item.color}`}
+              ></i>
+            ) : (
+              <img
+                src={item.imgUrl}
+                alt={item.name}
+                className="w-[28px] h-[27px] mb-[2px]"
+              />
+            )}
+
+            <span className="text-xs text-white">{item.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 const Project = (props) => {
   const navigate = useNavigate();
-
   return (
-    <div className="w-4/5 md:w-1/2 lg:w-2/5 max-h-[800px] bg-emerald-600 bg-opacity-40 rounded-md p-5 flex flex-col gap-5  items-center border-4 border-gray-400">
+    <div className="w-4/5 md:w-3/5 lg:w-2/5 max-h-[900px] bg-emerald-600 bg-opacity-30 rounded-md p-5 flex flex-col gap-5  items-center border-4 border-gray-400">
       <div>
         <ProjectsImages
           projectImages={props.projectImages}
@@ -117,6 +194,9 @@ const Project = (props) => {
           setCurrentProjectImages={props.setCurrentProjectImages}
         />
       </div>
+
+      {generateUsedTechStackList(props.project.techStack)}
+
       <h1 className="text-2xl lg:text-3xl text-sky-400 uppercase font-bold text-center">
         {props.project.name}
       </h1>

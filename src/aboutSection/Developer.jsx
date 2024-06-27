@@ -52,16 +52,25 @@ export default function Developer() {
             <div className="absolute max-[460px]:left-[-8px] max-[460px]:top-[-28px] left-[-60px] top-0 text-rose-700 text-xl font-bold">
               &lt;p&gt;
             </div>
-            As a Front-End Developer, I possess an impressive arsenal of skills
-            in HTML, CSS, JavaScript, React, TypeScript, Tailwind, and
-            Bootstrap. I excel in designing and maintaining responsive websites
-            that offer a smooth user experience. My expertise lies in crafting
-            dynamic, engaging interfaces through writing clean and optimized
-            code and solving puzzles, which helps fuel my creativity and
-            problem-solving skills. Outside of coding, I have a passion for
-            basketball, which makes me a team player. I not only foster
-            chemistry within a team but also thrive in collaborating with
-            cross-functional teams to create outstanding web applications.
+            As a Front-End Developer, I have strong skills in HTML, CSS,
+            JavaScript, React, TypeScript, Tailwind, and Bootstrap. I am good at
+            designing and maintaining responsive websites that provide a smooth
+            user experience. I love developing websites and have a strong
+            interest in mobile app development. My goal is to become skilled in
+            both areas.
+            <br />
+            <br />
+            When browsing other websites, I always look at their design and
+            functionality, thinking about how to improve user experience. This
+            curiosity helps me learn and grow in UX design and functionality. I
+            am good at creating dynamic, engaging interfaces with clean,
+            optimized code, which boosts my creativity and problem-solving
+            skills.
+            <br />
+            <br />
+            Outside of coding, I love basketball, which makes me a team player.
+            I work well in teams and enjoy collaborating with cross-functional
+            teams to create great web applications.
             <span className="text-rose-700 text-xl ml-4 font-bold">
               &lt;/p&gt;
             </span>

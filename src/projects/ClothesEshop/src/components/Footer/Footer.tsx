@@ -71,14 +71,14 @@ export default function Footer() {
   return (
     <div className="flex justify-center bg-[#FECA5A] p-8">
       <div className="flex flex-wrap max-[730px]:justify-center justify-start gap-12">
-        {/* logo & social media icons */}
-        {generateSocialMediaLinks(socialMediaLinks)}
         {/* Store Info column */}
         {generateContactInfo(storeInfo)}
         {/* Customer Services column */}
         {generateLink(customersServices, "Customer Services")}
         {/* company column */}
         {generateLink(companyInfo, "Company")}
+        {/* logo & social media icons */}
+        {generateSocialMediaLinks(socialMediaLinks)}
       </div>
     </div>
   );
