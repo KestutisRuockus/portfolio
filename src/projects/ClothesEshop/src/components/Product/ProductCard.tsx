@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../utils/Buttons";
 
 type ProductProps = {
@@ -21,15 +21,27 @@ type ProductProps = {
 };
 
 export default function ProductCard({ products }: ProductProps) {
-  console.log(products.length);
+  const [currentProductId, setCurrentProductId] = useState<string>("");
+  const [currentProductForModal, setCurrentProductForModal] = useState<object>(
+    {}
+  );
+
+  useEffect(() => {
+    setCurrentProductForModal(
+      products.filter((product) => currentProductId === product.id)
+    );
+  }, [currentProductId]);
+
   return (
     <div className="flex flex-wrap justify-start px-4">
       {products.map((product) => (
         <div
+          onClick={(e) => setCurrentProductId(product.id)}
+          id={product.id}
           key={product.id}
           className="w-[300px] mx-2 my-8 pt-2 relative group hover:border-black border-2 rounded-lg transition-all duration-500"
         >
-          <div className="w-full mb-20 cursor-pointer">
+          <div className="w-full mb-20">
             <img
               className="w-[200px] h-[300px] m-auto"
               src={product.images[0]}

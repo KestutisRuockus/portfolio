@@ -11,6 +11,7 @@ import Collections from "./src/components/Collections/Collections";
 import ProductCard from "./src/components/Product/ProductCard";
 
 import { allItems } from "./src/data/products";
+import ProductModal from "./src/components/Product/ProductModal";
 
 export default function ClothesEshopIndex() {
   const testProductCard = [
@@ -18,15 +19,11 @@ export default function ClothesEshopIndex() {
     allItems[65],
     allItems[89],
     allItems[114],
-    allItems[137],
-    allItems[169],
-    allItems[175],
   ];
   window.scrollTo(0, 0);
   return (
     <div className="bg-white min-h-screen">
       <Navbar />
-      {/* <ProductCard /> */}
       <BrandAdvertisement />
       <Collections />
       <BrandLogosSlider />
@@ -38,8 +35,12 @@ export default function ClothesEshopIndex() {
         {`Everything below the footer is used for testing! Thank you for your
         understanding. ;)`}
       </div>
+      {/* <ProductCard /> */}
       <div className="text-center my-4 text-4xl">ProductCard component</div>
       <ProductCard products={testProductCard} />
+      {/* <ProductModal /> */}
+      <div className="text-center my-4 text-4xl">ProductModal component</div>
+      <ProductModal product={testProductCard[1]} />
     </div>
   );
 }
