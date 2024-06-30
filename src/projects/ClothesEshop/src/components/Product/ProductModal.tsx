@@ -1,7 +1,26 @@
 import React, { useState } from "react";
 import Button from "../../utils/Buttons";
 
-export default function ProductModal({ product }) {
+type ProductModalProps = {
+  product: {
+    id: string;
+    name: string;
+    description: string;
+    collection: string;
+    subcategory: string;
+    price: number;
+    currency: string;
+    sizes: string[];
+    brand: string;
+    material: string;
+    availability: boolean;
+    stock_quantity: number;
+    images: string[];
+    rating: number;
+  };
+};
+
+export default function ProductModal({ product }: ProductModalProps) {
   const [currentImage, setCurrentImage] = useState<string>(product.images[0]);
 
   // render images on side and set currentImage state onMouseEnter

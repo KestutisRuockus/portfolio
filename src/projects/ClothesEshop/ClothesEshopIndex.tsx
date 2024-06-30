@@ -8,10 +8,9 @@ import LatestNews from "./src/components/latestNews/LatestNews";
 import Footer from "./src/components/Footer/Footer";
 import BrandLogosSlider from "./src/components/BrandLogosSlider/BrandLogosSlider";
 import Collections from "./src/components/Collections/Collections";
-import ProductCard from "./src/components/Product/ProductCard";
-
 import { allItems } from "./src/data/products";
 import ProductModal from "./src/components/Product/ProductModal";
+import CurrentSelectedCollection from "./src/components/CurrentCollection/CurrentSelectedCollection";
 
 export default function ClothesEshopIndex() {
   const testProductCard = [
@@ -35,9 +34,11 @@ export default function ClothesEshopIndex() {
         {`Everything below the footer is used for testing! Thank you for your
         understanding. ;)`}
       </div>
-      {/* <ProductCard /> */}
-      <div className="text-center my-4 text-4xl">ProductCard component</div>
-      <ProductCard products={testProductCard} />
+      {/* <CurrentSelectedCollection /> */}
+      <div className="text-center my-4 text-4xl">
+        Current Selected Collection component
+      </div>
+      <CurrentSelectedCollection products={testProductCard} />
       {/* <ProductModal /> */}
       <div className="text-center my-4 text-4xl">ProductModal component</div>
       <ProductModal product={testProductCard[1]} />

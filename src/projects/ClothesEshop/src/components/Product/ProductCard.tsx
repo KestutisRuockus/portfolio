@@ -33,13 +33,13 @@ export default function ProductCard({ products }: ProductProps) {
   }, [currentProductId]);
 
   return (
-    <div className="flex flex-wrap justify-start px-4">
+    <div className="md:w-4/5 flex flex-wrap md:justify-start justify-center">
       {products.map((product) => (
         <div
           onClick={(e) => setCurrentProductId(product.id)}
           id={product.id}
           key={product.id}
-          className="w-[300px] mx-2 my-8 pt-2 relative group hover:border-black border-2 rounded-lg transition-all duration-500"
+          className="w-[270px] max-h-[400px] mx-2 my-8 pt-2 relative group hover:border-black border-2 rounded-lg transition-all duration-500"
         >
           <div className="w-full mb-20">
             <img
