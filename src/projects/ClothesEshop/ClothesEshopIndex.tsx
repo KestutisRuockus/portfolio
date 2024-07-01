@@ -11,6 +11,7 @@ import Collections from "./src/components/Collections/Collections";
 import { allItems } from "./src/data/products";
 import ProductModal from "./src/components/Product/ProductModal";
 import CurrentSelectedCollection from "./src/components/CurrentCollection/CurrentSelectedCollection";
+import BestSeller from "./src/components/BestSeller/BestSellers";
 
 export default function ClothesEshopIndex() {
   const testProductCard = [
@@ -24,6 +25,7 @@ export default function ClothesEshopIndex() {
     <div className="bg-white min-h-screen">
       <Navbar />
       <BrandAdvertisement />
+      <BestSeller />
       <Collections />
       <BrandLogosSlider />
       <LatestNews />

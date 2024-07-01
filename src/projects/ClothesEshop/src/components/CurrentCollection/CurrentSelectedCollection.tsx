@@ -5,7 +5,7 @@ export default function CurrentSelectedCollection({ products }) {
   return (
     <div className="w-full flex max-md:items-center max-md:flex-col">
       <CollectionsAndSubcategoriesDropList />
-      <ProductCard products={products} />
+      <ProductCard products={products} isBestSellerComponent={false} />
     </div>
   );
 }

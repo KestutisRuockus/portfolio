@@ -17,8 +17,6 @@ export default function BrandLogosSlider() {
   // display previous image on clicking left angle icon
   function showPrevImage() {
     setImageIndex((prevImageIndex) => {
-      console.log("prevI:" + prevImageIndex);
-      console.log("url:" + brands[imageIndex]);
       if (prevImageIndex === 0) return brands.length - 1;
       else {
         return prevImageIndex - 1;
@@ -37,7 +35,7 @@ export default function BrandLogosSlider() {
   }
 
   return (
-    <div className="w-full h-[200px] bg-[#FECA5A]">
+    <div className="w-full h-[150px] bg-[#FECA5A]">
       <div className="w-full h-full m-auto flex gap-4 justify-center items-center py-8 sm:px-0 px-2">
         <i
           onClick={showPrevImage}
