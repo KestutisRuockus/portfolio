@@ -8,7 +8,7 @@ export default function BestSeller() {
   }
 
   // Get a random list of 10 products as Top Sellers.
-  function randomTopSellers(itemsNumber: number = 10) {
+  function randomTopSellers(itemsNumber: number = 5) {
     let randomTopSellers: any[] = [];
     for (let i = 0; i < itemsNumber; i++) {
       const randomItem: any = allItems[random(0, 100)];
@@ -17,15 +17,15 @@ export default function BestSeller() {
     return randomTopSellers;
   }
 
-  const testProductCard = randomTopSellers();
+  const testProductCard = randomTopSellers(6);
   return (
-    <div className="w-11/12 my-16 rounded-lg m-auto border-4">
+    <div className="w-4/5 my-16 rounded-lg m-auto border-4">
       <div>
-        <h1 className="text-center mt-4 text-3xl font-semibold text-sky-800">
+        <h1 className="text-center mt-4 text-3xl font-semibold text-sky-800 px-2">
           Top Sellers from the Past Month
         </h1>
       </div>
-      <div className="w-full flex gap-2 justify-center overflow-scroll">
+      <div className="w-full m-auto flex gap-2 justify-center">
         <ProductCard products={testProductCard} isBestSellerComponent={true} />
       </div>
     </div>

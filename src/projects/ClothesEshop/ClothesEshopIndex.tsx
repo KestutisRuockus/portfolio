@@ -4,7 +4,7 @@ import BrandAdvertisement from "./src/components/BrandAdvertisement/BrandAdverti
 import "./src/assets/styles/style.css";
 import Feedback from "./src/components/Feedback/Feedback";
 import "./src/assets/styles/style.css";
-import LatestNews from "./src/components/latestNews/LatestNews";
+import LatestNews from "./src/components/LatestNews/LatestNews";
 import Footer from "./src/components/Footer/Footer";
 import BrandLogosSlider from "./src/components/BrandLogosSlider/BrandLogosSlider";
 import Collections from "./src/components/Collections/Collections";

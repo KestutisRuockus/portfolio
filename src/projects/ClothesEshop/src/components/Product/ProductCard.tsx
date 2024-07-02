@@ -38,10 +38,8 @@ export default function ProductCard({
 
   return (
     <div
-      className={`flex ${
-        isBestSellerComponent
-          ? "w-full"
-          : "md:w-4/5 flex-wrap md:justify-start justify-center"
+      className={`flex flex-wrap justify-center${
+        isBestSellerComponent ? "" : " md:justify-start"
       }`}
     >
       {products.map((product) => (
