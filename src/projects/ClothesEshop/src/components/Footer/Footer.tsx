@@ -6,6 +6,7 @@ import {
   socialMediaLinks,
   customersServices,
 } from "../../data/footerLinks";
+import PaymentsCardsIcons from "../../utils/PaymentsCardsIcons";
 
 export default function Footer() {
   // automatically generate all links
@@ -69,17 +70,20 @@ export default function Footer() {
     );
   }
   return (
-    <div className="flex justify-center bg-[#FECA5A] p-8">
-      <div className="flex flex-wrap max-[730px]:justify-center justify-start gap-12">
-        {/* Store Info column */}
-        {generateContactInfo(storeInfo)}
-        {/* Customer Services column */}
-        {generateLink(customersServices, "Customer Services")}
-        {/* company column */}
-        {generateLink(companyInfo, "Company")}
-        {/* logo & social media icons */}
-        {generateSocialMediaLinks(socialMediaLinks)}
+    <div>
+      <div className="flex justify-center bg-[#FECA5A] p-8">
+        <div className="flex flex-wrap max-[730px]:justify-center justify-start gap-12">
+          {/* Store Info column */}
+          {generateContactInfo(storeInfo)}
+          {/* Customer Services column */}
+          {generateLink(customersServices, "Customer Services")}
+          {/* company column */}
+          {generateLink(companyInfo, "Company")}
+          {/* logo & social media icons */}
+          {generateSocialMediaLinks(socialMediaLinks)}
+        </div>
       </div>
+      <PaymentsCardsIcons />
     </div>
   );
 }

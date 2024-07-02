@@ -3,6 +3,7 @@ import ShoppingCartProduct from "./ShoppingCartProduct";
 import { allItems } from "../../data/products";
 import Button from "../../utils/Buttons";
 import BestSeller from "../BestSeller/BestSellers";
+import PaymentsCardsIcons from "../../utils/PaymentsCardsIcons";
 
 export default function ShoppingCart() {
   return (
@@ -31,6 +32,7 @@ export default function ShoppingCart() {
           </div>
         </div>
       </div>
+      <PaymentsCardsIcons />
       <BestSeller />
     </div>
   );
