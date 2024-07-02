@@ -52,14 +52,14 @@ export default function ProductCard({
           className={`${
             isBestSellerComponent
               ? "min-w-[170px] max-h-[230px]"
-              : "w-[270px] max-h-[400px]"
+              : "w-[270px] max-h-[391px]"
           } mx-2 my-8 pt-2 relative group hover:border-black border-2 rounded-lg transition-all duration-500`}
         >
           <div className="w-full mb-20">
             <img
               className={`${
                 isBestSellerComponent
-                  ? "min-w-[100px] h-[120px]"
+                  ? "min-w-[90px] h-[130px]"
                   : "w-[200px] h-[300px]"
               } m-auto`}
               src={product.images[0]}

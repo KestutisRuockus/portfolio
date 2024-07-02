@@ -12,6 +12,7 @@ import { allItems } from "./src/data/products";
 import ProductModal from "./src/components/Product/ProductModal";
 import CurrentSelectedCollection from "./src/components/CurrentCollection/CurrentSelectedCollection";
 import BestSeller from "./src/components/BestSeller/BestSellers";
+import ShoppingCart from "./src/components/ShoppingCart/ShoppingCart";
 
 export default function ClothesEshopIndex() {
   const testProductCard = [
@@ -44,6 +45,9 @@ export default function ClothesEshopIndex() {
       {/* <ProductModal /> */}
       <div className="text-center my-4 text-4xl">ProductModal component</div>
       <ProductModal product={testProductCard[1]} />
+      {/* <ShoppingCart /> */}
+      <div className="text-center my-4 text-4xl">Shopping Cart component</div>
+      <ShoppingCart />
     </div>
   );
 }
