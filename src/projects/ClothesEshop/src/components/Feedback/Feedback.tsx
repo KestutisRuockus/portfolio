@@ -48,12 +48,12 @@ export default function Feedback() {
             />
           </div>
           <div>
-            <div className="font-bold text-lg">
+            <div className="font-bold font-name text-xl">
               {feedback[feedbackIndex].name}
             </div>
           </div>
         </div>
-        <div className="line-clamp-3 min-h-[74px]">
+        <div className="line-clamp-3 min-h-[74px] font-base">
           {feedback[feedbackIndex].comment}
         </div>
         <div className="m-auto">{convertRatingToStars()}</div>

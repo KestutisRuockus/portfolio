@@ -59,17 +59,19 @@ export default function ProductModal({ product }: ProductModalProps) {
       <div className="md:w-2/3 w-full flex justify-center items-center">
         <div className="sm:w-2/3 w-4/5 m-auto flex flex-col gap-4">
           <div className="flex justify-end">
-            <div className="text-gray-400 text-end text-sm">{`${product.collection}`}</div>
-            <div className="text-gray-400 text-end text-sm">{`, ${product.subcategory}`}</div>
+            <div className="text-gray-400 text-end text-sm font-base">{`${product.collection}`}</div>
+            <div className="text-gray-400 text-end text-sm font-base">{`, ${product.subcategory}`}</div>
           </div>
           <div>
-            <h1 className="text-2xl font-[900]">{product.name}</h1>
+            <h1 className="text-3xl font-[900] font-name">{product.name}</h1>
           </div>
           <div>
-            <h1 className="text-xl font-bold text-sky-950">{product.brand}</h1>
+            <h1 className="font-brandTitle text-2xl font-semibold text-sky-950">
+              {product.brand}
+            </h1>
           </div>
           <div className="flex justify-between items-center">
-            <h1 className="text-sky-800 font-semibold">{`${product.price} ${product.currency}`}</h1>
+            <h1 className="text-sky-800 font-semibold font-base">{`${product.price} ${product.currency}`}</h1>
             <div className="border-2 border-yellow-400 rounded-full p-2">
               <span className="w-fit rounded-full mt-4 font-semibold">
                 {product.rating.toFixed(1)}
@@ -77,7 +79,7 @@ export default function ProductModal({ product }: ProductModalProps) {
             </div>
           </div>
           <div>
-            <div className="text-gray-400 text-sm">Size:</div>
+            <div className="text-gray-400 text-sm font-base">Size:</div>
             <div className="flex max-[400px]:flex-col justify-between">
               <select
                 className="border-2 p-1 text-sm rounded-lg cursor-pointer max-[400px]:w-2/3"
@@ -87,23 +89,23 @@ export default function ProductModal({ product }: ProductModalProps) {
                   Choose a Size
                 </option>
                 {product.sizes.map((size) => (
-                  <option className="text-sm" key={size} value={size}>
+                  <option className="text-sm font-base" key={size} value={size}>
                     {size}
                   </option>
                 ))}
               </select>
-              <div className="text-gray-400 text-sm min-[401px]:text-end">
+              <div className="font-base text-gray-400 text-sm min-[401px]:text-end">
                 Available quantity: {product.stock_quantity}
               </div>
             </div>
           </div>
           <Button text="Add To Cart" />
-          <div className="border-dashed border-b-4 pb-2">
+          <div className="font-base border-dashed border-b-4 pb-2">
             {product.description}
           </div>
           <div>
-            <div className="text-gray-400 text-sm">Material:</div>
-            <div>{product.material}</div>
+            <div className="text-gray-400 text-sm font-base">Material:</div>
+            <div className="font-base">{product.material}</div>
           </div>
         </div>
       </div>

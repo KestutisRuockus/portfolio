@@ -21,7 +21,7 @@ export default function BestSeller() {
   return (
     <div className="w-4/5 my-16 rounded-lg m-auto border-4">
       <div>
-        <h1 className="text-center mt-4 text-3xl font-semibold text-sky-800 px-2">
+        <h1 className="font-brandTitle text-center mt-4 text-6xl font-semibold text-sky-800 px-2">
           Top Sellers from the Past Month
         </h1>
       </div>

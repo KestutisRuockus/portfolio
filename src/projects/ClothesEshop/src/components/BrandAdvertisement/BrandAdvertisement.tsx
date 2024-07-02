@@ -19,12 +19,12 @@ export default function BrandAdvertisement() {
               alt="buffalo brand"
             />
           </div>
-          <div>
+          <div className="font-base">
             Use all your positivity, optimism, creativity and motivation. We
             believe in that kind of passion.
           </div>
           <div>
-            <button className="py-2 px-6 bg-white text-black rounded-lg font-bold hover:bg-gray-400 transition-colors duration-200">
+            <button className="py-2 px-6 bg-white text-black rounded-lg font-semibold font-base hover:bg-gray-400 transition-colors duration-200">
               See Collection
             </button>
           </div>

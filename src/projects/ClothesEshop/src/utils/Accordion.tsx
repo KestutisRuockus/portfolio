@@ -15,7 +15,7 @@ export default function Accordion({ dropList }: AccordionProps) {
         onClick={() => setAccordionOpen(!accordionOpen)}
         className="w-full flex justify-between gap-2 items-center px-1 group border-b-2 border-gray-300 cursor-pointer"
       >
-        <div className="text-lg font-semibold text-sky-950 group-hover:text-gray-500 transition-all duration-300">
+        <div className="font-name text-xl font-semibold text-sky-950 group-hover:text-gray-500 transition-all duration-300">
           {dropList.collection}
         </div>
         <i
@@ -29,7 +29,7 @@ export default function Accordion({ dropList }: AccordionProps) {
           <h1
             key={subcategory}
             onClick={(e) => console.log(e.target)}
-            className={`w-full bg-rose-100 bg-opacity-0 hover:bg-opacity-100 hover:w-full rounded-lg ${
+            className={`font-base w-full bg-rose-100 bg-opacity-0 hover:bg-opacity-100 hover:w-full rounded-lg ${
               accordionOpen ? "max-h-20 opacity-100" : "max-h-0 opacity-0"
             } overflow-hidden cursor-pointer hover:text-rose-700 text-sm font-semibold hover:pl-2 transition-all duration-500`}
           >

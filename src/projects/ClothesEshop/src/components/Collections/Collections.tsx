@@ -21,8 +21,10 @@ function generateCollection(
             />
           </div>
           <div className="text-white font-semibold text-center w-4/5 absolute m-auto left-0 right-0 bottom-5 rounded-lg py-6 border-4 border-gray-300 bg-black bg-opacity-70 group-hover:py-12 group-hover:bottom-16 group-hover:bg-gray-500 group-hover:bg-opacity-80 group-hover:text-[#FECA5A] transition-all duration-300 cursor-pointer">
-            <h1 className="text-2xl cursor-pointer">{obj.collection}</h1>
-            <h1 className="text-2xl cursor-pointer">Collection</h1>
+            <h1 className="font-name text-4xl cursor-pointer">
+              {obj.collection}
+            </h1>
+            <h1 className="font-name text-4xl cursor-pointer">Collection</h1>
             <Button text="Shop Now" />
           </div>
         </div>

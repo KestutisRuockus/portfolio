@@ -3,7 +3,7 @@ import React from "react";
 export default function PaymentsCardsIcons() {
   return (
     <div className="flex justify-center gap-2 items-center relative bg-sky-950 py-2">
-      <div className="sm:absolute sm:left-2 text-white text-sm max-[500px]:text-xs">
+      <div className="font-base sm:absolute sm:left-2 text-white text-sm max-[500px]:text-xs">
         © 2024 ClothesEShop.
       </div>
       <div className="flex items-center gap-3 w-fit sm:m-auto text-white">

@@ -59,7 +59,7 @@ export default function Navbar() {
       >
         {links.map((link) => (
           <li
-            className="text-2xl font-semibold cursor-pointer border-black md:hover:border-b-8 md:hover:-mb-4 transition-all duration-200 rounded-b-lg max-md:hover:text-[#FECA5A]"
+            className="font-brandTitle text-3xl font-semibold cursor-pointer border-black md:hover:border-b-8 md:hover:-mb-4 transition-all duration-200 rounded-b-lg max-md:hover:text-[#FECA5A]"
             key={link.name}
           >
             {link.name}
@@ -78,7 +78,7 @@ export default function Navbar() {
         {/* search element */}
         <div className="flex justify-center items-center search-input w-2/3">
           <input
-            className="w-full h-10 sm:px-4 px-2 focus:outline-none focus:bg-rose-100 rounded-s-lg transition-colors duration-200"
+            className="font-base w-full h-10 sm:px-4 px-2 focus:outline-none focus:bg-rose-100 rounded-s-lg transition-colors duration-200"
             type="text"
             placeholder="Search"
           />

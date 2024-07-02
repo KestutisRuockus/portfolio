@@ -69,13 +69,15 @@ export default function ProductCard({
               </span>
             </div>
           </div>
-          <div className="w-full m-auto mt-5 pl-[10%] py-1 absolute left-0 right-0 bottom-0 text-sm flex flex-col gap-4 bg- group-hover:bg-gray-200 group-hover:bg-opacity-80 transition-all duration-500 overflow-hidden cursor-default rounded-lg">
+          <div className="w-full m-auto mt-5 pl-[5%] py-1 absolute left-0 right-0 bottom-0 text-sm flex flex-col gap-1 bg- group-hover:bg-gray-200 group-hover:bg-opacity-80 transition-all duration-500 overflow-hidden cursor-default rounded-lg">
             <div className="px-2">
-              <h1 className="font-bold">{product.brand}</h1>
-              <h1 className="">{`${product.price} ${product.currency}`}</h1>
+              <h1 className="font-bold font-brandTitle text-xl">
+                {product.name}
+              </h1>
+              <h1 className="font-name">{`${product.price} ${product.currency}`}</h1>
             </div>
             <div className="w-full px-2 group-hover:h-[5.2rem]  h-0 transition-all duration-500 overflow-hidden">
-              <span className="text-sm text-gray-500 line-clamp-2">
+              <span className="font-base text-sm text-gray-500 line-clamp-2">
                 {`Available sizes: ${product.sizes.join(", ")}`}
               </span>
               <Button text="Add To Cart" />

@@ -13,14 +13,14 @@ export default function Footer() {
   function generateLink(array: { name: string; url: string }[], title: string) {
     return (
       <div>
-        <h1 className="text-xl font-semibold mb-4">{title}</h1>
+        <h1 className="font-brandTitle text-2xl font-semibold mb-4">{title}</h1>
         <ul className="min-w-[190px] w-1/5 flex flex-col gap-3">
           {array.map((obj) => (
             <li
               key={obj.name}
               className="w-fit cursor-pointer hover:text-rose-700 border-black hover:border-s-8 hover:ps-2 hover:font-semibold transition-all duration-300 rounded-s-lg box-border"
             >
-              <a href={obj.url} target="_blank">
+              <a className="font-base" href={obj.url} target="_blank">
                 {obj.name}
               </a>
             </li>
@@ -60,10 +60,14 @@ export default function Footer() {
   function generateContactInfo(array: { name: string; text: string }[]) {
     return (
       <div>
-        <h1 className="text-xl font-semibold mb-4">Store Info</h1>
+        <h1 className="font-brandTitle text-2xl font-semibold mb-4">
+          Store Info
+        </h1>
         <ul className="min-w-[190px] w-1/5 flex flex-col gap-3">
           {array.map((item) => (
-            <li key={item.name}>{item.text}</li>
+            <li className="font-base" key={item.name}>
+              {item.text}
+            </li>
           ))}
         </ul>
       </div>
