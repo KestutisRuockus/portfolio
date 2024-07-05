@@ -2102,10 +2102,10 @@ export const allItems = [
   },
   {
     id: "KCL012386",
-    name: "Kid's Puffer Coat",
+    name: "Children's Puffer Coat",
     description:
       "Warm puffer coat with a hood. Insulated for cold weather protection.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Coats",
     price: 49.99,
     currency: "EUR",
@@ -2123,10 +2123,10 @@ export const allItems = [
   },
   {
     id: "KCL012387",
-    name: "Kid's Wool Blend Coat",
+    name: "Children's Wool Blend Coat",
     description:
       "Stylish wool blend coat for a classic look. Ideal for formal occasions.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Coats",
     price: 54.99,
     currency: "EUR",
@@ -2144,10 +2144,10 @@ export const allItems = [
   },
   {
     id: "KCL012388",
-    name: "Kid's Parka Jacket",
+    name: "Children's Parka Jacket",
     description:
       "Durable parka jacket for outdoor adventures. Waterproof and windproof.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Coats",
     price: 59.99,
     currency: "EUR",
@@ -2165,10 +2165,10 @@ export const allItems = [
   },
   {
     id: "KCL012389",
-    name: "Kid's Faux Fur Coat",
+    name: "Children's Faux Fur Coat",
     description:
       "Fashionable faux fur coat for a trendy winter look. Soft and luxurious feel.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Coats",
     price: 64.99,
     currency: "EUR",
@@ -2186,10 +2186,10 @@ export const allItems = [
   },
   {
     id: "KCL012390",
-    name: "Kid's Trench Coat",
+    name: "Children's Trench Coat",
     description:
       "Classic trench coat for a sophisticated look. Perfect for all seasons.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Coats",
     price: 57.99,
     currency: "EUR",
@@ -2207,10 +2207,10 @@ export const allItems = [
   },
   {
     id: "KCL012391",
-    name: "Kid's Quilted Jacket",
+    name: "Children's Quilted Jacket",
     description:
       "Quilted jacket with a lightweight design. Ideal for transitional seasons.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Coats",
     price: 42.99,
     currency: "EUR",
@@ -2228,10 +2228,10 @@ export const allItems = [
   },
   {
     id: "KCL012392",
-    name: "Kid's Fleece Jacket",
+    name: "Children's Fleece Jacket",
     description:
       "Warm fleece jacket for outdoor activities. Soft and comfortable.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Coats",
     price: 39.99,
     currency: "EUR",
@@ -2249,10 +2249,10 @@ export const allItems = [
   },
   {
     id: "KCL012393",
-    name: "Kid's Bomber Jacket",
+    name: "Children's Bomber Jacket",
     description:
       "Stylish bomber jacket with a sporty look. Perfect for casual outings.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Coats",
     price: 45.99,
     currency: "EUR",
@@ -2270,10 +2270,10 @@ export const allItems = [
   },
   {
     id: "KCL012394",
-    name: "Kid's Raincoat",
+    name: "Children's Raincoat",
     description:
       "Waterproof raincoat with a hood. Keeps kids dry during rainy days.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Coats",
     price: 37.99,
     currency: "EUR",
@@ -2291,10 +2291,10 @@ export const allItems = [
   },
   {
     id: "KCL012395",
-    name: "Kid's Faux Leather Jacket",
+    name: "Children's Faux Leather Jacket",
     description:
       "Fashionable faux leather jacket for a trendy look. Lightweight and comfortable.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Coats",
     price: 49.99,
     currency: "EUR",
@@ -2312,10 +2312,10 @@ export const allItems = [
   },
   {
     id: "KCL012376",
-    name: "Kid's Cozy Knit Sweater",
+    name: "Children's Cozy Knit Sweater",
     description:
       "Soft and cozy knit sweater for warmth and comfort. Perfect for chilly days.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 34.99,
     currency: "EUR",
@@ -2333,10 +2333,10 @@ export const allItems = [
   },
   {
     id: "KCL012377",
-    name: "Kid's Striped Crewneck Sweater",
+    name: "Children's Striped Crewneck Sweater",
     description:
       "Classic striped crewneck sweater. Versatile and stylish for everyday wear.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 29.99,
     currency: "EUR",
@@ -2354,10 +2354,10 @@ export const allItems = [
   },
   {
     id: "KCL012378",
-    name: "Kid's Hooded Pullover Sweater",
+    name: "Children's Hooded Pullover Sweater",
     description:
       "Warm hooded pullover sweater with a cozy feel. Great for outdoor activities.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 36.99,
     currency: "EUR",
@@ -2375,10 +2375,10 @@ export const allItems = [
   },
   {
     id: "KCL012379",
-    name: "Kid's Cable Knit Sweater",
+    name: "Children's Cable Knit Sweater",
     description:
       "Classic cable knit sweater for a timeless look. Soft and warm for winter.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 39.99,
     currency: "EUR",
@@ -2396,10 +2396,10 @@ export const allItems = [
   },
   {
     id: "KCL012380",
-    name: "Kid's V-Neck Sweater",
+    name: "Children's V-Neck Sweater",
     description:
       "Stylish V-neck sweater with a comfortable fit. Suitable for casual and formal occasions.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 32.99,
     currency: "EUR",
@@ -2417,10 +2417,10 @@ export const allItems = [
   },
   {
     id: "KCL012381",
-    name: "Kid's Printed Sweater",
+    name: "Children's Printed Sweater",
     description:
       "Fun printed sweater with colorful designs. Adds a playful touch to any outfit.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 28.99,
     currency: "EUR",
@@ -2438,10 +2438,10 @@ export const allItems = [
   },
   {
     id: "KCL012382",
-    name: "Kid's Chunky Sweater",
+    name: "Children's Chunky Sweater",
     description:
       "Chunky knit sweater for a cozy and stylish look. Perfect for colder days.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 38.99,
     currency: "EUR",
@@ -2459,10 +2459,10 @@ export const allItems = [
   },
   {
     id: "KCL012383",
-    name: "Kid's Cardigan Sweater",
+    name: "Children's Cardigan Sweater",
     description:
       "Versatile cardigan sweater for layering. Soft and lightweight.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 31.99,
     currency: "EUR",
@@ -2480,10 +2480,10 @@ export const allItems = [
   },
   {
     id: "KCL012384",
-    name: "Kid's Fair Isle Sweater",
+    name: "Children's Fair Isle Sweater",
     description:
       "Classic Fair Isle sweater with a festive design. Warm and comfortable for winter.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 35.99,
     currency: "EUR",
@@ -2501,10 +2501,10 @@ export const allItems = [
   },
   {
     id: "KCL012385",
-    name: "Kid's Color Block Sweater",
+    name: "Children's Color Block Sweater",
     description:
       "Trendy color block sweater with a modern design. Soft and stylish for all occasions.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 33.99,
     currency: "EUR",
@@ -2522,10 +2522,10 @@ export const allItems = [
   },
   {
     id: "KCL012356",
-    name: "Kid's T-Shirt",
+    name: "Children's T-Shirt",
     description:
       "A fun t-shirt featuring a cool dinosaur print. Soft and comfortable for everyday wear.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 15.99,
     currency: "EUR",
@@ -2543,10 +2543,10 @@ export const allItems = [
   },
   {
     id: "KCL012357",
-    name: "Kid's Striped T-Shirt",
+    name: "Children's Striped T-Shirt",
     description:
       "Classic striped t-shirt for a stylish look. Made from soft, breathable cotton.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 18.99,
     currency: "EUR",
@@ -2564,10 +2564,10 @@ export const allItems = [
   },
   {
     id: "KCL012358",
-    name: "Kid's Rainbow T-Shirt",
+    name: "Children's Rainbow T-Shirt",
     description:
       "Bright and cheerful t-shirt with a rainbow design. Perfect for adding color to any outfit.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 16.99,
     currency: "EUR",
@@ -2585,10 +2585,10 @@ export const allItems = [
   },
   {
     id: "KCL012359",
-    name: "Kid's Adventure T-Shirt",
+    name: "Children's Adventure T-Shirt",
     description:
       "T-shirt with a fun adventure-themed graphic. Ideal for little explorers.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 17.99,
     currency: "EUR",
@@ -2606,10 +2606,10 @@ export const allItems = [
   },
   {
     id: "KCL012360",
-    name: "Kid's Space T-Shirt",
+    name: "Children's Space T-Shirt",
     description:
       "A t-shirt with a cool space theme, perfect for young space enthusiasts.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 19.99,
     currency: "EUR",
@@ -2627,10 +2627,10 @@ export const allItems = [
   },
   {
     id: "KCL012361",
-    name: "Kid's Animal Friends T-Shirt",
+    name: "Children's Animal Friends T-Shirt",
     description:
       "Cute t-shirt featuring various animal friends. Made from soft and durable fabric.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 14.99,
     currency: "EUR",
@@ -2648,10 +2648,10 @@ export const allItems = [
   },
   {
     id: "KCL012362",
-    name: "Kid's Superhero T-Shirt",
+    name: "Children's Superhero T-Shirt",
     description:
       "Exciting t-shirt with a superhero graphic. Perfect for little heroes.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 18.99,
     currency: "EUR",
@@ -2669,10 +2669,10 @@ export const allItems = [
   },
   {
     id: "KCL012363",
-    name: "Kid's Summer Vibes T-Shirt",
+    name: "Children's Summer Vibes T-Shirt",
     description:
       "Bright t-shirt with a summer vibes print. Light and breathable for warm days.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 17.99,
     currency: "EUR",
@@ -2690,10 +2690,10 @@ export const allItems = [
   },
   {
     id: "KCL012364",
-    name: "Kid's Unicorn T-Shirt",
+    name: "Children's Unicorn T-Shirt",
     description:
       "Magical unicorn t-shirt for imaginative kids. Soft and comfy materiall.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 19.99,
     currency: "EUR",
@@ -2711,10 +2711,10 @@ export const allItems = [
   },
   {
     id: "KCL012365",
-    name: "Kid's Sports T-Shirt",
+    name: "Children's Sports T-Shirt",
     description:
       "Sporty t-shirt for active kids. Moisture-wicking fabric to keep them cool.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 20.99,
     currency: "EUR",
@@ -2732,10 +2732,10 @@ export const allItems = [
   },
   {
     id: "KCL012396",
-    name: "Kid's Matching Sweatshirt and Joggers Set",
+    name: "Children's Matching Sweatshirt and Joggers Set",
     description:
       "Cozy sweatshirt and joggers set for casual wear. Matching design for a stylish look.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 44.99,
     currency: "EUR",
@@ -2753,10 +2753,10 @@ export const allItems = [
   },
   {
     id: "KCL012397",
-    name: "Kid's Hoodie and Leggings Set",
+    name: "Children's Hoodie and Leggings Set",
     description:
       "Stylish hoodie and leggings set for everyday wear. Comfortable and trendy.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 39.99,
     currency: "EUR",
@@ -2774,10 +2774,10 @@ export const allItems = [
   },
   {
     id: "KCL012398",
-    name: "Kid's Denim Jacket and Jeans Set",
+    name: "Children's Denim Jacket and Jeans Set",
     description:
       "Classic denim jacket and jeans set for a stylish outfit. Perfect for casual outings.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 54.99,
     currency: "EUR",
@@ -2795,10 +2795,10 @@ export const allItems = [
   },
   {
     id: "KCL012399",
-    name: "Kid's Sweater and short Set",
+    name: "Children's Sweater and short Set",
     description:
       "Cozy sweater and skirt set for a cute and comfortable look. Ideal for colder days.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 49.99,
     currency: "EUR",
@@ -2816,10 +2816,10 @@ export const allItems = [
   },
   {
     id: "KCL012400",
-    name: "Kid's Tracksuit Set",
+    name: "Children's Tracksuit Set",
     description:
       "Sporty tracksuit set for active kids. Comfortable and suitable for sports activities.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 47.99,
     currency: "EUR",
@@ -2837,10 +2837,10 @@ export const allItems = [
   },
   {
     id: "KCL012401",
-    name: "Kid's Shirt and Shorts Set",
+    name: "Children's Shirt and Shorts Set",
     description:
       "Casual shirt and shorts set for warm weather. Perfect for playtime and outings.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 34.99,
     currency: "EUR",
@@ -2858,9 +2858,9 @@ export const allItems = [
   },
   {
     id: "KCL012402",
-    name: "Kid's Shark Set",
+    name: "Children's Shark Set",
     description: "Shark set. Stylish and comfortable.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 59.99,
     currency: "EUR",
@@ -2878,10 +2878,10 @@ export const allItems = [
   },
   {
     id: "KCL012403",
-    name: "Kid's Sweater and Pants Set",
+    name: "Children's Sweater and Pants Set",
     description:
       "Warm sweater and pants set for chilly days. Cozy and fashionable.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 49.99,
     currency: "EUR",
@@ -2899,10 +2899,10 @@ export const allItems = [
   },
   {
     id: "KCL012404",
-    name: "Kid's Overall Set",
+    name: "Children's Overall Set",
     description:
       "Sporty Overall set for active kids. Lightweight and flexible.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 42.99,
     currency: "EUR",
@@ -2920,10 +2920,10 @@ export const allItems = [
   },
   {
     id: "KCL012405",
-    name: "Kid's T-shirt and Shorts Set",
+    name: "Children's T-shirt and Shorts Set",
     description:
       "Comfortable t-shirt and shorts set for casual wear. Breathable fabric for hot days.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 29.99,
     currency: "EUR",
@@ -2941,10 +2941,10 @@ export const allItems = [
   },
   {
     id: "KCL012396",
-    name: "Kid's Matching Sweatshirt and Joggers Set",
+    name: "Children's Matching Sweatshirt and Joggers Set",
     description:
       "Cozy sweatshirt and joggers set for casual wear. Matching design for a stylish look.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 44.99,
     currency: "EUR",
@@ -2962,10 +2962,10 @@ export const allItems = [
   },
   {
     id: "KCL012397",
-    name: "Kid's Hoodie and Leggings Set",
+    name: "Children's Hoodie and Leggings Set",
     description:
       "Stylish hoodie and leggings set for everyday wear. Comfortable and trendy.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 39.99,
     currency: "EUR",
@@ -2983,10 +2983,10 @@ export const allItems = [
   },
   {
     id: "KCL012398",
-    name: "Kid's Denim Jacket and Jeans Set",
+    name: "Children's Denim Jacket and Jeans Set",
     description:
       "Classic denim jacket and jeans set for a stylish outfit. Perfect for casual outings.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 54.99,
     currency: "EUR",
@@ -3004,10 +3004,10 @@ export const allItems = [
   },
   {
     id: "KCL012399",
-    name: "Kid's Sweater and short Set",
+    name: "Children's Sweater and short Set",
     description:
       "Cozy sweater and skirt set for a cute and comfortable look. Ideal for colder days.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 49.99,
     currency: "EUR",
@@ -3025,10 +3025,10 @@ export const allItems = [
   },
   {
     id: "KCL012400",
-    name: "Kid's Tracksuit Set",
+    name: "Children's Tracksuit Set",
     description:
       "Sporty tracksuit set for active kids. Comfortable and suitable for sports activities.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 47.99,
     currency: "EUR",
@@ -3046,10 +3046,10 @@ export const allItems = [
   },
   {
     id: "KCL012401",
-    name: "Kid's Shirt and Shorts Set",
+    name: "Children's Shirt and Shorts Set",
     description:
       "Casual shirt and shorts set for warm weather. Perfect for playtime and outings.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 34.99,
     currency: "EUR",
@@ -3067,9 +3067,9 @@ export const allItems = [
   },
   {
     id: "KCL012402",
-    name: "Kid's Shark Set",
+    name: "Children's Shark Set",
     description: "Shark set. Stylish and comfortable.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 59.99,
     currency: "EUR",
@@ -3087,10 +3087,10 @@ export const allItems = [
   },
   {
     id: "KCL012403",
-    name: "Kid's Sweater and Pants Set",
+    name: "Children's Sweater and Pants Set",
     description:
       "Warm sweater and pants set for chilly days. Cozy and fashionable.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 49.99,
     currency: "EUR",
@@ -3108,10 +3108,10 @@ export const allItems = [
   },
   {
     id: "KCL012404",
-    name: "Kid's Overall Set",
+    name: "Children's Overall Set",
     description:
       "Sporty Overall set for active kids. Lightweight and flexible.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 42.99,
     currency: "EUR",
@@ -3129,10 +3129,10 @@ export const allItems = [
   },
   {
     id: "KCL012405",
-    name: "Kid's T-shirt and Shorts Set",
+    name: "Children's T-shirt and Shorts Set",
     description:
       "Comfortable t-shirt and shorts set for casual wear. Breathable fabric for hot days.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sets",
     price: 29.99,
     currency: "EUR",
@@ -3150,10 +3150,10 @@ export const allItems = [
   },
   {
     id: "KCL012376",
-    name: "Kid's Cozy Knit Sweater",
+    name: "Children's Cozy Knit Sweater",
     description:
       "Soft and cozy knit sweater for warmth and comfort. Perfect for chilly days.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 34.99,
     currency: "EUR",
@@ -3171,10 +3171,10 @@ export const allItems = [
   },
   {
     id: "KCL012377",
-    name: "Kid's Striped Crewneck Sweater",
+    name: "Children's Striped Crewneck Sweater",
     description:
       "Classic striped crewneck sweater. Versatile and stylish for everyday wear.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 29.99,
     currency: "EUR",
@@ -3192,10 +3192,10 @@ export const allItems = [
   },
   {
     id: "KCL012378",
-    name: "Kid's Hooded Pullover Sweater",
+    name: "Children's Hooded Pullover Sweater",
     description:
       "Warm hooded pullover sweater with a cozy feel. Great for outdoor activities.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 36.99,
     currency: "EUR",
@@ -3213,10 +3213,10 @@ export const allItems = [
   },
   {
     id: "KCL012379",
-    name: "Kid's Cable Knit Sweater",
+    name: "Children's Cable Knit Sweater",
     description:
       "Classic cable knit sweater for a timeless look. Soft and warm for winter.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 39.99,
     currency: "EUR",
@@ -3234,10 +3234,10 @@ export const allItems = [
   },
   {
     id: "KCL012380",
-    name: "Kid's V-Neck Sweater",
+    name: "Children's V-Neck Sweater",
     description:
       "Stylish V-neck sweater with a comfortable fit. Suitable for casual and formal occasions.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 32.99,
     currency: "EUR",
@@ -3255,10 +3255,10 @@ export const allItems = [
   },
   {
     id: "KCL012381",
-    name: "Kid's Printed Sweater",
+    name: "Children's Printed Sweater",
     description:
       "Fun printed sweater with colorful designs. Adds a playful touch to any outfit.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 28.99,
     currency: "EUR",
@@ -3276,10 +3276,10 @@ export const allItems = [
   },
   {
     id: "KCL012382",
-    name: "Kid's Chunky Sweater",
+    name: "Children's Chunky Sweater",
     description:
       "Chunky knit sweater for a cozy and stylish look. Perfect for colder days.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 38.99,
     currency: "EUR",
@@ -3297,10 +3297,10 @@ export const allItems = [
   },
   {
     id: "KCL012383",
-    name: "Kid's Cardigan Sweater",
+    name: "Children's Cardigan Sweater",
     description:
       "Versatile cardigan sweater for layering. Soft and lightweight.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 31.99,
     currency: "EUR",
@@ -3318,10 +3318,10 @@ export const allItems = [
   },
   {
     id: "KCL012384",
-    name: "Kid's Fair Isle Sweater",
+    name: "Children's Fair Isle Sweater",
     description:
       "Classic Fair Isle sweater with a festive design. Warm and comfortable for winter.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 35.99,
     currency: "EUR",
@@ -3339,10 +3339,10 @@ export const allItems = [
   },
   {
     id: "KCL012385",
-    name: "Kid's Color Block Sweater",
+    name: "Children's Color Block Sweater",
     description:
       "Trendy color block sweater with a modern design. Soft and stylish for all occasions.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Sweaters",
     price: 33.99,
     currency: "EUR",
@@ -3360,10 +3360,10 @@ export const allItems = [
   },
   {
     id: "KCL012356",
-    name: "Kid's T-Shirt",
+    name: "Children's T-Shirt",
     description:
       "A fun t-shirt featuring a cool dinosaur print. Soft and comfortable for everyday wear.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 15.99,
     currency: "EUR",
@@ -3381,10 +3381,10 @@ export const allItems = [
   },
   {
     id: "KCL012357",
-    name: "Kid's Striped T-Shirt",
+    name: "Children's Striped T-Shirt",
     description:
       "Classic striped t-shirt for a stylish look. Made from soft, breathable cotton.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 18.99,
     currency: "EUR",
@@ -3402,10 +3402,10 @@ export const allItems = [
   },
   {
     id: "KCL012358",
-    name: "Kid's Rainbow T-Shirt",
+    name: "Children's Rainbow T-Shirt",
     description:
       "Bright and cheerful t-shirt with a rainbow design. Perfect for adding color to any outfit.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 16.99,
     currency: "EUR",
@@ -3423,10 +3423,10 @@ export const allItems = [
   },
   {
     id: "KCL012359",
-    name: "Kid's Adventure T-Shirt",
+    name: "Children's Adventure T-Shirt",
     description:
       "T-shirt with a fun adventure-themed graphic. Ideal for little explorers.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 17.99,
     currency: "EUR",
@@ -3444,10 +3444,10 @@ export const allItems = [
   },
   {
     id: "KCL012360",
-    name: "Kid's Space T-Shirt",
+    name: "Children's Space T-Shirt",
     description:
       "A t-shirt with a cool space theme, perfect for young space enthusiasts.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 19.99,
     currency: "EUR",
@@ -3465,10 +3465,10 @@ export const allItems = [
   },
   {
     id: "KCL012361",
-    name: "Kid's Animal Friends T-Shirt",
+    name: "Children's Animal Friends T-Shirt",
     description:
       "Cute t-shirt featuring various animal friends. Made from soft and durable fabric.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 14.99,
     currency: "EUR",
@@ -3486,10 +3486,10 @@ export const allItems = [
   },
   {
     id: "KCL012362",
-    name: "Kid's Superhero T-Shirt",
+    name: "Children's Superhero T-Shirt",
     description:
       "Exciting t-shirt with a superhero graphic. Perfect for little heroes.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 18.99,
     currency: "EUR",
@@ -3507,10 +3507,10 @@ export const allItems = [
   },
   {
     id: "KCL012363",
-    name: "Kid's Summer Vibes T-Shirt",
+    name: "Children's Summer Vibes T-Shirt",
     description:
       "Bright t-shirt with a summer vibes print. Light and breathable for warm days.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 17.99,
     currency: "EUR",
@@ -3528,10 +3528,10 @@ export const allItems = [
   },
   {
     id: "KCL012364",
-    name: "Kid's Unicorn T-Shirt",
+    name: "Children's Unicorn T-Shirt",
     description:
       "Magical unicorn t-shirt for imaginative kids. Soft and comfy materiall.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 19.99,
     currency: "EUR",
@@ -3549,10 +3549,10 @@ export const allItems = [
   },
   {
     id: "KCL012365",
-    name: "Kid's Sports T-Shirt",
+    name: "Children's Sports T-Shirt",
     description:
       "Sporty t-shirt for active kids. Moisture-wicking fabric to keep them cool.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "T-Shirts",
     price: 20.99,
     currency: "EUR",
@@ -3570,10 +3570,10 @@ export const allItems = [
   },
   {
     id: "KCL012367",
-    name: "Kid's Jogger Pants",
+    name: "Children's Jogger Pants",
     description:
       "Comfortable jogger pants for active kids. Elastic waistband and cuffs for a perfect fit.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Pants",
     price: 24.99,
     currency: "EUR",
@@ -3591,10 +3591,10 @@ export const allItems = [
   },
   {
     id: "KCL012368",
-    name: "Kid's Chino Pants",
+    name: "Children's Chino Pants",
     description:
       "Stylish chino pants for a smart-casual look. Comfortable and versatile.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Pants",
     price: 27.99,
     currency: "EUR",
@@ -3612,10 +3612,10 @@ export const allItems = [
   },
   {
     id: "KCL012369",
-    name: "Kid's Denim Jeans",
+    name: "Children's Denim Jeans",
     description:
       "Classic denim jeans for kids. Durable and comfortable for everyday wear.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Pants",
     price: 31.99,
     currency: "EUR",
@@ -3633,10 +3633,10 @@ export const allItems = [
   },
   {
     id: "KCL012370",
-    name: "Kid's Printed Leggings",
+    name: "Children's Printed Leggings",
     description:
       "Fun and colorful printed leggings. Stretchy and comfortable for all-day wear.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Pants",
     price: 22.99,
     currency: "EUR",
@@ -3654,10 +3654,10 @@ export const allItems = [
   },
   {
     id: "KCL012371",
-    name: "Kid's Sweatpants",
+    name: "Children's Sweatpants",
     description:
       "Cozy sweatpants for lounging and play. Soft and warm fleece lining.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Pants",
     price: 26.99,
     currency: "EUR",
@@ -3675,10 +3675,10 @@ export const allItems = [
   },
   {
     id: "KCL012372",
-    name: "Kid's Corduroy Pants",
+    name: "Children's Corduroy Pants",
     description:
       "Stylish corduroy pants for a vintage-inspired look. Soft and comfortable fabric.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Pants",
     price: 28.99,
     currency: "EUR",
@@ -3696,10 +3696,10 @@ export const allItems = [
   },
   {
     id: "KCL012373",
-    name: "Kid's Harem Pants",
+    name: "Children's Harem Pants",
     description:
       "Comfortable harem pants for a relaxed fit. Perfect for everyday wear.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Pants",
     price: 23.99,
     currency: "EUR",
@@ -3717,10 +3717,10 @@ export const allItems = [
   },
   {
     id: "KCL012374",
-    name: "Kid's Fleece-Lined Leggings",
+    name: "Children's Fleece-Lined Leggings",
     description:
       "Warm fleece-lined leggings for cold weather. Stretchy and cozy for outdoor play.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Pants",
     price: 25.99,
     currency: "EUR",
@@ -3738,10 +3738,10 @@ export const allItems = [
   },
   {
     id: "KCL012375",
-    name: "Kid's Printed Joggers",
+    name: "Children's Printed Joggers",
     description:
       "Printed joggers with fun patterns. Elastic waistband for easy wear.",
-    collection: "Kid's Clothing",
+    collection: "Children's Clothing",
     subcategory: "Pants",
     price: 21.99,
     currency: "EUR",

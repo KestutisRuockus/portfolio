@@ -8,7 +8,7 @@ export const collectionsAndSubcategories = [
     subcategories: ["Coats", "Dresses", "Pants", "Tops", "Skirts"],
   },
   {
-    collection: `Kid's collection`,
+    collection: `Children's collection`,
     subcategories: ["Coats", "Pants", "T-shirts", "Sets", "Sweaters"],
   },
 ];

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/images/logo.jpg";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false); // state used to set or navbar is open or closed on small screens/pages
@@ -20,19 +21,23 @@ export default function Navbar() {
   const links = [
     {
       name: "Home",
-      link: "/",
+      link: "/clotheseshop",
+    },
+    {
+      name: "All",
+      link: "collection",
     },
     {
       name: "Men",
-      link: "/",
+      link: "collection",
     },
     {
       name: "Women",
-      link: "/",
+      link: "collection",
     },
     {
-      name: "Kids",
-      link: "/",
+      name: "Children",
+      link: "collection",
     },
   ];
 
@@ -53,17 +58,18 @@ export default function Navbar() {
       </div>
       {/* ul element of links */}
       <ul
-        className={`sm:w-2/3 w-full flex md:flex-row flex-col justify-center items-center lg:gap-12 gap-8 max-md:absolute max-md:z-30 z-0 ${
+        className={`sm:w-2/3 w-full flex md:flex-row flex-col justify-center items-center lg:gap-12 gap-8 max-md:absolute max-md:z-30 z-0  ${
           open ? "left-0" : "max-md:-left-full z-10"
         } top-0 max-md:py-24 max-md:bg-black max-md:text-white md:pb-0 pb-4 rounded-br-3xl transition-all duration-200 relative`}
       >
         {links.map((link) => (
-          <li
-            className="font-brandTitle text-3xl font-semibold cursor-pointer border-black md:hover:border-b-8 md:hover:-mb-4 transition-all duration-200 rounded-b-lg max-md:hover:text-[#FECA5A]"
+          <NavLink
+            to={link.link}
+            className="font-brandTitle lg:text-3xl text-2xl font-semibold cursor-pointer border-black md:hover:border-b-8 md:hover:-mb-4 transition-all duration-200 rounded-b-lg max-md:hover:text-[#FECA5A]"
             key={link.name}
           >
             {link.name}
-          </li>
+          </NavLink>
         ))}
       </ul>
       {/* logo element */}
@@ -86,7 +92,10 @@ export default function Navbar() {
         </div>
       </div>
       {/* shopping cart icon */}
-      <div className="flex justify-end items-center h-fit m-auto mx-4 relative group">
+      <NavLink
+        to="shoppingcart"
+        className="flex justify-end items-center h-fit m-auto mx-4 relative group"
+      >
         <i className="fa-solid fa-cart-shopping text-3xl group-hover:opacity-70 cursor-pointer"></i>
         <div
           className={`flex justify-center items-center w-5 h-5 p-[2px] bg-rose-700 rounded-full absolute right-[-10px] bottom-[-8px] ${
@@ -99,7 +108,7 @@ export default function Navbar() {
             {productsQuantityInShoppingCart}
           </div>
         </div>
-      </div>
+      </NavLink>
     </nav>
   );
 }
