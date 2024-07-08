@@ -1,8 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../../assets/images/logo.jpg";
 import { NavLink } from "react-router-dom";
+import { ClothesEShopContext } from "../../useContext/ClothesEShopContext";
+import { allItems } from "../../data/products";
+import { links } from "../../data/navbarLinks";
+
+type LinkProps = {
+  name: string;
+  link: string;
+};
 
 export default function Navbar() {
+  const productsContext = useContext(ClothesEShopContext);
+
   const [open, setOpen] = useState(false); // state used to set or navbar is open or closed on small screens/pages
   const [productsQuantityInShoppingCart, setProductsQuantityInShoppingCart] =
     useState(3); // get and display how many products are in the shopping cart
@@ -17,29 +27,32 @@ export default function Navbar() {
     }
   };
 
-  // automatically rendered links with map method
-  const links = [
-    {
-      name: "Home",
-      link: "/clotheseshop",
-    },
-    {
-      name: "All",
-      link: "collection",
-    },
-    {
-      name: "Men",
-      link: "collection",
-    },
-    {
-      name: "Women",
-      link: "collection",
-    },
-    {
-      name: "Children",
-      link: "collection",
-    },
-  ];
+  function filterListByCollectionType(collection: string) {
+    if (collection !== "All") {
+      const filteredList = allItems.filter(
+        (product) => product.collection === `${collection}'s Clothing`
+      );
+      productsContext.setCurrentList(filteredList);
+    } else {
+      productsContext.setCurrentList(allItems);
+    }
+  }
+
+  function createNavLink(link: LinkProps) {
+    return (
+      <NavLink
+        onClick={() => {
+          productsContext.setCurrentListTitle(`${link.name} Collection`);
+          filterListByCollectionType(link.name);
+        }}
+        to={link.link}
+        className="font-brandTitle lg:text-3xl text-2xl font-semibold cursor-pointer border-black md:hover:border-b-8 md:hover:-mb-4 transition-all duration-200 rounded-b-lg max-md:hover:text-[#FECA5A]"
+        key={link.name}
+      >
+        {link.name}
+      </NavLink>
+    );
+  }
 
   return (
     <nav
@@ -62,15 +75,7 @@ export default function Navbar() {
           open ? "left-0" : "max-md:-left-full z-10"
         } top-0 max-md:py-24 max-md:bg-black max-md:text-white md:pb-0 pb-4 rounded-br-3xl transition-all duration-200 relative`}
       >
-        {links.map((link) => (
-          <NavLink
-            to={link.link}
-            className="font-brandTitle lg:text-3xl text-2xl font-semibold cursor-pointer border-black md:hover:border-b-8 md:hover:-mb-4 transition-all duration-200 rounded-b-lg max-md:hover:text-[#FECA5A]"
-            key={link.name}
-          >
-            {link.name}
-          </NavLink>
-        ))}
+        {links.map((link) => createNavLink(link))}
       </ul>
       {/* logo element */}
       <div className="flex justify-end md:w-1/2 sm:w-2/3 w-2/3">

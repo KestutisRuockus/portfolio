@@ -38,7 +38,7 @@ export default function ProductCard({
 
   return (
     <div
-      className={`flex flex-wrap justify-center${
+      className={`w-4/5 flex flex-wrap justify-center${
         isBestSellerComponent ? "" : " md:justify-start"
       }`}
     >

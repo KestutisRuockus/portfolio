@@ -6,7 +6,7 @@ import BestSeller from "../../components/BestSeller/BestSellers";
 import { NavLink } from "react-router-dom";
 
 export default function ShoppingCart() {
-  const cartProducts = [allItems[45], allItems[88], allItems[165]];
+  const cartProducts = [allItems[45], allItems[88], allItems[133]];
   const [isCartEmpty] = useState<boolean>(
     cartProducts.length === 0 ? true : false
   );

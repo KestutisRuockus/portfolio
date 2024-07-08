@@ -17,7 +17,7 @@ export default function BestSeller() {
     return randomTopSellers;
   }
 
-  const testProductCard = randomTopSellers(6);
+  const testProductCard = randomTopSellers();
   return (
     <div className="w-4/5 my-16 rounded-lg m-auto border-4">
       <div>
