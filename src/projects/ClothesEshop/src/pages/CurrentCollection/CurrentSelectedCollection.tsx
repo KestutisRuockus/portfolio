@@ -8,7 +8,7 @@ export default function CurrentSelectedCollection() {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
   return (
-    <div className="w-full">
+    <div className="w-full relative">
       <h2 className="text-center text-5xl font-brandTitle text-sky-950 mt-8">
         {productsContext.currentListTitle}
       </h2>
@@ -24,6 +24,17 @@ export default function CurrentSelectedCollection() {
             isBestSellerComponent={false}
           />
         )}
+      </div>
+      <div className="fixed bottom-6 right-6 flex flex-col-reverse items-end justify-center ">
+        <i
+          onClick={() =>
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+          }
+          className="text-6xl text-blackc bg-[#FECA5A] fa-solid fa-circle-arrow-up rounded-full cursor-pointer hover:opacity-80 peer"
+        ></i>
+        <p className="text-end font-base text-2xl font-medium opacity-0 peer-hover:opacity-100 transition-all duration-300">
+          Scroll to Top
+        </p>
       </div>
     </div>
   );

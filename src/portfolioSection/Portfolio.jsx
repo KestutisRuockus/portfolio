@@ -15,9 +15,9 @@ import carRentPlatform3 from "../projects/CarRentPlatform/src/assets/img/rentCar
 import carRentPlatform4 from "../projects/CarRentPlatform/src/assets/img/rentCarPlatform-4.png";
 // Clothes E-SHOP Project images
 import eShop1 from "../projects/ClothesEshop/src/assets/images/e-shop-1.png";
-import eShop2 from "../projects/ClothesEshop/src/assets/images/e-shop-1.png";
-import eShop3 from "../projects/ClothesEshop/src/assets/images/e-shop-1.png";
-import eShop4 from "../projects/ClothesEshop/src/assets/images/e-shop-1.png";
+import eShop2 from "../projects/ClothesEshop/src/assets/images/e-shop-2.png";
+import eShop3 from "../projects/ClothesEshop/src/assets/images/e-shop-3.png";
+import eShop4 from "../projects/ClothesEshop/src/assets/images/e-shop-4.png";
 import RestApiLogo from "../assets/rest-api.gif";
 import ProjectCard from "./ProjectCard";
 

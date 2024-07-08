@@ -10,13 +10,31 @@ type LinkProps = {
   link: string;
 };
 
-export default function Navbar() {
-  const productsContext = useContext(ClothesEShopContext);
+type SearchResultsProps = {
+  id: string;
+  name: string;
+  description: string;
+  collection: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  sizes: string[];
+  brand: string;
+  material: string;
+  availability: boolean;
+  stock_quantity: number;
+  images: string[];
+  rating: number;
+};
 
+export default function Navbar() {
+  const [searchInput, setSearchInput] = useState<string>("");
   const [open, setOpen] = useState(false); // state used to set or navbar is open or closed on small screens/pages
   const [productsQuantityInShoppingCart, setProductsQuantityInShoppingCart] =
     useState(3); // get and display how many products are in the shopping cart
-  const [navOpacity, setNavOpacity] = useState<string>("100"); // set navbar opacity value
+  const [navOpacity, setNavOpacity] = useState<string>(""); // set navbar opacity value
+
+  const productsContext = useContext(ClothesEShopContext);
 
   // check if user is scrolling then set opacity value for navbar
   window.onscroll = function () {
@@ -54,6 +72,20 @@ export default function Navbar() {
     );
   }
 
+  function searchProductInNameOrSubcategoryKeys() {
+    productsContext.setCurrentListTitle(`Your Search Results`);
+    let filteredList: SearchResultsProps[] = [];
+    allItems.forEach((product) => {
+      if (
+        product.name.toLowerCase().includes(searchInput) ||
+        product.subcategory.toLowerCase().includes(searchInput)
+      ) {
+        filteredList.push(product);
+      }
+    });
+    productsContext.setCurrentList(filteredList);
+  }
+
   return (
     <nav
       className={`flex item-center md:justify-between justify-end px-2 bg-[#FECA5A] sticky top-0 z-50 opacity-${navOpacity} transition-all duration-300 hover:opacity-100`}
@@ -89,11 +121,18 @@ export default function Navbar() {
         {/* search element */}
         <div className="flex justify-center items-center search-input w-2/3">
           <input
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
             className="font-base w-full h-10 sm:px-4 px-2 focus:outline-none focus:bg-rose-100 rounded-s-lg transition-colors duration-200"
             type="text"
             placeholder="Search"
           />
-          <i className="fa-solid fa-magnifying-glass p-3 rounded-e-lg text-white bg-black cursor-pointer hover:bg-rose-700 transition-colors duration-200"></i>
+          <NavLink to="collection">
+            <i
+              onClick={searchProductInNameOrSubcategoryKeys}
+              className="fa-solid fa-magnifying-glass p-3 rounded-e-lg text-white bg-black cursor-pointer hover:bg-rose-700 transition-colors duration-200"
+            ></i>
+          </NavLink>
         </div>
       </div>
       {/* shopping cart icon */}
