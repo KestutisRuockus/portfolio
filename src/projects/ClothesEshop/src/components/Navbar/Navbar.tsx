@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import logo from "../../assets/images/logo.jpg";
+import logo from "../../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 import { ClothesEShopContext } from "../../useContext/ClothesEShopContext";
 import { allItems } from "../../data/products";
@@ -93,7 +93,7 @@ export default function Navbar() {
       {/* hamburger element of links */}
       <div
         onClick={() => setOpen(!open)}
-        className="absolute md:hidden left-4 top-10 z-40"
+        className="absolute md:hidden left-4 top-7 z-40"
       >
         {open ? (
           <i className="fa-regular fa-rectangle-xmark text-white hover:text-rose-700 cursor-pointer text-3xl transition-all duration-200"></i>

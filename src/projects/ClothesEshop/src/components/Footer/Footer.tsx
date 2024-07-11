@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/images/logo.jpg";
+import logo from "../../assets/images/logo.png";
 import {
   storeInfo,
   companyInfo,
@@ -37,7 +37,7 @@ export default function Footer() {
       <div className="min-w-[190px] w-1/5 flex gap-6 flex-col">
         <div className="w-24 h-16 rounded-3xl">
           <img
-            className="w-24 h-16 rounded-3xl border-2 border-black"
+            className="w-24 h-16 rounded-3xl"
             src={logo}
             alt="clothing-logo"
           />

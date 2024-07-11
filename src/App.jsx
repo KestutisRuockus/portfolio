@@ -19,6 +19,10 @@ import NotFound from "./projects/ClothesEshop/src/pages/NotFound/NotFound";
 import ShoppingCart from "./projects/ClothesEshop/src/pages/ShoppingCart/ShoppingCart";
 import Checkout from "./projects/ClothesEshop/src/pages/Checkout/Checkout";
 import ShoppingCartLayout from "./projects/ClothesEshop/src/layouts/ShoppingCartLayout";
+import ProductModal, {
+  productDetailsLoader,
+} from "./projects/ClothesEshop/src/components/Product/ProductModal";
+import CurrentProductsLayout from "./projects/ClothesEshop/src/layouts/CurrentProductsLayout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,9 +39,26 @@ const router = createBrowserRouter(
       {/* CLOTHES E-SHOP ROUTES */}
       <Route path="clotheseshop" element={<ClothesEshopIndex />}>
         <Route index element={<MainLayout />} />
-        <Route path="collection" element={<CurrentSelectedCollection />} />
+        <Route
+          path=":id"
+          element={<ProductModal />}
+          loader={productDetailsLoader}
+        />
+        <Route path="collection" element={<CurrentProductsLayout />}>
+          <Route index element={<CurrentSelectedCollection />} />
+          <Route
+            path=":id"
+            element={<ProductModal />}
+            loader={productDetailsLoader}
+          />
+        </Route>
         <Route path="shoppingcart" element={<ShoppingCartLayout />}>
           <Route index element={<ShoppingCart />} />
+          <Route
+            path=":id"
+            element={<ProductModal />}
+            loader={productDetailsLoader}
+          />
           <Route path="checkout" element={<Checkout />} />
         </Route>
       </Route>

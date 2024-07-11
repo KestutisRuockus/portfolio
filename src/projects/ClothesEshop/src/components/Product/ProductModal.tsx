@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Button from "../../utils/Buttons";
+import { useLoaderData, useParams } from "react-router-dom";
+import { allItems } from "../../data/products";
 
 type ProductModalProps = {
   product: {
@@ -20,18 +22,25 @@ type ProductModalProps = {
   };
 };
 
-export default function ProductModal({ product }: ProductModalProps) {
+export default function ProductModal() {
+  const { id } = useParams<string>();
+  const product: any = useLoaderData();
   const [currentImage, setCurrentImage] = useState<string>(product.images[0]);
 
   // render images on side and set currentImage state onMouseEnter
   function getAndRenderImages(images: string[]) {
     return (
-      <div className="w-1/4 h-full flex flex-col gap-6 justify-between">
+      <div className="w-1/4 max-[500px]:h-[260px] h-[400px] flex flex-col gap-6 justify-between">
         {images.map((image, index) => (
-          <a key={index} href={image} target="_blank">
+          <a
+            key={index}
+            href={image}
+            target="_blank"
+            className="cursor-zoom-in max-[500px]:h-[70px] h-[110px]"
+          >
             <img
               onMouseEnter={() => setCurrentImage(image)}
-              className="w-full h-[33%] hover:opacity-80"
+              className="w-full h-full hover:opacity-80"
               src={image}
             />
           </a>
@@ -42,13 +51,13 @@ export default function ProductModal({ product }: ProductModalProps) {
   return (
     <div className="flex md:flex-row flex-col justify-center items-center max-md:items-center md:gap-2 gap-12 lg:w-4/5 w-full m-auto sm:p-8 p-2 pb-12">
       {/* images */}
-      <div className="bg-gray-100 md:w-1/3 sm:w-1/2 max-[450px]:w-4/5 w-2/3 h-fit flex gap-2 p-2 border-2 rounded-lg">
+      <div className="bg-gray-100 sm:w-2/3 w-4/5 h-auto flex justify-end gap-2 p-2 border-2 rounded-lg">
         {getAndRenderImages(product.images)}
         {/* current big image element */}
         <div className="w-2/3">
-          <a href={currentImage} target="_blank">
+          <a href={currentImage} target="_blank" className="cursor-zoom-in">
             <img
-              className="w-full h-full"
+              className="w-3/4 m-auto max-[500px]:h-[260px] h-[400px]"
               src={currentImage}
               alt={product.name}
             />
@@ -112,3 +121,11 @@ export default function ProductModal({ product }: ProductModalProps) {
     </div>
   );
 }
+
+export const productDetailsLoader = async ({ params }) => {
+  const { id } = params;
+
+  const product = allItems.find((item) => item.id === id);
+
+  return product;
+};

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "../../utils/Buttons";
+import { Link } from "react-router-dom";
 
 type ProductProps = {
   isBestSellerComponent?: boolean;
@@ -43,8 +44,9 @@ export default function ProductCard({
       }`}
     >
       {products.map((product) => (
-        <div
-          onClick={(e) => setCurrentProductId(product.id)}
+        <Link
+          to={product.id}
+          // onClick={(e) => setCurrentProductId(product.id)}
           id={product.id}
           key={product.id}
           className={`${
@@ -83,7 +85,7 @@ export default function ProductCard({
               <Button text="Add To Cart" />
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

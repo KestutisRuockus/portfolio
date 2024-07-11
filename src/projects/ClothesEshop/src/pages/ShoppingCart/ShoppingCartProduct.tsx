@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function ShoppingCartProduct({ product }) {
   const [quantity, setQuantity] = useState<number>(1);
@@ -11,7 +12,10 @@ export default function ShoppingCartProduct({ product }) {
   }
 
   return (
-    <div className="flex max-[500px]:flex-col max-[500px]:items-center gap-4 w-full border-2 border-[#FECA5A] rounded-lg p-4 my-2 relative">
+    <Link
+      to={product.id}
+      className="flex max-[500px]:flex-col max-[500px]:items-center gap-4 w-full border-2 border-[#FECA5A] rounded-lg p-4 my-2 relative"
+    >
       <div className="flex max-md:flex-col md:gap-12 justify-center items-center max-[500px]:w-1/2 w-full max-md:text-sm font-semibold">
         <div className="w-28 h-32 flex justify-center items-center cursor-pointer hover:opacity-80 transition-all duration-300">
           <img
@@ -60,6 +64,6 @@ export default function ShoppingCartProduct({ product }) {
       <div className="absolute right-4 top-4">
         <i className="fa-solid fa-trash-can cursor-pointer text-2xl text-rose-700 hover:opacity-70 transition-colors duration-300"></i>
       </div>
-    </div>
+    </Link>
   );
 }

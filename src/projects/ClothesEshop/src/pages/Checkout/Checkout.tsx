@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/images/logo.jpg";
+import logo from "../../assets/images/logo.png";
 import { Form, NavLink, useNavigate } from "react-router-dom";
 import Button from "../../utils/Buttons";
 
