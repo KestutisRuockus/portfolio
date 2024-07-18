@@ -1,31 +1,65 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Button from "../../utils/Buttons";
 import { useLoaderData, useParams } from "react-router-dom";
 import { allItems } from "../../data/products";
+import { ClothesEShopContext } from "../../useContext/ClothesEShopContext";
 
-type ProductModalProps = {
-  product: {
-    id: string;
-    name: string;
-    description: string;
-    collection: string;
-    subcategory: string;
-    price: number;
-    currency: string;
-    sizes: string[];
-    brand: string;
-    material: string;
-    availability: boolean;
-    stock_quantity: number;
-    images: string[];
-    rating: number;
-  };
+type ItemProps = {
+  id: string;
+  name: string;
+  description: string;
+  collection: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  sizes: string[];
+  brand: string;
+  material: string;
+  availability: boolean;
+  stock_quantity: number;
+  images: string[];
+  rating: number;
+  quantity?: number;
 };
 
 export default function ProductModal() {
   const { id } = useParams<string>();
   const product: any = useLoaderData();
   const [currentImage, setCurrentImage] = useState<string>(product.images[0]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
+  const productsContext = useContext(ClothesEShopContext);
+
+  //update shopping cart list in local storage
+  function updateShoppingCartListInLocalStorage(item: {
+    id: string;
+    quantity: number;
+  }): void {
+    productsContext.setProductsInShoppingCart([
+      ...productsContext.productsInShoppingCart,
+      item,
+    ]);
+  }
+
+  // add product to shopping cart list, default quantity 1
+  function addProductToCshoppingCart(product: ItemProps, quantity: number = 1) {
+    const item = { id: product.id, quantity: quantity };
+
+    // check or item already exist in shopping cart
+    if (
+      !productsContext.productsInShoppingCart.some(
+        (item: ItemProps) => item.id === product.id
+      )
+    ) {
+      updateShoppingCartListInLocalStorage(item);
+      const newArr = productsContext.productsInShoppingCart;
+      newArr.push(item);
+      localStorage.setItem("shopping-cart", JSON.stringify(newArr));
+    }
+  }
 
   // render images on side and set currentImage state onMouseEnter
   function getAndRenderImages(images: string[]) {
@@ -108,7 +142,15 @@ export default function ProductModal() {
               </div>
             </div>
           </div>
-          <Button text="Add To Cart" />
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              addProductToCshoppingCart(product);
+            }}
+            className="w-fit rounded-full"
+          >
+            <Button text="Add To Cart" />
+          </div>
           <div className="font-base border-dashed border-b-4 pb-2">
             {product.description}
           </div>

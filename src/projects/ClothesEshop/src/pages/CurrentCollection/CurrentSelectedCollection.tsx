@@ -1,11 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import CollectionsAndSubcategoriesDropList from "./CollectionsAmdSubcategoriesDropList";
 import ProductCard from "../../components/Product/ProductCard";
 import { ClothesEShopContext } from "../../useContext/ClothesEShopContext";
 
 export default function CurrentSelectedCollection() {
   const productsContext = useContext(ClothesEShopContext);
-  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <div className="w-full relative">

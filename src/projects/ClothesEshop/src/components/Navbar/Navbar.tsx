@@ -29,9 +29,7 @@ type SearchResultsProps = {
 
 export default function Navbar() {
   const [searchInput, setSearchInput] = useState<string>("");
-  const [open, setOpen] = useState(false); // state used to set or navbar is open or closed on small screens/pages
-  const [productsQuantityInShoppingCart, setProductsQuantityInShoppingCart] =
-    useState(3); // get and display how many products are in the shopping cart
+  const [open, setOpen] = useState<boolean>(false); // state used to set or navbar is open or closed on small screens/pages
   const [navOpacity, setNavOpacity] = useState<string>(""); // set navbar opacity value
 
   const productsContext = useContext(ClothesEShopContext);
@@ -62,6 +60,7 @@ export default function Navbar() {
         onClick={() => {
           productsContext.setCurrentListTitle(`${link.name} Collection`);
           filterListByCollectionType(link.name);
+          window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         }}
         to={link.link}
         className="font-brandTitle lg:text-3xl text-2xl font-semibold cursor-pointer border-black md:hover:border-b-8 md:hover:-mb-4 transition-all duration-200 rounded-b-lg max-md:hover:text-[#FECA5A]"
@@ -72,7 +71,7 @@ export default function Navbar() {
     );
   }
 
-  function searchProductInNameOrSubcategoryKeys() {
+  function searchProductInNameOrSubcategoryKeys(): void {
     productsContext.setCurrentListTitle(`Your Search Results`);
     let filteredList: SearchResultsProps[] = [];
     allItems.forEach((product) => {
@@ -143,13 +142,13 @@ export default function Navbar() {
         <i className="fa-solid fa-cart-shopping text-3xl group-hover:opacity-70 cursor-pointer"></i>
         <div
           className={`flex justify-center items-center w-5 h-5 p-[2px] bg-rose-700 rounded-full absolute right-[-10px] bottom-[-8px] ${
-            productsQuantityInShoppingCart === 0
+            productsContext.productsInShoppingCart.length === 0
               ? "hidden"
               : "visible cursor-default"
           }`}
         >
           <div className="text-white text-xs">
-            {productsQuantityInShoppingCart}
+            {productsContext.productsInShoppingCart.length}
           </div>
         </div>
       </NavLink>

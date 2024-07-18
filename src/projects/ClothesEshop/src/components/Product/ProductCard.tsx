@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Button from "../../utils/Buttons";
 import { Link } from "react-router-dom";
+import { ClothesEShopContext } from "../../useContext/ClothesEShopContext";
 
 type ProductProps = {
   isBestSellerComponent?: boolean;
@@ -22,20 +23,57 @@ type ProductProps = {
   }[];
 };
 
+type ItemProps = {
+  id: string;
+  name: string;
+  description: string;
+  collection: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  sizes: string[];
+  brand: string;
+  material: string;
+  availability: boolean;
+  stock_quantity: number;
+  images: string[];
+  rating: number;
+  quantity?: number;
+};
+
 export default function ProductCard({
   products,
   isBestSellerComponent,
 }: ProductProps) {
-  const [currentProductId, setCurrentProductId] = useState<string>("");
-  const [currentProductForModal, setCurrentProductForModal] = useState<object>(
-    {}
-  );
+  const productsContext = useContext(ClothesEShopContext);
 
-  useEffect(() => {
-    setCurrentProductForModal(
-      products.filter((product) => currentProductId === product.id)
-    );
-  }, [currentProductId]);
+  //update shopping cart list in local storage
+  function updateShoppingCartListInLocalStorage(item: {
+    id: string;
+    quantity: number;
+  }) {
+    productsContext.setProductsInShoppingCart([
+      ...productsContext.productsInShoppingCart,
+      item,
+    ]);
+  }
+
+  // add product to shopping cart list, default quantity 1
+  function addProductToCshoppingCart(product: ItemProps, quantity: number = 1) {
+    const item = { id: product.id, quantity: quantity };
+
+    // check or item already exist in shopping cart
+    if (
+      !productsContext.productsInShoppingCart.some(
+        (item: ItemProps) => item.id === product.id
+      )
+    ) {
+      updateShoppingCartListInLocalStorage(item);
+      const newArr = productsContext.productsInShoppingCart;
+      newArr.push(item);
+      localStorage.setItem("shopping-cart", JSON.stringify(newArr));
+    }
+  }
 
   return (
     <div
@@ -46,7 +84,6 @@ export default function ProductCard({
       {products.map((product) => (
         <Link
           to={product.id}
-          // onClick={(e) => setCurrentProductId(product.id)}
           id={product.id}
           key={product.id}
           className={`${
@@ -82,7 +119,14 @@ export default function ProductCard({
               <span className="font-base text-sm text-gray-500 line-clamp-2">
                 {`Available sizes: ${product.sizes.join(", ")}`}
               </span>
-              <Button text="Add To Cart" />
+              <div
+                onClick={(e) => {
+                  e.preventDefault();
+                  addProductToCshoppingCart(product);
+                }}
+              >
+                <Button text="Add To Cart" />
+              </div>
             </div>
           </div>
         </Link>

@@ -17,7 +17,13 @@ export default function BestSeller() {
     return randomTopSellers;
   }
 
-  const testProductCard = randomTopSellers();
+  const BestSellersList = [
+    allItems[0],
+    allItems[39],
+    allItems[69],
+    allItems[101],
+    allItems[139],
+  ];
   return (
     <div className="w-4/5 my-16 rounded-lg m-auto border-4">
       <div>
@@ -26,7 +32,7 @@ export default function BestSeller() {
         </h1>
       </div>
       <div className="w-full m-auto flex gap-2 justify-center">
-        <ProductCard products={testProductCard} isBestSellerComponent={true} />
+        <ProductCard products={BestSellersList} isBestSellerComponent={true} />
       </div>
     </div>
   );

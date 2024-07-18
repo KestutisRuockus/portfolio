@@ -30,6 +30,9 @@ export default function ClothesEshopIndex() {
   >(undefined);
   const [currentListTitle, setCurrentListTitle] =
     useState<string>("All Collections");
+  const [productsInShoppingCart, setProductsInShoppingCart] = useState<
+    string[]
+  >(JSON.parse(localStorage.getItem("shopping-cart") || "[]"));
 
   return (
     <div className="bg-white w-full min-h-screen">
@@ -44,6 +47,8 @@ export default function ClothesEshopIndex() {
           setCurrentListTitle,
           currentListPage,
           setCurrentListPage,
+          productsInShoppingCart,
+          setProductsInShoppingCart,
         }}
       >
         <Navbar />

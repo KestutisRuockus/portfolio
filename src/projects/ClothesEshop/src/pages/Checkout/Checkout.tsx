@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../../assets/images/logo.png";
 import { Form, NavLink, useNavigate } from "react-router-dom";
 import Button from "../../utils/Buttons";
+import { ClothesEShopContext } from "../../useContext/ClothesEShopContext";
 
 export default function Checkout() {
   const [fullName, setFullName] = useState<string>("");
@@ -14,6 +15,9 @@ export default function Checkout() {
     useState<Boolean>(false);
   const navigate = useNavigate();
 
+  const productsContext = useContext(ClothesEShopContext);
+
+  // set timer after submiting proceed form
   useEffect(() => {
     const timer = setTimeout(() => {
       if (time > 1) {
@@ -27,15 +31,19 @@ export default function Checkout() {
     }, 1000);
   }, [time]);
 
+  // handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
     const orderDetails = { fullName, email, phoneNumber, shippingAddress };
     setTime(9);
     setIsOrderSubmitted(true);
+    localStorage.removeItem("shopping-cart");
+    productsContext.setProductsInShoppingCart([]);
     console.log(orderDetails);
   };
 
-  const getBackToMenuNow = () => {
+  // route to main page immediately
+  const getBackToMenuNow = (): void => {
     if (itIsTimeToNavigateToHomepage) return navigate("/clotheseshop");
   };
 

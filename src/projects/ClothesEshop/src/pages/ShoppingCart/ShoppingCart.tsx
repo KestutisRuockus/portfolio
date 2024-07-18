@@ -1,17 +1,93 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ShoppingCartProduct from "./ShoppingCartProduct";
 import { allItems } from "../../data/products";
 import Button from "../../utils/Buttons";
-import BestSeller from "../../components/BestSeller/BestSellers";
 import { NavLink } from "react-router-dom";
+import { ClothesEShopContext } from "../../useContext/ClothesEShopContext";
+
+type ProductsInShoppingCartProps = {
+  id: string;
+  name: string;
+  description: string;
+  collection: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  sizes: string[];
+  brand: string;
+  material: string;
+  availability: boolean;
+  stock_quantity: number;
+  images: string[];
+  rating: number;
+  quantity?: number;
+};
+
+type CalculateTotalsProps = {
+  totalPrice: number;
+  totalQuantity: number;
+};
 
 export default function ShoppingCart() {
-  const cartProducts = [allItems[45], allItems[88], allItems[133]];
-  const [isCartEmpty] = useState<boolean>(
-    cartProducts.length === 0 ? true : false
-  );
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
 
-  window.scrollTo(0, 0);
+  const productsContext = useContext(ClothesEShopContext);
+  const [cartProducts, setCartProducts] = useState<
+    ProductsInShoppingCartProps[]
+  >([]);
+  const [totalCartPrice, setTotalCartPrice] = useState<number>(0);
+  const [totalCartProductsQuantity, setTotalCartProductsQuantity] =
+    useState<number>(0);
+
+  // increase totalCartProductsQuantity state by 1.
+  // add to totalCartPrice state product price
+  const addToTotalCartPrice = (childComponentTotalPrice: number): void => {
+    setTotalCartProductsQuantity((prevQuantity) => prevQuantity + 1);
+    setTotalCartPrice((prevPrice) => prevPrice + childComponentTotalPrice);
+  };
+  // decrease totalCartProductsQuantity state by 1.
+  // minus from totalCartPrice state product price
+  const minusFromTotalCartPrice = (childComponentTotalPrice: number): void => {
+    setTotalCartProductsQuantity((prevQuantity) => prevQuantity - 1);
+    setTotalCartPrice((prevPrice) => prevPrice - childComponentTotalPrice);
+  };
+
+  // get to cartProducts state products by saved products ids in localStorage as shopping-cart
+  useEffect(() => {
+    let productsInShoppingCart: ProductsInShoppingCartProps[] = [];
+    productsContext.productsInShoppingCart.map(
+      (item: { id: string; quantity: number }) => {
+        allItems.find((product) => {
+          if (product.id === item.id) {
+            product = { ...product, quantity: item.quantity };
+            productsInShoppingCart.push(product);
+          }
+        });
+      }
+    );
+    setCartProducts(productsInShoppingCart);
+  }, [productsContext.productsInShoppingCart]);
+
+  // calculate totalCartPrice and totalCartProductsQuantity whenever cartProducts state changes.
+  useEffect(() => {
+    const calculateTotals = () => {
+      const { totalPrice, totalQuantity }: CalculateTotalsProps =
+        cartProducts.reduce(
+          (obj, item) => {
+            obj.totalPrice += item.price * item.quantity!;
+            obj.totalQuantity += item.quantity!;
+            return obj;
+          },
+          { totalPrice: 0, totalQuantity: 0 }
+        );
+      setTotalCartPrice(totalPrice);
+      setTotalCartProductsQuantity(totalQuantity);
+    };
+
+    calculateTotals();
+  }, [cartProducts]);
 
   return (
     <div className="w-full py-8">
@@ -21,13 +97,18 @@ export default function ShoppingCart() {
         </div>
         <div className="flex max-md:flex-col gap-2 w-full">
           <div className="w-2/3 m-auto">
-            {isCartEmpty ? (
+            {cartProducts.length === 0 ? (
               <div className="flex justify-center items-center font-base text-3xl font-semibold">
                 There Are No Products In Your Cart
               </div>
             ) : (
               cartProducts.map((product) => (
-                <ShoppingCartProduct key={product.id} product={product} />
+                <ShoppingCartProduct
+                  key={product.id}
+                  product={product}
+                  addToTotalCartPrice={addToTotalCartPrice}
+                  minusFromTotalCartPrice={minusFromTotalCartPrice}
+                />
               ))
             )}
           </div>
@@ -35,24 +116,28 @@ export default function ShoppingCart() {
             <div className="flex flex-col gap-4 sticky top-24 border-2 rounded-lg p-6">
               <div className="flex justify-between text-slate-500 font-semibold">
                 <div className="font-base">Total products:</div>
-                <div className="font-base max-md:text-sm">2</div>
+                <div className="font-base max-md:text-sm">
+                  {totalCartProductsQuantity}
+                </div>
               </div>
               <div className="flex justify-between font-semibold">
                 <div className="font-base lg:text-2xl md:text-xl text-xl">
                   Total:
                 </div>
                 <div className="font-base lg:text-2xl md:text-xl text-lg">
-                  9999 EUR
+                  {(totalCartPrice * 1).toFixed(2)} EUR
                 </div>
               </div>
-              <NavLink to={isCartEmpty ? "" : "checkout"}>
+              <NavLink
+                className="w-fit rounded-full"
+                to={cartProducts.length === 0 ? "" : "checkout"}
+              >
                 <Button text="Checkout" />
               </NavLink>
             </div>
           </div>
         </div>
       </div>
-      <BestSeller />
     </div>
   );
 }
