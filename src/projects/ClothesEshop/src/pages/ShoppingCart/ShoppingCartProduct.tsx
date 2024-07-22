@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { ChangeEvent, useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ClothesEShopContext } from "../../useContext/ClothesEShopContext";
 
@@ -11,6 +11,7 @@ export default function ShoppingCartProduct({
   const [PrevQuantity, setPrevQuantity] = useState<number>(quantity);
   const [totalPrice] = useState<number>(product.price);
   const [mounted, setMounted] = useState<boolean>(false);
+  const [size, setSize] = useState<string>(product.selectedSize);
 
   const productsContext = useContext(ClothesEShopContext);
 
@@ -37,6 +38,18 @@ export default function ShoppingCartProduct({
     }
   };
 
+  // update item size in shopping cart and save changes to local storage
+  const updateProductSizeInLocalStorage = (id: string): void => {
+    const newArr = productsContext.productsInShoppingCart.map((item) => {
+      if (item.id === id) {
+        item.selectedSize = size;
+      }
+      return item;
+    });
+
+    localStorage.setItem("shopping-cart", JSON.stringify(newArr));
+  };
+
   // set previous Quantity
   useEffect(() => {
     setPrevQuantity(quantity);
@@ -55,6 +68,10 @@ export default function ShoppingCartProduct({
     }
   }, [quantity]);
 
+  useEffect(() => {
+    updateProductSizeInLocalStorage(product.id);
+  }, [size]);
+
   // decrease quantity by 1
   function decreaseQuantity(): void {
     if (quantity !== 1) setQuantity((prevQuantity) => prevQuantity - 1);
@@ -65,6 +82,11 @@ export default function ShoppingCartProduct({
     setQuantity((prevQuantity) => prevQuantity + 1);
     updateQuantityInLocalStorage(product.id, 1);
   }
+
+  // handle select element
+  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSize(event.target.value);
+  };
 
   return (
     <div className="flex max-[500px]:flex-col max-[500px]:items-center gap-4 w-full border-2 border-[#FECA5A] rounded-lg p-4 my-2 relative">
@@ -84,8 +106,23 @@ export default function ShoppingCartProduct({
             {product.brand}
           </div>
           <div className="font-name max-md:text-base text-xl text-black">{`'${product.name}' `}</div>
-          <div className="font-base text-sm max-md:text-xs text-slate-500">
-            Size: {product.sizes[1]}
+          <div
+            onClick={(e) => e.preventDefault()}
+            className="font-base text-sm max-md:text-xs text-slate-500"
+          >
+            Size:{" "}
+            <select
+              value={size}
+              onChange={handleChange}
+              className="hover:opacity-100"
+            >
+              <option value="Choose Size">Choose Size</option>
+              {product.sizes.map((size) => (
+                <option className="text-sm font-base" key={size} value={size}>
+                  {size}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
       </Link>
@@ -107,7 +144,6 @@ export default function ShoppingCartProduct({
               onClick={(e) => {
                 e.preventDefault();
                 decreaseQuantity();
-                // updateQuantityInLocalStorage(product.id, quantity);
               }}
               className="fa-solid fa-minus"
             ></i>

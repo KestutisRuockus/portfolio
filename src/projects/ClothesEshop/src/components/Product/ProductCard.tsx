@@ -59,8 +59,16 @@ export default function ProductCard({
   }
 
   // add product to shopping cart list, default quantity 1
-  function addProductToCshoppingCart(product: ItemProps, quantity: number = 1) {
-    const item = { id: product.id, quantity: quantity };
+  function addProductToCshoppingCart(
+    product: ItemProps,
+    quantity: number = 1,
+    selectedSize: string = "Choose Size"
+  ) {
+    const item = {
+      id: product.id,
+      quantity: quantity,
+      selectedSize: selectedSize,
+    };
 
     // check or item already exist in shopping cart
     if (

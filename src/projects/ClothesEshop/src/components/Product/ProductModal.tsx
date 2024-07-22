@@ -131,7 +131,7 @@ export default function ProductModal() {
                 <option disabled value="choose a size">
                   Choose a Size
                 </option>
-                {product.sizes.map((size) => (
+                {product.sizes.map((size: string) => (
                   <option className="text-sm font-base" key={size} value={size}>
                     {size}
                   </option>

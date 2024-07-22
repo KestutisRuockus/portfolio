@@ -21,11 +21,18 @@ type ProductsInShoppingCartProps = {
   images: string[];
   rating: number;
   quantity?: number;
+  selectedSize?: string;
 };
 
 type CalculateTotalsProps = {
   totalPrice: number;
   totalQuantity: number;
+};
+
+type ItemProps = {
+  id: string;
+  quantity: number;
+  selectedSize: string;
 };
 
 export default function ShoppingCart() {
@@ -40,6 +47,7 @@ export default function ShoppingCart() {
   const [totalCartPrice, setTotalCartPrice] = useState<number>(0);
   const [totalCartProductsQuantity, setTotalCartProductsQuantity] =
     useState<number>(0);
+  const [errorMessage, setErrorMessage] = useState<String>("");
 
   // increase totalCartProductsQuantity state by 1.
   // add to totalCartPrice state product price
@@ -58,10 +66,14 @@ export default function ShoppingCart() {
   useEffect(() => {
     let productsInShoppingCart: ProductsInShoppingCartProps[] = [];
     productsContext.productsInShoppingCart.map(
-      (item: { id: string; quantity: number }) => {
+      (item: { id: string; quantity: number; selectedSize: string }) => {
         allItems.find((product) => {
           if (product.id === item.id) {
-            product = { ...product, quantity: item.quantity };
+            product = {
+              ...product,
+              quantity: item.quantity,
+              selectedSize: item.selectedSize,
+            };
             productsInShoppingCart.push(product);
           }
         });
@@ -85,9 +97,17 @@ export default function ShoppingCart() {
       setTotalCartPrice(totalPrice);
       setTotalCartProductsQuantity(totalQuantity);
     };
-
     calculateTotals();
   }, [cartProducts]);
+
+  // check if all products have selected size. if at least one does not returns TRUE
+  const checkIfAtLeastOneProductDoesNotHaveSize = () => {
+    const result = productsContext.productsInShoppingCart.some(
+      (item: ItemProps) => item.selectedSize === "Choose Size"
+    );
+
+    return result;
+  };
 
   return (
     <div className="w-full py-8">
@@ -129,11 +149,30 @@ export default function ShoppingCart() {
                 </div>
               </div>
               <NavLink
+                onClick={(e) => {
+                  if (checkIfAtLeastOneProductDoesNotHaveSize()) {
+                    e.preventDefault();
+                    setErrorMessage(
+                      "!!! Ensure that a size is selected for every product. !!!"
+                    );
+                  }
+                  console.log(checkIfAtLeastOneProductDoesNotHaveSize());
+                  console.log(errorMessage);
+                }}
                 className="w-fit rounded-full"
                 to={cartProducts.length === 0 ? "" : "checkout"}
               >
                 <Button text="Checkout" />
               </NavLink>
+              <div>
+                {errorMessage ? (
+                  <p className="font-base text-red-500 text-xl">
+                    {errorMessage}
+                  </p>
+                ) : (
+                  ""
+                )}
+              </div>
             </div>
           </div>
         </div>
