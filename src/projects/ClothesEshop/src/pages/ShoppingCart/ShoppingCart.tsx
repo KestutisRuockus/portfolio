@@ -101,13 +101,10 @@ export default function ShoppingCart() {
   }, [cartProducts]);
 
   // check if all products have selected size. if at least one does not returns TRUE
-  const checkIfAtLeastOneProductDoesNotHaveSize = () => {
-    const result = productsContext.productsInShoppingCart.some(
+  const checkIfAtLeastOneProductDoesNotHaveSize = (): boolean =>
+    productsContext.productsInShoppingCart.some(
       (item: ItemProps) => item.selectedSize === "Choose Size"
     );
-
-    return result;
-  };
 
   return (
     <div className="w-full py-8">
@@ -156,8 +153,6 @@ export default function ShoppingCart() {
                       "!!! Ensure that a size is selected for every product. !!!"
                     );
                   }
-                  console.log(checkIfAtLeastOneProductDoesNotHaveSize());
-                  console.log(errorMessage);
                 }}
                 className="w-fit rounded-full"
                 to={cartProducts.length === 0 ? "" : "checkout"}

@@ -2,64 +2,20 @@ import React, { useContext, useEffect, useState } from "react";
 import Button from "../../utils/Buttons";
 import { useLoaderData, useParams } from "react-router-dom";
 import { allItems } from "../../data/products";
+import { addProductToCshoppingCart } from "./ProductUtils";
 import { ClothesEShopContext } from "../../useContext/ClothesEShopContext";
-
-type ItemProps = {
-  id: string;
-  name: string;
-  description: string;
-  collection: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  sizes: string[];
-  brand: string;
-  material: string;
-  availability: boolean;
-  stock_quantity: number;
-  images: string[];
-  rating: number;
-  quantity?: number;
-};
 
 export default function ProductModal() {
   const { id } = useParams<string>();
   const product: any = useLoaderData();
   const [currentImage, setCurrentImage] = useState<string>(product.images[0]);
+  const [size, setSize] = useState<string>("Choose Size");
+
+  const productsContext = useContext(ClothesEShopContext);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
-
-  const productsContext = useContext(ClothesEShopContext);
-
-  //update shopping cart list in local storage
-  function updateShoppingCartListInLocalStorage(item: {
-    id: string;
-    quantity: number;
-  }): void {
-    productsContext.setProductsInShoppingCart([
-      ...productsContext.productsInShoppingCart,
-      item,
-    ]);
-  }
-
-  // add product to shopping cart list, default quantity 1
-  function addProductToCshoppingCart(product: ItemProps, quantity: number = 1) {
-    const item = { id: product.id, quantity: quantity };
-
-    // check or item already exist in shopping cart
-    if (
-      !productsContext.productsInShoppingCart.some(
-        (item: ItemProps) => item.id === product.id
-      )
-    ) {
-      updateShoppingCartListInLocalStorage(item);
-      const newArr = productsContext.productsInShoppingCart;
-      newArr.push(item);
-      localStorage.setItem("shopping-cart", JSON.stringify(newArr));
-    }
-  }
 
   // render images on side and set currentImage state onMouseEnter
   function getAndRenderImages(images: string[]) {
@@ -125,6 +81,8 @@ export default function ProductModal() {
             <div className="text-gray-400 text-sm font-base">Size:</div>
             <div className="flex max-[400px]:flex-col justify-between">
               <select
+                value={size}
+                onChange={(e) => setSize(e.target.value)}
                 className="border-2 p-1 text-sm rounded-lg cursor-pointer max-[400px]:w-2/3"
                 name="size"
               >
@@ -145,7 +103,12 @@ export default function ProductModal() {
           <div
             onClick={(e) => {
               e.preventDefault();
-              addProductToCshoppingCart(product);
+              addProductToCshoppingCart(
+                product,
+                productsContext.productsInShoppingCart,
+                productsContext.setProductsInShoppingCart,
+                size
+              );
             }}
             className="w-fit rounded-full"
           >

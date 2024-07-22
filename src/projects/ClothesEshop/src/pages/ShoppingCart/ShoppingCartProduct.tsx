@@ -40,12 +40,14 @@ export default function ShoppingCartProduct({
 
   // update item size in shopping cart and save changes to local storage
   const updateProductSizeInLocalStorage = (id: string): void => {
-    const newArr = productsContext.productsInShoppingCart.map((item) => {
-      if (item.id === id) {
-        item.selectedSize = size;
+    const newArr = productsContext.productsInShoppingCart.map(
+      (item: { id: string; quantity: number; selectedSize: string }) => {
+        if (item.id === id) {
+          item.selectedSize = size;
+        }
+        return item;
       }
-      return item;
-    });
+    );
 
     localStorage.setItem("shopping-cart", JSON.stringify(newArr));
   };
@@ -84,7 +86,7 @@ export default function ShoppingCartProduct({
   }
 
   // handle select element
-  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLSelectElement>): void => {
     setSize(event.target.value);
   };
 
@@ -117,7 +119,7 @@ export default function ShoppingCartProduct({
               className="hover:opacity-100"
             >
               <option value="Choose Size">Choose Size</option>
-              {product.sizes.map((size) => (
+              {product.sizes.map((size: string) => (
                 <option className="text-sm font-base" key={size} value={size}>
                   {size}
                 </option>
