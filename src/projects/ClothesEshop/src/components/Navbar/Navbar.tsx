@@ -60,6 +60,7 @@ export default function Navbar() {
         onClick={() => {
           productsContext.setCurrentListTitle(`${link.name} Collection`);
           filterListByCollectionType(link.name);
+          setOpen(false);
           window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         }}
         to={link.link}

@@ -86,9 +86,7 @@ export default function ProductModal() {
                 className="border-2 p-1 text-sm rounded-lg cursor-pointer max-[400px]:w-2/3"
                 name="size"
               >
-                <option disabled value="choose a size">
-                  Choose a Size
-                </option>
+                <option value="choose a size">Choose a Size</option>
                 {product.sizes.map((size: string) => (
                   <option className="text-sm font-base" key={size} value={size}>
                     {size}
