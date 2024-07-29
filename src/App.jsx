@@ -23,6 +23,8 @@ import ProductModal, {
   productDetailsLoader,
 } from "./projects/ClothesEshop/src/components/Product/ProductModal";
 import CurrentProductsLayout from "./projects/ClothesEshop/src/layouts/CurrentProductsLayout";
+import CookingTogetherIndex from "./projects/CookingTogether/CokingTogetherIndex";
+import CookingTogetherMainLayout from "./projects/CookingTogether/src/layouts/CookingTogetherMainLayout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -61,6 +63,9 @@ const router = createBrowserRouter(
           />
           <Route path="checkout" element={<Checkout />} />
         </Route>
+      </Route>
+      <Route path="/cookingtogether" element={<CookingTogetherIndex />}>
+        <Route index element={<CookingTogetherMainLayout />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Route>

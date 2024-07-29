@@ -20,17 +20,39 @@ import eShop3 from "../projects/ClothesEshop/src/assets/images/e-shop-3.png";
 import eShop4 from "../projects/ClothesEshop/src/assets/images/e-shop-4.png";
 import RestApiLogo from "../assets/rest-api.gif";
 import ProjectCard from "./ProjectCard";
+import NoImage from "../assets/No-Image.svg.png";
 
 // PROEJCTS ARRAY
-// 1. CLOTHES E-SHOP PROJECT
-// 2. TMDB PROJECT
-// 3. CAR RENT PLATFORM PROJECT
-// 4. DoctorCare landing page
+// 1. COOKING TOGETHER - FOOD RECIPE PROJECT
+// 2. CLOTHES E-SHOP PROJECT
+// 3. TMDB PROJECT
+// 4. CAR RENT PLATFORM PROJECT
+// 5. DoctorCare landing page
 const projectsDetails = [
   {
+    name: "Cooking Together",
+    description:
+      "In development process... Food Recipes Project. API doc - https://www.themealdb.com/api.php",
+    images: [NoImage, NoImage, NoImage, NoImage],
+    url: "/cookingtogether",
+    github:
+      "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/CookingTogether",
+    techStack: [
+      { name: "CSS", icon: "fa-css3-alt", color: "blue-600" },
+      { name: "JS", icon: "fa-js", color: "yellow-400" },
+      { name: "React", icon: "fa-react", color: "blue-400" },
+      {
+        name: "Typescript",
+        icon: "",
+        color: "",
+        imgUrl:
+          "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg",
+      },
+      { name: "Rest-API", icon: "", color: "", imgUrl: RestApiLogo },
+    ],
+  },
+  {
     name: "Clothes E-Shop",
-    // description:
-    //   "Welcome to Clothes E-shop, your one-stop online store for the latest in fashion. Explore a wide range of stylish apparel for men, women, and children. Enjoy a seamless shopping experience with easy navigation, secure payment options, and fast delivery. Stay trendy with Clothes E-shop!",
     description:
       "Explore the latest trends and timeless classics at StyleHub, where fashion meets convenience. Our e-shop offers a diverse range of clothing for men, women, and kids, including everything from chic casual wear to elegant formal attire. With easy navigation, detailed product descriptions, and high-quality images, finding your perfect outfit has never been easier. Enjoy a seamless shopping experience with secure payment options and fast, reliable shipping. Stay stylish, stay confident with StyleHub",
     images: [eShop1, eShop2, eShop3, eShop4],
