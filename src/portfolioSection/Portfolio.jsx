@@ -31,7 +31,8 @@ const projectsDetails = [
     name: "Clothes E-Shop",
     // description:
     //   "Welcome to Clothes E-shop, your one-stop online store for the latest in fashion. Explore a wide range of stylish apparel for men, women, and children. Enjoy a seamless shopping experience with easy navigation, secure payment options, and fast delivery. Stay trendy with Clothes E-shop!",
-    description: "In development process...",
+    description:
+      "Explore the latest trends and timeless classics at StyleHub, where fashion meets convenience. Our e-shop offers a diverse range of clothing for men, women, and kids, including everything from chic casual wear to elegant formal attire. With easy navigation, detailed product descriptions, and high-quality images, finding your perfect outfit has never been easier. Enjoy a seamless shopping experience with secure payment options and fast, reliable shipping. Stay stylish, stay confident with StyleHub",
     images: [eShop1, eShop2, eShop3, eShop4],
     url: "/clotheseshop",
     github:
@@ -116,8 +117,8 @@ const projectsDetails = [
 
 export default function Portfolio() {
   return (
-    <div className="bg-sky-950 w-4/5 mb-20 mt-14 py-14 rounded-md shadow-xl shadow-cyan-500/50 bg-opacity-70 relative">
-      <div className="absolute left-4 top-4 text-sky-700 text-lg underline underline-offset-1 cursor-default font-bold">
+    <div className="bg-[#444243] w-4/5 mb-20 mt-14 py-14 rounded-md shadow-xl shadow-[#615545] bg-opacity-70 relative">
+      <div className="absolute left-4 top-4 text-white text-lg underline underline-offset-1 cursor-default font-bold">
         Projects
       </div>
       <div className="flex flex-wrap gap-8 justify-center">
