@@ -12,7 +12,7 @@ export default function TmdbIndex() {
 
   // create key in localStorage if it does not exist
   const checkLocalStorage = localStorage.getItem("myList");
-  if (checkLocalStorage === null)
+  if (checkLocalStorage === null || checkLocalStorage === "")
     localStorage.setItem("myList", JSON.stringify([]));
 
   const [listUrl, setListUrl] = useState("movie/popular?");

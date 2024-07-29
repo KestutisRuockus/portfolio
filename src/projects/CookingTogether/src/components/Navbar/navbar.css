@@ -1,0 +1,100 @@
+@import "../../assets/styles/style.css";
+
+.cooking-nav {
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  color: var(--cooking-green);
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cooking-nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.cooking-nav ul .navlink {
+  list-style: none;
+  font-size: 1.3rem;
+  border-bottom: 0px solid var(--cooking-green);
+  transition: all 0.5s;
+}
+
+.cooking-nav ul .navlink:hover {
+  color: var(--cooking-text-dark);
+  scale: 1.2;
+  border-bottom: 6px solid var(--cooking-green);
+  margin-bottom: -6px;
+}
+
+.cooking-nav-input {
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cooking-nav-input input {
+  width: 100%;
+  padding: 0 4px;
+}
+
+.cooking-nav-input input:focus {
+  outline: none;
+}
+
+.cooking-nav-input i {
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: color 0.5s;
+}
+
+.cooking-nav-input i:hover {
+  color: black;
+}
+
+.cooking-nav .icon-bars {
+  position: absolute;
+  left: 1rem;
+  top: 1.4rem;
+  font-size: 1.7rem;
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .cooking-nav {
+    justify-content: end;
+    padding-right: 10px;
+  }
+
+  .cooking-nav .icon-bars {
+    visibility: visible;
+  }
+
+  .cooking-nav ul {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    flex-direction: column;
+    gap: 3rem;
+    height: 400px;
+    background-color: var(--cooking-light);
+    width: 100%;
+    justify-content: center;
+    padding-left: 25%;
+    z-index: 9;
+    transition: all 0.5s;
+  }
+
+  .cooking-nav .icon-bars {
+    z-index: 10;
+  }
+}
