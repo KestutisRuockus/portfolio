@@ -1,6 +1,11 @@
 :root {
   --cooking-green: #00b969;
+  --cooking-green-dark: #087c4a;
+  --cooking-red: #ce0909;
   --cooking-light: #f6f3ee;
   --cooking-text-dark: #000;
   --cooking-text-light: #fff;
+  --cooking-icon-facebook: #0866ff;
+  --cooking-icon-twitter: #000;
+  --cooking-icon-instagram: #833ab4;
 }

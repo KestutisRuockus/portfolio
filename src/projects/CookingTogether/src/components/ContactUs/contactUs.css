@@ -1,0 +1,63 @@
+@import "../../assets/styles/style.css";
+
+.contact-us-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-us .form-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.contact-us .form {
+  display: flex;
+  gap: 2rem;
+}
+
+.contact-us .form input {
+  color: var(--cooking-green);
+  padding: 0.2rem 0.8rem;
+  border-radius: 4px;
+  max-width: 200px;
+  outline: none;
+}
+
+.contact-us .form input:focus {
+  background-color: var(--cooking-light);
+}
+
+.contact-us .form button {
+  background-color: var(--cooking-green-dark);
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  max-width: 100px;
+  transition: all 0.5s;
+}
+
+.contact-us .form button:hover {
+  color: var(--cooking-light);
+  opacity: 0.8;
+  scale: 1.2;
+}
+
+.contact-us .message {
+  width: fit-content;
+  transition: all 0.5s;
+}
+
+.cooking-contact-us-success {
+  color: var(--cooking-text-light);
+}
+
+.cooking-contact-us-error {
+  color: var(--cooking-red);
+}
+
+@media (max-width: 425px) {
+  .contact-us .form {
+    flex-direction: column;
+  }
+}

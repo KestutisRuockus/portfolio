@@ -25,7 +25,7 @@ const createLink = (link: LinkProps) => (
   </NavLink>
 );
 const Navbar = () => {
-  const [isHamburgerOpen, setIsHamburgerOpen] = useState<boolean>(true);
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState<boolean>(false);
 
   return (
     <nav className="cooking-nav">

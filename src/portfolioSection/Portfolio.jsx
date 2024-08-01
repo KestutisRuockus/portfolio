@@ -139,7 +139,7 @@ const projectsDetails = [
 
 export default function Portfolio() {
   return (
-    <div className="bg-[#444243] w-4/5 mb-20 mt-14 py-14 rounded-md shadow-xl shadow-[#615545] bg-opacity-70 relative">
+    <div className="bg-slate-800 w-4/5 mb-20 mt-14 py-14 rounded-md shadow-xl shadow-[#615545] bg-opacity-50 relative">
       <div className="absolute left-4 top-4 text-white text-lg underline underline-offset-1 cursor-default font-bold">
         Projects
       </div>
