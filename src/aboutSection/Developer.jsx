@@ -52,15 +52,11 @@ export default function Developer() {
             <div className="absolute max-[460px]:left-[-8px] max-[460px]:top-[-28px] left-[-60px] top-0 text-rose-700 text-xl font-bold">
               &lt;p&gt;
             </div>
-            As a Front-End Developer I love developing websites and have a
-            strong interest in mobile app development. My goal is to become
-            skilled in both areas.
-            <br />
-            Whenever I have the chance, I always look at other websites designs
-            and think about how to learn from them or improve the user
-            experience. This curiosity helps me learn and grow, be dynamic,
-            engage with interfaces, and boost my creativity and problem-solving
-            skills.
+            I am an enthusiastic front-end developer with a strong passion for crafting interactive and visually engaging web experiences.
+             I thrive on solving challenging problems and transforming creative concepts into functional, responsive designs using clean code.
+              My goal is to create products that not only enhance user experience but also contribute to positive social change.
+               I would love to connect with others in the tech community! Alongside web development, I am also highly interested in mobile app development,
+                as I see cross-platform applications as a key part of the future in connecting people through technology.
             <span className="text-rose-700 text-xl ml-4 font-bold">
               &lt;/p&gt;
             </span>

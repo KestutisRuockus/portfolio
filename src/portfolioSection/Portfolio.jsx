@@ -29,28 +29,28 @@ import NoImage from "../assets/No-Image.svg.png";
 // 4. CAR RENT PLATFORM PROJECT
 // 5. DoctorCare landing page
 const projectsDetails = [
-  {
-    name: "Cooking Together",
-    description:
-      "In development process... Food Recipes Project. API doc - https://www.themealdb.com/api.php",
-    images: [NoImage, NoImage, NoImage, NoImage],
-    url: "/cookingtogether",
-    github:
-      "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/CookingTogether",
-    techStack: [
-      { name: "CSS", icon: "fa-css3-alt", color: "blue-600" },
-      { name: "JS", icon: "fa-js", color: "yellow-400" },
-      { name: "React", icon: "fa-react", color: "blue-400" },
-      {
-        name: "Typescript",
-        icon: "",
-        color: "",
-        imgUrl:
-          "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg",
-      },
-      { name: "Rest-API", icon: "", color: "", imgUrl: RestApiLogo },
-    ],
-  },
+  // {
+  //   name: "Cooking Together",
+  //   description:
+  //     "In development process... Food Recipes Project. API doc - https://www.themealdb.com/api.php",
+  //   images: [NoImage, NoImage, NoImage, NoImage],
+  //   url: "/cookingtogether",
+  //   github:
+  //     "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/CookingTogether",
+  //   techStack: [
+  //     { name: "CSS", icon: "fa-css3-alt", color: "blue-600" },
+  //     { name: "JS", icon: "fa-js", color: "yellow-400" },
+  //     { name: "React", icon: "fa-react", color: "blue-400" },
+  //     {
+  //       name: "Typescript",
+  //       icon: "",
+  //       color: "",
+  //       imgUrl:
+  //         "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg",
+  //     },
+  //     { name: "Rest-API", icon: "", color: "", imgUrl: RestApiLogo },
+  //   ],
+  // },
   {
     name: "Clothes E-Shop",
     description:
@@ -99,42 +99,42 @@ const projectsDetails = [
       { name: "Rest-API", icon: "", color: "", imgUrl: RestApiLogo },
     ],
   },
-  {
-    name: "Car Rent Platform",
-    description:
-      "Car rent platform - Main car rental points: City, City and City. We also deliver cars to any place in this country",
-    images: [
-      carRentPlatform1,
-      carRentPlatform2,
-      carRentPlatform3,
-      carRentPlatform4,
-    ],
-    url: "/carrentplatform",
-    github:
-      "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/CarRentPlatform",
-    techStack: [
-      { name: "React", icon: "fa-react", color: "blue-400" },
-      {
-        name: "Tailwind",
-        icon: "",
-        color: "",
-        imgUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-      },
-    ],
-  },
-  {
-    name: "DoctorCare landing page",
-    description: "Landing page DoctorCare",
-    images: [imgDoctorCare1, imgDoctorCare2, imgDoctorCare3, imgDoctorCare4],
-    url: "/doctorcare",
-    github:
-      "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/DoctorCare",
-    techStack: [
-      { name: "HTML", icon: "fa-html5", color: "orange-600" },
-      { name: "CSS", icon: "fa-css3-alt", color: "blue-600" },
-    ],
-  },
+  // {
+  //   name: "Car Rent Platform",
+  //   description:
+  //     "Car rent platform - Main car rental points: City, City and City. We also deliver cars to any place in this country",
+  //   images: [
+  //     carRentPlatform1,
+  //     carRentPlatform2,
+  //     carRentPlatform3,
+  //     carRentPlatform4,
+  //   ],
+  //   url: "/carrentplatform",
+  //   github:
+  //     "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/CarRentPlatform",
+  //   techStack: [
+  //     { name: "React", icon: "fa-react", color: "blue-400" },
+  //     {
+  //       name: "Tailwind",
+  //       icon: "",
+  //       color: "",
+  //       imgUrl:
+  //         "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: "DoctorCare landing page",
+  //   description: "Landing page DoctorCare",
+  //   images: [imgDoctorCare1, imgDoctorCare2, imgDoctorCare3, imgDoctorCare4],
+  //   url: "/doctorcare",
+  //   github:
+  //     "https://github.com/KestutisRuockus/portfolio/tree/main/src/projects/DoctorCare",
+  //   techStack: [
+  //     { name: "HTML", icon: "fa-html5", color: "orange-600" },
+  //     { name: "CSS", icon: "fa-css3-alt", color: "blue-600" },
+  //   ],
+  // },
 ];
 
 export default function Portfolio() {
